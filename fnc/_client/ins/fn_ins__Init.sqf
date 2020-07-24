@@ -1,4 +1,4 @@
-_insClothes = [
+private _insClothes = [
 	"CUP_O_TKI_Khet_Partug_01",
 	"CUP_O_TKI_Khet_Partug_02",
 	"CUP_O_TKI_Khet_Partug_03",
@@ -9,7 +9,7 @@ _insClothes = [
 	"CUP_O_TKI_Khet_Partug_08"
 ];
 
-_insVests = [
+private _insVests = [
 	"CUP_V_OI_TKI_Jacket1_04",
 	"CUP_V_OI_TKI_Jacket1_05",
 	"CUP_V_OI_TKI_Jacket1_06",
@@ -25,7 +25,7 @@ _insVests = [
 	"CUP_V_OI_TKI_Jacket6_06"
 ];
 
-_insHeadgear = [
+private _insHeadgear = [
 	"CUP_H_TKI_SkullCap_01",
 	"CUP_H_TKI_SkullCap_02",
 	"CUP_H_TKI_SkullCap_03",
@@ -43,7 +43,7 @@ _insHeadgear = [
 	"CUP_H_TKI_Pakol_2_03"
 ];
 
-_insHead = [
+private _insHead = [
     "PersianHead_A3_01",
     "PersianHead_A3_02",
     "PersianHead_A3_03"
@@ -67,7 +67,7 @@ private _playerVest = _insVests select round random ((count _insVests)-1);
 private _playerHeadGear = _insHeadgear select round random ((count _insHeadgear)-1);
 [player, _playerHeadGear] remoteExec ["addHeadgear", 0];
 
-if (["PersianHead_A3_01", "PersianHead_A3_02", "PersianHead_A3_03"] findIf { face player == _x } == -1) then
+if (_insHead findIf { face player == _x } == -1) then
 {
     private _playerHead = _insHead select round random ((count _insHead)-1);
     player remoteExec ["removeGoggles", 0];
@@ -77,7 +77,7 @@ if (["PersianHead_A3_01", "PersianHead_A3_02", "PersianHead_A3_03"] findIf { fac
 private _insActionMenu = ["INS_AceMenu","Insurrection Menu","hpp\images\insIcon.paa",{nil},{true}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], _insActionMenu] call ace_interact_menu_fnc_addActionToObject;
 
-_hook = ["INS_ItemShop", "Item Shop", "hpp\images\insShop.paa", {call client_fnc_itemShop_openShop;}, {true}, {}, []] call ace_interact_menu_fnc_createAction;
+private _hook = ["INS_ItemShop", "Item Shop", "hpp\images\insShop.paa", {call client_fnc_itemShop_openShop;}, {true}, {}, []] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "INS_AceMenu"], _hook] call ace_interact_menu_fnc_addActionToObject;
 
 [] spawn client_fnc_ins_markerManagerStatic;

@@ -1,11 +1,6 @@
-/*
-	author: Bluekiller
-	description: none
-	returns: nothing
-*/
 params ["_crate", "_type"];
 
-_insClothes = [
+private _insClothes = [
 	["CUP_O_TKI_Khet_Partug_01", 3],
 	["CUP_O_TKI_Khet_Partug_02", 3],
 	["CUP_O_TKI_Khet_Partug_03", 3],
@@ -29,7 +24,7 @@ _insClothes = [
 	["CUP_V_OI_TKI_Jacket6_06", 3]
 ];
 
-_insHeadgear = [
+private _insHeadgear = [
 	["CUP_H_TKI_SkullCap_01", 3],
 	["CUP_H_TKI_SkullCap_02", 3],
 	["CUP_H_TKI_SkullCap_03", 3],
@@ -47,7 +42,7 @@ _insHeadgear = [
 	["CUP_H_TKI_Pakol_2_03", 3]
 ];
 
-_insAceEquipment = [
+private _insAceEquipment = [
 	["ACE_EarPlugs", 3],
 	["ACE_CableTie", 3],
 	["ACE_ConcertinaWireCoil", 3],
