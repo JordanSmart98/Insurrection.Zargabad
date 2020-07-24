@@ -12,3 +12,4 @@ switch(side player) do {
 };
 
 if ((paramsArray select 1) == 1) then {player enableStamina false;};
+if ((paramsArray select 2) != 4) then {[] spawn client_fnc_core_restrictView;};
