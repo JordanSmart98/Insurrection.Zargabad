@@ -1,0 +1,25 @@
+CHANGELOG
+
+24/07/20
+
+Added MH6J_USA motorbike to BLUFOR vehicle spawn
+Added UH1H_SLA motorbike to BLUFOR vehicle spawn
+Added various vehicles to BLUFOR vehicle Bay
+Added VR Ground Icon BLUFORvehicleSpawn_2
+Added VR Ground Icon BLUFORvehicleSpawn_2
+Modified INSvehicleSpawn to INSvehicleSpawn_1
+Modified BLUFORvehicleSpawn to BLUFORvehicleSpawn_1
+
+BLUFOR & INS vehicle display & spawn locations modified to be dependant on vehicle type.
+See:    fn_blufor_vrsRequest
+        fn_blufor_vrsOnSelectionChange
+        fn_ins_vrsRequest
+        fn_ins_vrsOnSelectionChange
+
+
+22/07/20
+Mission timer rewrite, storing global var in missionNamespace
+
+
+
+

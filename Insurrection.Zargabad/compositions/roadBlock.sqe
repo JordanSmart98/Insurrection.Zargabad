@@ -1,0 +1,123 @@
+version=53;
+center[]={4081.5217,5,4172.4526};
+class items
+{
+	items=7;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={1.4550781,0.40583229,0.064941406};
+		};
+		side="Empty";
+		flags=5;
+		class Attributes
+		{
+		};
+		id=484;
+		type="Land_Crash_barrier_F";
+		atlOffset=-0.0048007965;
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.015136719,-2.1746101,-0.63476563};
+			angles[]={0,3.1415927,0};
+		};
+		side="Empty";
+		flags=5;
+		class Attributes
+		{
+			name="ammoHouse2";
+		};
+		id=485;
+		type="Land_Canal_Wall_10m_F";
+		atlOffset=0.030000687;
+	};
+	class Item2
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-1.4213867,0.45018959,0.0625};
+		};
+		side="Empty";
+		flags=5;
+		class Attributes
+		{
+		};
+		id=486;
+		type="Land_Crash_barrier_F";
+		atlOffset=0.053199768;
+	};
+	class Item3
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={3.9882813,0.69337654,0.092773438};
+			angles[]={0.014998405,0,6.2482009};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=492;
+		type="Land_jezekbeton";
+		atlOffset=5.7220459e-006;
+	};
+	class Item4
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={1.465332,0.75017929,0.13232422};
+			angles[]={0.0075011365,0,0.0049914722};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=495;
+		type="Land_jezekbeton";
+	};
+	class Item5
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-4.175293,0.69000053,0.11425781};
+			angles[]={0.012496647,0,0.019996032};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=496;
+		type="Land_jezekbeton";
+		atlOffset=3.8146973e-006;
+	};
+	class Item6
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-1.3305664,0.73596382,0.1640625};
+			angles[]={0.0075011365,0,0.0049914722};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=497;
+		type="Land_jezekbeton";
+		atlOffset=1.9073486e-006;
+	};
+};

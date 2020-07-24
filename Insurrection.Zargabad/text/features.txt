@@ -1,0 +1,2 @@
+pull civi from car
+carbomb detonation modes (30 sec etc)

@@ -1,0 +1,18 @@
+allowFunctionsRecompile = 1;
+allowFunctionsLog = 1;
+
+#include "hpp\cfgFunctions.hpp"
+#include "hpp\cfgNotifications.hpp"
+#include "hpp\cfgSounds.hpp"
+#include "hpp\cfgParams.hpp"
+
+#include "hpp\dialogs\common.hpp"
+#include "hpp\dialogs\dialog_VehicleRequest.hpp"
+#include "hpp\dialogs\dialog_InsurgentVehicleRequest.hpp"
+#include "hpp\dialogs\dialog_InsurgentSelection.hpp"
+#include "hpp\dialogs\dialog_InsurgentItemShop.hpp"
+#include "hpp\dialogs\RscTitles.hpp"
+
+
+
+#include "compositions\compositions.cfg"
