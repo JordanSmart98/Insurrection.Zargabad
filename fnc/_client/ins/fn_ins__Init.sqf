@@ -6,7 +6,10 @@ _insClothes = [
 	"CUP_O_TKI_Khet_Partug_05",
 	"CUP_O_TKI_Khet_Partug_06",
 	"CUP_O_TKI_Khet_Partug_07",
-	"CUP_O_TKI_Khet_Partug_08",
+	"CUP_O_TKI_Khet_Partug_08"
+];
+
+_insVests = [
 	"CUP_V_OI_TKI_Jacket1_04",
 	"CUP_V_OI_TKI_Jacket1_05",
 	"CUP_V_OI_TKI_Jacket1_06",
@@ -58,6 +61,9 @@ player setVariable ["local_insMoney", 10000, true];
 private _playerUniform = _insClothes select round random ((count _insClothes)-1);
 [player, _playerUniform] remoteExec ["addUniform", 0];
 
+private _playerVest = _insVests select round random ((count _insVests)-1);
+[player, _playerVest] remoteExec ["addVest", 0];
+
 private _playerHeadGear = _insHeadgear select round random ((count _insHeadgear)-1);
 [player, _playerHeadGear] remoteExec ["addHeadgear", 0];
 
@@ -68,10 +74,10 @@ if (["PersianHead_A3_01", "PersianHead_A3_02", "PersianHead_A3_03"] findIf { fac
     [player, _playerHead] remoteExec ["setFace", 0];
 };
 
-private _insActionMenu = ["INS_AceMenu","Insurrection Menu","",{nil},{true}] call ace_interact_menu_fnc_createAction;
+private _insActionMenu = ["INS_AceMenu","Insurrection Menu","hpp\images\insIcon.paa",{nil},{true}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], _insActionMenu] call ace_interact_menu_fnc_addActionToObject;
 
-_hook = ["INS_ItemShop", "Item Shop", "", {call client_fnc_itemShop_openShop;}, {true}, {}, []] call ace_interact_menu_fnc_createAction;
+_hook = ["INS_ItemShop", "Item Shop", "hpp\images\insShop.paa", {call client_fnc_itemShop_openShop;}, {true}, {}, []] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "INS_AceMenu"], _hook] call ace_interact_menu_fnc_addActionToObject;
 
 [] spawn client_fnc_ins_markerManagerStatic;

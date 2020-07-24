@@ -4,6 +4,8 @@ class cfgFunctions {
             tag = "blufor";
             file = "fnc\_client\blufor";
             class blufor__Init;
+            class blufor_interrogate;
+            class blufor_markerManagerStatic;
             class blufor_scan;
             class blufor_vrsOnSelectionChange;
             class blufor_vrsPopulate;
@@ -61,7 +63,8 @@ class cfgFunctions {
 	    class core {
             tag = "core";
             file = "fnc\_server\core";
-            class core_missionEvent_entityKilled;
+            class core_mE_entityKilled;
+            class core_mE_aceCaptiveStatus;
             class core_safeStartLoop;
             class core_spawnComp;
             class core_createComp;

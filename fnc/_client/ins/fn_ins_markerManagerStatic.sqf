@@ -11,7 +11,7 @@ while {true} do
                 private _marker = createMarkerLocal[format["_local_safehousemarker_%1", _forEachIndex], position _x];
                 _marker setMarkerColorLocal "ColorCIV";
                 _marker setMarkerTypeLocal "loc_hospital";
-                _marker setMarkerTextLocal format["Safehouse: %1", _forEachIndex + 1];
+                //_marker setMarkerTextLocal format["Safehouse: %1", _forEachIndex + 1];
                 _staticMarkerList pushBack _marker;
             };
         } forEach _safehouseArray;

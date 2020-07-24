@@ -8,8 +8,6 @@ _itemIndex = lbCurSel 2902;
 _itemValue = lbValue [2902, _itemIndex];
 _itemData = lbData [2902, _itemIndex];
 
-systemChat"ran";
-
 _playerMoney = player getVariable["local_bluforMoney", 0];
 if (_playerMoney >= _itemValue) then
 {
