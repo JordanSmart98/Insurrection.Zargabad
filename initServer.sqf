@@ -10,7 +10,7 @@ call server_fnc_ins__Init;
 call server_fnc_blufor__Init;
 
 sleep 1;
-waitUntil {missionNamespace getVariable["MissionTimer", 0] < 0};
+waitUntil {missionNamespace getVariable["server_missionTimer", 0] < 0};
 
 deleteVehicle blueNorth;
 deleteVehicle blueEast;

@@ -25,16 +25,15 @@ if (serverCommandAvailable "#kick" || true) then
 
     _briefing = _briefing + "
     <font size='18'>SAFE START CONTROL</font><br/>
-    |- <execute expression=""missionNamespace setVariable['MissionTimer', ((missionNamespace getVariable['MissionTimer', 0]) + 1), true]; [Format ['Safe Start timer increased by %1 to %2', name vehicle player, MissionTimer * 30],'hintsilent',true,true] call BIS_fnc_MP;"">
+    |- <execute expression=""missionNamespace setVariable['server_missionTimer', ((missionNamespace getVariable['MissionTimer', 0]) + 1), true]; Format ['Safe Start timer increased by %1 to %2', name vehicle player, MissionTimer * 30] remoteExec ['hintSilent', 0];"">
     Increase Safe Start timer by 30 seconds</execute><br/>
 
-    |- <execute expression=""missionNamespace setVariable['MissionTimer', ((missionNamespace getVariable['MissionTimer', 0]) - 1), true]; [Format ['Safe Start timer decreased by %1 to %2', name vehicle player, MissionTimer * 30],'hintsilent',true,true] call BIS_fnc_MP;"">
+    |- <execute expression=""missionNamespace setVariable['server_missionTimer', ((missionNamespace getVariable['MissionTimer', 0]) - 1), true]; Format ['Safe Start timer decreased by %1 to %2', name vehicle player, MissionTimer * 30] remoteExec ['hintSilent', 0];"">
     Decrease Safe Start timer by 30 seconds</execute><br/>
 
-    |- <execute expression=""missionNamespace setVariable['MissionTimer', -1, true]; [[false],'client_fnc_core_safety', allUnits] call BIS_fnc_MP; [Format ['Safe Start ended by %1', name vehicle player],'hintsilent',true,true] call BIS_fnc_MP;"">
+    |- <execute expression=""missionNamespace setVariable['server_missionTimer', -1, true]; [false] remoteExec ['client_fnc_core_safety', 0]; Format ['Safe Start ended by %1', name vehicle player] remoteExec ['hintSilent', 0];"">
     End Safe Start timer</execute><br/>
     ";
 
-    // Create Admin Menu
-    player createDiaryRecord ["INS_Diary", ["Admin Menu",_briefing]];
+    player createDiaryRecord ["INS_Diary", ["Admin Menu", _briefing]];
 };
