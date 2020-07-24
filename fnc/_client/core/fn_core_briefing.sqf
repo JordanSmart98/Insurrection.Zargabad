@@ -31,7 +31,7 @@ if (serverCommandAvailable "#kick" || true) then
     |- <execute expression=""missionNamespace setVariable['MissionTimer', ((missionNamespace getVariable['MissionTimer', 0]) - 1), true]; [Format ['Safe Start timer decreased by %1 to %2', name vehicle player, MissionTimer * 30],'hintsilent',true,true] call BIS_fnc_MP;"">
     Decrease Safe Start timer by 30 seconds</execute><br/>
 
-    |- <execute expression=""missionNamespace setVariable['MissionTimer', -1, true]; [['SafeStartMissionStarting',['Mission starting now!']],'bis_fnc_showNotification',true] call BIS_fnc_MP; [[false],'INS_fnc_core_Safety',playableUnits + switchableUnits] call BIS_fnc_MP; [Format ['Safe Start ended by %1', name vehicle player],'hintsilent',true,true] call BIS_fnc_MP;"">
+    |- <execute expression=""missionNamespace setVariable['MissionTimer', -1, true]; [[false],'client_fnc_core_safety', allUnits] call BIS_fnc_MP; [Format ['Safe Start ended by %1', name vehicle player],'hintsilent',true,true] call BIS_fnc_MP;"">
     End Safe Start timer</execute><br/>
     ";
 
