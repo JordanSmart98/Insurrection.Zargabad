@@ -2,7 +2,7 @@ private ["_target", "_preset"];
 _target = _this select 0;
 _preset = _this select 1;
 
-_loadout1 = {
+_BLUFORloadout1 = {
     private ["_target"];
     _target = _this select 0;
     hint "Rifleman Loadout Equiped";
@@ -52,10 +52,9 @@ _loadout1 = {
     _target linkItem "ItemWatch";
     _target linkItem "ItemRadio";
 
-
 };
 
-_loadout2 = {
+_BLUFORloadout2 = {
     private ["_target"];
     _target = _this select 0;
     hint "Marksman Loadout Equiped";
@@ -112,7 +111,7 @@ _loadout2 = {
 
 };
 
-_loadout3 = {
+_BLUFORloadout3 = {
     private ["_target"];
     _target = _this select 0;
     hint "Demolition Loadout Equiped";
@@ -170,25 +169,163 @@ _loadout3 = {
     _target linkItem "ItemWatch";
     _target linkItem "ItemRadio";
 
+};
+
+_INSloadout1  = {
+    private ["_target"];
+    _target = _this select 0;
+    hint "Gunner Loadout Equiped";
+
+    // Paste Export below, replace this with _target
+    comment "[!] UNIT MUST BE LOCAL [!]";
+    if (!local _target) exitWith {};
+
+    comment "Remove existing items";
+    removeAllWeapons _target;
+    removeAllItems _target;
+    removeAllAssignedItems _target;
+    removeBackpack _target;
+    removeGoggles _target;
+
+    comment "Add weapons";
+    _target addWeapon "CUP_arifle_AK74";
+    _target addPrimaryWeaponItem "CUP_30Rnd_545x39_AK_M";
+
+    comment "Add items to containers";
+    _target addItemToUniform "ACE_EarPlugs";
+    for "_i" from 1 to 10 do {_target addItemToUniform "ACE_fieldDressing";};
+    for "_i" from 1 to 10 do {_target addItemToUniform "ACE_morphine";};
+    for "_i" from 1 to 5 do {_target addItemToUniform "ACE_epinephrine";};
+    for "_i" from 1 to 3 do {_target addItemToVest "CUP_30Rnd_545x39_AK_M";};
+
+    comment "Add items";
+    _target linkItem "ItemMap";
+    _target linkItem "ItemCompass";
+    _target linkItem "ItemWatch";
+    _target linkItem "ItemRadio";
+
+};
+
+_INSloadout2  = {
+    private ["_target"];
+    _target = _this select 0;
+    hint "Sniper Loadout Equiped";
+
+    // Paste Export below, replace this with _target
+    comment "[!] UNIT MUST BE LOCAL [!]";
+    if (!local _target) exitWith {};
+
+    comment "Remove existing items";
+    removeAllWeapons _target;
+    removeAllItems _target;
+    removeAllAssignedItems _target;
+    removeBackpack _target;
+
+    comment "Add weapons";
+    _target addWeapon "CUP_srifle_SVD";
+    _target addPrimaryWeaponItem "CUP_optic_PSO_1";
+    _target addPrimaryWeaponItem "CUP_10Rnd_762x54_SVD_M";
+    _target addWeapon "CUP_hgun_SA61";
+    _target addHandgunItem "CUP_20Rnd_B_765x17_Ball_M";
+
+    comment "Add binoculars";
+    _target addWeapon "Binocular";
+
+    comment "Add items to containers";
+    _target addItemToUniform "ACE_EarPlugs";
+    for "_i" from 1 to 10 do {_target addItemToUniform "ACE_fieldDressing";};
+    for "_i" from 1 to 10 do {_target addItemToUniform "ACE_morphine";};
+    for "_i" from 1 to 5 do {_target addItemToUniform "ACE_epinephrine";};
+    for "_i" from 1 to 3 do {_target addItemToVest "CUP_10Rnd_762x54_SVD_M";};
+    for "_i" from 1 to 3 do {_target addItemToVest "CUP_20Rnd_B_765x17_Ball_M";};
+
+    comment "Add items";
+    _target linkItem "ItemMap";
+    _target linkItem "ItemCompass";
+    _target linkItem "ItemWatch";
+    _target linkItem "ItemRadio";
+};
+
+_INSloadout3  = {
+   private ["_target"];
+   _target = _this select 0;
+   hint "Rocketman Loadout Equiped";
+
+    // Paste Export below, replace this with _target
+    comment "[!] UNIT MUST BE LOCAL [!]";
+    if (!local _target) exitWith {};
+
+    comment "Remove existing items";
+    removeAllWeapons _target;
+    removeAllItems _target;
+    removeAllAssignedItems _target;
+    removeBackpack _target;
+
+    comment "Add weapons";
+    _target addWeapon "CUP_arifle_AKS74U";
+    _target addPrimaryWeaponItem "CUP_30Rnd_545x39_AK74_plum_M";
+    _target addWeapon "CUP_launch_RPG7V";
+    _target addSecondaryWeaponItem "CUP_PG7VL_M";
+
+    comment "Add containers";
+    _target addBackpack "CUP_B_TKI_Backpack_Gunner_RPG";
+
+    comment "Add items to containers";
+    _target addItemToUniform "ACE_EarPlugs";
+    for "_i" from 1 to 10 do {_target addItemToUniform "ACE_fieldDressing";};
+    for "_i" from 1 to 10 do {_target addItemToUniform "ACE_morphine";};
+    for "_i" from 1 to 5 do {_target addItemToUniform "ACE_epinephrine";};
+    for "_i" from 1 to 4 do {_target addItemToVest "CUP_20Rnd_545x39_AKSU_M";};
+    _target addItemToBackpack "CUP_PG7VL_M";
+
+    comment "Add items";
+    _target linkItem "ItemMap";
+    _target linkItem "ItemCompass";
+    _target linkItem "ItemWatch";
+    _target linkItem "ItemRadio";
 
 };
 
 //Set Loadout
-switch(_preset) do
-{
-    case "1":
+switch (playerSide) do{
+    case west:
     {
-    [player] call _loadout1;
+         switch(_preset) do
+            {
+                case "1":
+                {
+                [player] call _BLUFORloadout1;
+                };
+                case "2":
+                {
+                [player] call _BLUFORloadout2;
+                };
+                case "3":
+                {
+                [player] call _BLUFORloadout3;
+                };
+            };
     };
-    case "2":
-    {
-    [player] call _loadout2;
-    };
-    case "3":
-    {
-    [player] call _loadout3;
-    };
+    case civilian:
+        {
+        switch(_preset) do
+            {
+                case "1":
+                {
+                [player] call _INSloadout1;
+                };
+                case "2":
+                {
+                [player] call _INSloadout2;
+                };
+                case "3":
+                {
+                [player] call _INSloadout3;
+                };
+            };
+        };
 };
+
 
 
 
