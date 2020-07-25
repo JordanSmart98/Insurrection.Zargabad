@@ -13,6 +13,4 @@ allowFunctionsLog = 1;
 #include "hpp\dialogs\dialog_InsurgentItemShop.hpp"
 #include "hpp\dialogs\RscTitles.hpp"
 
-
-
 #include "compositions\compositions.cfg"

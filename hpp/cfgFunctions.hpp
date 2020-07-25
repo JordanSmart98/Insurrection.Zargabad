@@ -20,6 +20,7 @@ class cfgFunctions {
             class core_briefing;
             class core_keyDownHandler;
             class core_displayStructuredText;
+            class core_restrictView;
         };
         class ins {
             tag = "ins";
