@@ -8,7 +8,7 @@ class EditorData
 	toggles=553;
 	class ItemIDProvider
 	{
-		nextID=2350;
+		nextID=2352;
 	};
 	class MarkerIDProvider
 	{
@@ -20,7 +20,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4027.002,26.98609,4124.0132};
+		pos[]={4032.8552,25.400791,4121.2617};
 		dir[]={0.1401868,-0.38136426,-0.9138701};
 		up[]={0.057831053,0.92437857,-0.37701133};
 		aside[]={-0.98855942,-1.2712881e-006,-0.15164858};
@@ -21499,7 +21499,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=98;
+		items=97;
 		class Item0
 		{
 			dataType="Object";
@@ -21512,7 +21512,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addAction[""<t color='#FF57CCCC'> Civilian Vehicles </t>"", { player setVariable [""local_insVSType"", 1]; createDialog ""dialog_InsurgentVehicleRequest"" }];}";
+				init="call{this addAction[""<t color='#FF57CCCC'> Civilian Vehicles </t>"", { player setVariable [""local_insVSType"", 1]; createDialog ""dialog_InsurgentVehicleRequest"" },"""",1,true,false,"""",""(side player == civilian)""];}";
 				disableSimulation=1;
 			};
 			id=31;
@@ -23134,7 +23134,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addAction[""<t color='#FFC95454'> Blackmarket Vehicles </t>"", { player setVariable [""local_insVSType"", 2]; createDialog ""dialog_InsurgentVehicleRequest"" }];}";
+				init="call{this addAction[""<t color='#FFC95454'> Blackmarket Vehicles </t>"", { player setVariable [""local_insVSType"", 2]; createDialog ""dialog_InsurgentVehicleRequest"" },"""",1,true,false,"""",""(side player == civilian)""];}";
 				disableSimulation=1;
 			};
 			id=1302;
@@ -23893,25 +23893,6 @@ class Mission
 			{
 			};
 			id=2317;
-		};
-		class Item97
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4035.917,16.469845,4107.4888};
-				angles[]={6.2806959,1.0988418,0.0075011365};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="call{this addAction[""<t color='#B570E8C9'> Loadout </t>"", { createDialog ""dialog_LoadoutRequest"" }]; }";
-				name="loadourShop_1";
-			};
-			id=2332;
-			type="AmmoCrate_NoInteractive_";
-			atlOffset=-1.9073486e-006;
 		};
 	};
 };
