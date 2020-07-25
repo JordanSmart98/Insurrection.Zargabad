@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=41;
+		nextID=43;
 	};
 	class Camera
 	{
-		pos[]={4032.8552,25.400791,4121.2617};
-		dir[]={0.1401868,-0.38136426,-0.9138701};
-		up[]={0.057831053,0.92437857,-0.37701133};
-		aside[]={-0.98855942,-1.2712881e-006,-0.15164858};
+		pos[]={4011.4053,88.78125,4126.4873};
+		dir[]={0.53473788,-0.74034965,-0.40766123};
+		up[]={0.5887472,0.67221922,-0.44883826};
+		aside[]={-0.60634291,-3.0540396e-006,-0.79535896};
 	};
 };
 binarizationWanted=0;
@@ -21491,6 +21491,8 @@ class Mission
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
 		year=2009;
 		day=29;
 		hour=11;
@@ -23515,7 +23517,7 @@ class Mission
 			class Attributes
 			{
 				init="call{this addAction[""<t color='#B570E8C9'> Loadout </t>"", { createDialog ""dialog_LoadoutRequest"" }]; }";
-				name="loadourShop";
+				name="loadoutShop";
 			};
 			id=2301;
 			type="AmmoCrate_NoInteractive_";

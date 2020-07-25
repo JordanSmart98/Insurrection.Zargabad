@@ -90,4 +90,6 @@ private _hook = ["INS_ItemShop", "Item Shop", "hpp\images\insShop.paa", {call cl
     player attachTo [_box, [0, 0 ,0]];
     sleep 1;
     detach player;
+    waitUntil { not visibleMap };
+    ["Zargabad","Kandahar Region", format["%1/%2/%3", date select 2, date select 1, date select 0]] spawn BIS_fnc_infoText;
 };
