@@ -30,6 +30,6 @@ closeDialog 1;
 [] spawn
 {
     sleep 10;
-    waitUntil {missionNamespace getVariable["MissionTimer", 0] < 0};
+    waitUntil {missionNamespace getVariable["server_missionTimer", 0] < 0};
     ["teleportSelf","onMapSingleClick"] call BIS_fnc_removeStackedEventHandler;
 }

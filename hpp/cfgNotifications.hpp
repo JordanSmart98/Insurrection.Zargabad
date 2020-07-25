@@ -27,9 +27,9 @@ class cfgNotifications
 		priority = 1;
 	};
 	
-	class VipFound
+	class EsclationPhaseUp
 	{
-		title = "VIP FOUND";
+		title = "Escalation Phase";
 		description = "%1";
 		iconPicture="\A3\ui_f\data\map\mapcontrol\taskIconCreated_ca.paa";
 		duration = 3;
@@ -41,15 +41,6 @@ class cfgNotifications
 		title = "VIP SECURED";
 		description = "%1";
 		iconPicture="\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
-		duration = 3;
-		priority = 1;
-	};
-	
-	class ColAziz
-	{
-		title = "Col. Aziz";
-		description = "%1";
-		iconPicture="\A3\ui_f\data\map\mapcontrol\taskIconCreated_ca.paa";
 		duration = 3;
 		priority = 1;
 	};

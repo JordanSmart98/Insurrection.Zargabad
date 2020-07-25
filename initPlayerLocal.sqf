@@ -11,4 +11,5 @@ switch(side player) do {
     case civilian: {[] spawn client_fnc_ins__Init;};
 };
 
-player enableStamina false;
+if ((paramsArray select 1) == 1) then {player enableStamina false;};
+if ((paramsArray select 2) != 4) then {[] spawn client_fnc_core_restrictView;};

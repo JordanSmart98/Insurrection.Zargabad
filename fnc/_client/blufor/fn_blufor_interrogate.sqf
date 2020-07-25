@@ -1,7 +1,6 @@
 params ["_target", "_player", "_params"];
-
 [_player, "AmovPercMstpSrasWpstDnon_AinvPknlMstpSnonWnonDnon", 1] call ace_common_fnc_doAnimation;
-[10,[_target, _PARAM2],
+[10,[_target],
 {
     params ["_params"];
     _target = _params select 0;
@@ -21,7 +20,6 @@ params ["_target", "_player", "_params"];
     missionNamespace setVariable["server_bluforIntelCount", count _intelLocations, true];
 
     ["<t font='PuristaBold' align='center' size='2'>Intel Added</t>"] call client_fnc_core_displayStructuredText;
-
 
     [_target, 0, ["ACE_MainActions", "BLU_Interrogate"]] call ace_interact_menu_fnc_removeActionFromObject;
 

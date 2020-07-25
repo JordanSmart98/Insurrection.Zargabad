@@ -23,6 +23,8 @@ class cfgFunctions {
             class core_loadouts;
             class core_lrsPopulate;
             class core_lrsRequest;
+            class core_restrictView;
+
         };
         class ins {
             tag = "ins";
