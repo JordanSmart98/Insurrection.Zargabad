@@ -8,7 +8,7 @@ class EditorData
 	toggles=553;
 	class ItemIDProvider
 	{
-		nextID=2330;
+		nextID=2350;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=37;
+		nextID=39;
 	};
 	class Camera
 	{
-		pos[]={4695.0059,34.236782,6206.3726};
-		dir[]={0.15469278,-0.44745675,0.88094026};
-		up[]={0.077398159,0.89426935,0.44075179};
-		aside[]={0.9850356,-1.2763339e-006,-0.17297111};
+		pos[]={4692.7876,31.636898,6202.9224};
+		dir[]={0.92950517,-0.26770008,0.25417027};
+		up[]={0.25829458,0.96346116,0.070627466};
+		aside[]={0.26380044,-6.0151797e-007,-0.96470541};
 	};
 };
 binarizationWanted=0;
@@ -21499,7 +21499,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=97;
+		items=98;
 		class Item0
 		{
 			dataType="Object";
@@ -23515,7 +23515,7 @@ class Mission
 			class Attributes
 			{
 				init="call{this addAction[""<t color='#B570E8C9'> Loadout </t>"", { createDialog ""dialog_LoadoutRequest"" }]; }";
-				name="bluforloadourShop";
+				name="loadourShop";
 			};
 			id=2301;
 			type="AmmoCrate_NoInteractive_";
@@ -23893,6 +23893,25 @@ class Mission
 			{
 			};
 			id=2317;
+		};
+		class Item97
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4035.917,16.469845,4107.4888};
+				angles[]={6.2806959,1.0988418,0.0075011365};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this addAction[""<t color='#B570E8C9'> Loadout </t>"", { createDialog ""dialog_LoadoutRequest"" }]; }";
+				name="loadourShop_1";
+			};
+			id=2332;
+			type="AmmoCrate_NoInteractive_";
+			atlOffset=-1.9073486e-006;
 		};
 	};
 };
