@@ -1,4 +1,0 @@
-["ace_common_displayTextStructured", ["<t size='1.4'>No valid vehicles in range</t>", 2, _insPlayer], [_insPlayer]] call CBA_fnc_targetEvent;
-
-
-
