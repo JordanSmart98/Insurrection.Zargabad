@@ -8,6 +8,7 @@ allowFunctionsLog = 1;
 
 #include "hpp\dialogs\common.hpp"
 #include "hpp\dialogs\dialog_VehicleRequest.hpp"
+#include "hpp\dialogs\dialog_LoadoutRequest.hpp"
 #include "hpp\dialogs\dialog_InsurgentVehicleRequest.hpp"
 #include "hpp\dialogs\dialog_InsurgentSelection.hpp"
 #include "hpp\dialogs\dialog_InsurgentItemShop.hpp"
