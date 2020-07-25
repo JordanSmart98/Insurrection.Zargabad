@@ -8,7 +8,7 @@ class EditorData
 	toggles=553;
 	class ItemIDProvider
 	{
-		nextID=2350;
+		nextID=2352;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=39;
+		nextID=41;
 	};
 	class Camera
 	{
-		pos[]={4692.7876,31.636898,6202.9224};
-		dir[]={0.92950517,-0.26770008,0.25417027};
-		up[]={0.25829458,0.96346116,0.070627466};
-		aside[]={0.26380044,-6.0151797e-007,-0.96470541};
+		pos[]={4032.8552,25.400791,4121.2617};
+		dir[]={0.1401868,-0.38136426,-0.9138701};
+		up[]={0.057831053,0.92437857,-0.37701133};
+		aside[]={-0.98855942,-1.2712881e-006,-0.15164858};
 	};
 };
 binarizationWanted=0;
@@ -21499,7 +21499,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=98;
+		items=97;
 		class Item0
 		{
 			dataType="Object";
@@ -21512,7 +21512,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addAction[""<t color='#FF57CCCC'> Civilian Vehicles </t>"", { player setVariable [""local_insVSType"", 1]; createDialog ""dialog_InsurgentVehicleRequest"" }];}";
+				init="call{this addAction[""<t color='#FF57CCCC'> Civilian Vehicles </t>"", { player setVariable [""local_insVSType"", 1]; createDialog ""dialog_InsurgentVehicleRequest"" },"""",1,true,false,"""",""(side player == civilian)""];}";
 				disableSimulation=1;
 			};
 			id=31;
@@ -22443,7 +22443,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4710.7476,31.668341,6206.0947};
+				position[]={4711.1836,31.678865,6206.3228};
 				angles[]={6.2656889,5.235147,0.014998405};
 			};
 			side="Empty";
@@ -22453,7 +22453,7 @@ class Mission
 			};
 			id=202;
 			type="ShedBig";
-			atlOffset=1.5258789e-005;
+			atlOffset=7.6293945e-006;
 		};
 		class Item38
 		{
@@ -23134,7 +23134,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addAction[""<t color='#FFC95454'> Blackmarket Vehicles </t>"", { player setVariable [""local_insVSType"", 2]; createDialog ""dialog_InsurgentVehicleRequest"" }];}";
+				init="call{this addAction[""<t color='#FFC95454'> Blackmarket Vehicles </t>"", { player setVariable [""local_insVSType"", 2]; createDialog ""dialog_InsurgentVehicleRequest"" },"""",1,true,false,"""",""(side player == civilian)""];}";
 				disableSimulation=1;
 			};
 			id=1302;
@@ -23893,25 +23893,6 @@ class Mission
 			{
 			};
 			id=2317;
-		};
-		class Item97
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={4035.917,16.469845,4107.4888};
-				angles[]={6.2806959,1.0988418,0.0075011365};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="call{this addAction[""<t color='#B570E8C9'> Loadout </t>"", { createDialog ""dialog_LoadoutRequest"" }]; }";
-				name="loadourShop_1";
-			};
-			id=2332;
-			type="AmmoCrate_NoInteractive_";
-			atlOffset=-1.9073486e-006;
 		};
 	};
 };
