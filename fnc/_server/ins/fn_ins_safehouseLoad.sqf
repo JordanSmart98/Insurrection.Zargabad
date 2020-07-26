@@ -20,7 +20,7 @@ private _fnc_CreateVehicle = {
 
 private _dataArrays = [];
 {
-    _name = _x select 0;
+    private _name = _x select 0;
     if (_name == _typeBuilding) then {_dataArrays = _x;};
 } forEach _safehouseLocations;
 

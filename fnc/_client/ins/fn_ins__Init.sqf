@@ -85,8 +85,8 @@ private _hook = ["INS_ItemShop", "Item Shop", "hpp\images\insShop.paa", {call cl
 [] spawn {
     waitUntil {missionNamespace getVariable["server_safehouseDataCount", 0] > 0};
     sleep 1;
-    _data = missionNamespace getVariable["server_safehouseData", []] select 0;
-    _box = _data select 2;
+    private _data = missionNamespace getVariable["server_safehouseData", []] select 0;
+    private _box = _data select 2;
     player attachTo [_box, [0, 0 ,0]];
     sleep 1;
     detach player;

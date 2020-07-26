@@ -19,11 +19,14 @@ params ["_target", "_player", "_params"];
     missionNamespace setVariable["server_bluforIntelArray", _intelLocations, true];
     missionNamespace setVariable["server_bluforIntelCount", count _intelLocations, true];
 
-    ["<t font='PuristaBold' align='center' size='2'>Intel Added</t>"] call client_fnc_core_displayStructuredText;
-
+    private _string = "<t font='PuristaBold' align='center' size='2'>Intel Added</t><br/><t font='PuristaMedium' align='center' size='1.5' color='#16ba3d'>+$1000</t>";
+    [_string] call client_fnc_core_displayStructuredText;
+    
+    player setVariable ["local_bluforMoney", ((player getVariable ["local_bluforMoney", 0]) + 1000)];
+          
     [_target, 0, ["ACE_MainActions", "BLU_Interrogate"]] call ace_interact_menu_fnc_removeActionFromObject;
 
-    _dickersArray = missionNamespace getVariable ["server_dickersArray", []];
+    private _dickersArray = missionNamespace getVariable ["server_dickersArray", []];
     _dickersArray = _dickersArray - [_target];
     _target setVariable["local_insDicker", 0, true];
     _target removeItem "ACE_Cellphone";

@@ -1,13 +1,13 @@
 waitUntil {!isNull (findDisplay 4000)};
 disableSerialization;
 
-_display = findDisplay 4000;
-_Text_ItemDescription = _display displayCtrl 4005;
-_Text_ItemPrice = _display displayCtrl 4006;
+private _display = findDisplay 4000;
+private _Text_ItemDescription = _display displayCtrl 4005;
+private _Text_ItemPrice = _display displayCtrl 4006;
 
-_itemIndex = lbCurSel 4001;
-_itemName = lbText[4001, _itemIndex];
-_itemPrice = lbValue[4001, _itemIndex];
+private _itemIndex = lbCurSel 4001;
+private _itemName = lbText[4001, _itemIndex];
+private _itemPrice = lbValue[4001, _itemIndex];
 
 _Text_ItemPrice ctrlSetStructuredText parseText format["$%1", _itemPrice];
 

@@ -1,8 +1,7 @@
 waitUntil {!isNull (findDisplay 2900)};
 disableSerialization;
-_display = findDisplay 2900;
-_Text_Fund = _display displayCtrl 2901;
-_List_Vehicles = _display displayCtrl 2902;
+private _display = findDisplay 2900;
+private _Text_Fund = _display displayCtrl 2901;
 
 private _bluforAirVehicleList = [
     ["CUP_B_MH6J_USA", 1000],

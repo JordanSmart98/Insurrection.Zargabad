@@ -13,13 +13,13 @@ if (((player getVariable ["local_bluforLastScanTime", 0]) + 60) <= time) then
 				private _py = floor ((_pos select 1) / 100);
 				private _markerName = format["grid_%1_%2", _px, _py];
 
-				_existingMarker = getMarkerPos _markerName;
+				private _existingMarker = getMarkerPos _markerName;
 				if (!(_existingMarker isEqualTo [0,0,0])) then {
                     _markerName setMarkerAlpha ((markerAlpha _markerName) + 0.2);
 				}
 				else
 				{
-                    _marker = createMarker[_markerName, [(_px * 100) + 50, (_py * 100) + 50, 0]];
+                    private _marker = createMarker[_markerName, [(_px * 100) + 50, (_py * 100) + 50, 0]];
                     _marker setMarkerShape "RECTANGLE";
                     _marker setMarkerSize [50,50];
                     _marker setMarkerColor "ColorRed";

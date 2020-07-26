@@ -16,7 +16,7 @@ if (_bluforCount > 0) then
             if ((side _x == civilian) && (isPlayer _x)) then
             {
                 _x setVariable ["local_insMoney", ((_x getVariable ["local_insMoney", 0]) + 2000)];
-                ["<t font='PuristaBold' align='center' size='2' color='#28b858'>+ $2000</t>"] call client_fnc_core_displayStructuredText;
+                "<t font='PuristaBold' align='center' size='2' color='#28b858'>+ $2000</t>" remoteExec ["client_fnc_core_displayStructuredText", _x];
             };
         } forEach allPlayers;
     }

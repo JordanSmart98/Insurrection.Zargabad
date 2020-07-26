@@ -1,8 +1,7 @@
 waitUntil {!isNull (findDisplay 3000)};
 disableSerialization;
-_display = findDisplay 3000;
-_Text_Fund = _display displayCtrl 3001;
-_List_Vehicles = _display displayCtrl 3002;
+private _display = findDisplay 3000;
+private _Text_Fund = _display displayCtrl 3001;
 
 private _civVehicleList = [
     ["CUP_C_Lada_GreenTK_CIV", 200],

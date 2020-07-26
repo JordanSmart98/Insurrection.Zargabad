@@ -1,6 +1,6 @@
 params["_insPlayer"];
 
-_roadBlock = "Land_Canal_Wall_10m_F" createVehicle position _insPlayer;
+private _roadBlock = "Land_Canal_Wall_10m_F" createVehicle position _insPlayer;
 _roadBlock attachTo [_insPlayer, [0, 3, -3.1], "Pelvis"];
 _roadBlock setDir 180;
 
@@ -22,15 +22,13 @@ _insPlayer addAction [ "Setup Roadblock",
 
 		_insPlayer removeAction _actionId;
 		
-		_dir = getDir _roadBlock + 180;
+		private _dir = getDir _roadBlock + 180;
 
 		["roadBlock", getPos _roadBlock, [0,0,0], _dir, false] remoteExec ["server_fnc_core_spawnComp", 2];
 		
 		deleteVehicle _roadBlock;
 
-        _string = "<t font='PuristaBold' align='center' size='2'>Roadblock Placed</t>";
-        [_string] call client_fnc_core_displayStructuredText;
-
+        ["<t font='PuristaBold' align='center' size='2'>Roadblock Placed</t>"] call client_fnc_core_displayStructuredText;
 		[_insPlayer, 1, ["ACE_SelfActions", "INS_AceMenu", "INS_PlaceRoadblock"]] call ace_interact_menu_fnc_removeActionFromObject;
 	},
 	{
