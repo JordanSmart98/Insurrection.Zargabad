@@ -21,3 +21,5 @@ _trigger setTriggerActivation ["VEHICLE", "NOT PRESENT", true];
 _trigger setTriggerStatements ["this", "_displayVehicle = player getVariable 'vrsVehicle'; if (typeName _displayVehicle == 'OBJECT') then {deleteVehicle _displayVehicle};", ""];
 
 player setVariable ["vrsVehicle", _simpleVehicle, true];
+
+ctrlSetText[2903,(getText (configFile >> "CfgVehicles" >> _itemData >> "editorPreview"))];
