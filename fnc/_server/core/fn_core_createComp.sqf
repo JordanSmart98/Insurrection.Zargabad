@@ -1,4 +1,4 @@
-﻿//Main function resposible for spawning compositions
+//Main function resposible for spawning compositions
 
 //[ COMP_NAME, POS_ATL, OFFSET, DIR, ALIGN_TERRAIN ] call LARs_fnc_spawnComp;
 

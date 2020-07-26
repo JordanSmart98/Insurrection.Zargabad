@@ -47,17 +47,17 @@ switch (_this select 0) do
     };
     case false:
     {
-        if !(isNil "f_eh_safetyMan") then
+        if (!(isNil "f_eh_safetyMan")) then
         {
             player removeEventHandler ["Fired", f_eh_safetyMan];
             f_eh_safetyMan = nil;
         };
 
-        if !(isNull(player getVariable ["f_var_safetyVeh",objNull])) then
+        if (!(isNull(player getVariable ["f_var_safetyVeh",objNull]))) then
         {
             (player getVariable "f_var_safetyVeh") allowDamage true;
 
-            if !(isNil "f_eh_safetyVeh") then
+            if (!(isNil "f_eh_safetyVeh")) then
             {
                 (player getVariable "f_var_safetyVeh") removeEventHandler ["Fired", f_eh_safetyVeh];
                 f_eh_safetyVeh = nil;

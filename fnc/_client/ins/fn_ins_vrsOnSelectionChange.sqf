@@ -1,22 +1,20 @@
-private["_ItemPos", "_ItemData", "_displayVehicle", "_position", "_vectorDirUp", "_model", "_simpleVehicle", "_trigger"];
-
-_itemIndex = lbCurSel 3002;
-_itemData = lbData [3002, _itemIndex];
-_displayVehicle = player getVariable["vrsVehicle", objNull];
+private _itemIndex = lbCurSel 3002;
+private _itemData = lbData [3002, _itemIndex];
+private _displayVehicle = player getVariable["vrsVehicle", objNull];
 
 if (!(isNull _displayVehicle)) then {deleteVehicle _displayVehicle};
 
 _displayVehicle = _itemData createVehicleLocal position (switch (player getVariable ["local_insVSType", -1]) do {case 1:{INSvehicleSpawn_1}; case 2:{INSvehicleSpawn_2};});
 
-_position = getPosWorld _displayVehicle;
-_vectorDirUp = [vectorDir _displayVehicle, vectorUp _displayVehicle];
-_model = getModelInfo _displayVehicle select 1;
+private _position = getPosWorld _displayVehicle;
+private _vectorDirUp = [vectorDir _displayVehicle, vectorUp _displayVehicle];
+private _model = getModelInfo _displayVehicle select 1;
 deleteVehicle _displayVehicle;
 
-_simpleVehicle = createSimpleObject [_model, _position];
+private _simpleVehicle = createSimpleObject [_model, _position];
 _simpleVehicle setVectorDirAndUp _vectorDirUp;
 
-_trigger = createTrigger["EmptyDetector", getPos player];
+private _trigger = createTrigger["EmptyDetector", getPos player];
 _trigger setTriggerArea [5, 5, 0, false, 5];
 _trigger triggerAttachVehicle [player];
 _trigger setTriggerActivation ["VEHICLE", "NOT PRESENT", true];

@@ -1,8 +1,8 @@
-﻿//Entry function - calls function to spawn composition and handles composition references
+//Entry function - calls function to spawn composition and handles composition references
 
 //Composition spawning is designed to be used via the server
 //If we are not the server exit with error
-if !( isServer ) exitWith {
+if (!( isServer )) exitWith {
 	"LARs_fnc_spawnComp must be called on the server" call BIS_fnc_error;
 	objNull
 };
@@ -23,7 +23,7 @@ _objects = _this call server_fnc_core_createComp;
 {
 	//Some index will be blank as objects are placed in the array according to their Eden ID
 	//If it is not blank
-	if !( isNil "_x" ) then {
+	if (!( isNil "_x" )) then {
 		//Set the index as [ Eden ID, OBJECT ]
 		_objects set [ _forEachIndex, [ _forEachIndex, _x ] ];
 	}else{
@@ -47,7 +47,7 @@ if ( isNil "_index" ) then {
 	_compReference = format[ "%1_%2", _compName, count LARs_spawnedCompositions ];
 
 	//Add it to the end of the data structure as an array of [ reference name, objects spawned ]
-	_nul = LARs_spawnedCompositions pushBack [ _compReference, _objects ];
+	LARs_spawnedCompositions pushBack [ _compReference, _objects ];
 
 }else{
 
