@@ -8,7 +8,7 @@ class EditorData
 	toggles=553;
 	class ItemIDProvider
 	{
-		nextID=2352;
+		nextID=2359;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4703.1558,33.910374,6210.5103};
-		dir[]={-0.90633744,-0.33357671,0.25944373};
-		up[]={-0.32070777,0.94272,0.091804445};
-		aside[]={0.27520609,-1.6763806e-007,0.96140045};
+		pos[]={4701.5903,33.910374,6191.2344};
+		dir[]={0.16743617,-0.29787135,0.93984133};
+		up[]={0.052247938,0.95460093,0.29327399};
+		aside[]={0.98452824,-2.7905844e-007,-0.17539857};
 	};
 };
 binarizationWanted=0;
@@ -59,13 +59,14 @@ addons[]=
 	"CUP_WheeledVehicles_Ridgeback",
 	"CUP_WheeledVehicles_Jackal",
 	"CUP_TrackedVehicles_Bulldog",
-	"CUP_Creatures_Military_BAF"
+	"CUP_Creatures_Military_BAF",
+	"CUP_Creatures_Military_SLA"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=26;
+		items=27;
 		class Item0
 		{
 			className="CUP_Misc_e_Config";
@@ -226,6 +227,11 @@ class AddonsMetaData
 			className="CUP_Creatures_Military_BAF";
 			name="CUP_Creatures_Military_BAF";
 		};
+		class Item26
+		{
+			className="CUP_Creatures_Military_SLA";
+			name="CUP_Creatures_Military_SLA";
+		};
 	};
 };
 randomSeed=15127478;
@@ -246,7 +252,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -287,7 +293,7 @@ class CustomAttributes
 		};
 		nAttributes=1;
 	};
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -21501,7 +21507,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=97;
+		items=98;
 		class Item0
 		{
 			dataType="Object";
@@ -23528,7 +23534,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=6;
+				items=7;
 				class Item0
 				{
 					dataType="Object";
@@ -23890,11 +23896,97 @@ class Mission
 						nAttributes=2;
 					};
 				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4703.0679,29.855846,6206.4653};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=2352;
+					type="CUP_B_BAF_Soldier_RiflemanUnarmed_DDPM";
+				};
 			};
 			class Attributes
 			{
 			};
 			id=2317;
+		};
+		class Item97
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4704.7168,29.828526,6201.1089};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=2358;
+					type="CUP_O_sla_Officer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male02GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2357;
 		};
 	};
 };
