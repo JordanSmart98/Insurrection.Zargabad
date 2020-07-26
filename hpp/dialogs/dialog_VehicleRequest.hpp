@@ -78,5 +78,14 @@ class dialog_VehicleRequest
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
+		class Display : life_RscPicture
+        {
+            idc = 2903;
+            text = "";
+			x = 0.683;
+			y = 0.2 + (11 / 250);
+			w = 0.4;
+			h = 0.6 - (2 / 250);
+        };
 	};
 };

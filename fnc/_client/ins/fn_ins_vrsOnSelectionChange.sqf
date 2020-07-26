@@ -22,3 +22,4 @@ _trigger setTriggerStatements ["this", "_displayVehicle = player getVariable 'vr
 
 player setVariable ["vrsVehicle", _simpleVehicle];
 
+ctrlSetText[3003,(getText (configFile >> "CfgVehicles" >> _itemData >> "editorPreview"))];
