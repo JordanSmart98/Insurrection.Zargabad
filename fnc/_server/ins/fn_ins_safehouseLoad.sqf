@@ -13,6 +13,8 @@ private _fnc_CreateVehicle = {
     _obj allowDamage false;
     _obj attachTo [_centerObj, _attachToOffset];
     _obj setVectorDirAndUp [_vectorDirAndUp select 0, _vectorDirAndUp select 1];
+    [_obj, false, [3, -2, 2], 20] call ace_dragging_fnc_setDraggable;
+    [_obj, false, [0, 3, 1], 10] call ace_dragging_fnc_setCarryable;
     _arrayToDetach pushBack _obj;
     [_obj, _type] call server_fnc_ins_safehouseEquipment;
     _obj;

@@ -52,10 +52,10 @@ class cfgFunctions {
         class items {
             tag = "items";
             file = "fnc\_client\ins\itemShop\items";
+            class items_AceHeal;
             class items_Carbomb;
             class items_CarbombDetonate;
             class items_Roadblock;
-            class items_WeaponsCache;
             class items_Safehouse;
         };
     };
