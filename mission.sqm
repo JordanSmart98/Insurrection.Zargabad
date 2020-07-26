@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=43;
+		nextID=47;
 	};
 	class Camera
 	{
-		pos[]={4011.4053,88.78125,4126.4873};
-		dir[]={0.53473788,-0.74034965,-0.40766123};
-		up[]={0.5887472,0.67221922,-0.44883826};
-		aside[]={-0.60634291,-3.0540396e-006,-0.79535896};
+		pos[]={4707.521,33.910374,6199.3174};
+		dir[]={-0.10774887,-0.49589449,0.86167854};
+		up[]={-0.061530564,0.86838126,0.49206808};
+		aside[]={0.99227673,-1.4874968e-007,0.1240788};
 	};
 };
 binarizationWanted=0;
@@ -23516,7 +23516,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addAction[""<t color='#B570E8C9'> Loadout </t>"", { createDialog ""dialog_LoadoutRequest"" }]; }";
+				init="call{this addAction[""<t color='#B570E8C9'>Loadout</t>"", { createDialog ""dialog_LoadoutRequest"" },"""",6,true,false,"""",""(side player == west)""]; }";
 				name="loadoutShop";
 			};
 			id=2301;
