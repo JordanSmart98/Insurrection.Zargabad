@@ -67,7 +67,7 @@ clearMagazineCargo _crate;
 clearBackpackCargoGlobal _crate;
 switch(_type) do
 {
-    case "CUP_USSpecialWeapons_EP1":{["AmmoboxInit",[_crate, true]] spawn BIS_fnc_arsenal; _crate addAction["<t color='#B570E8C9'> Loadout </t>", { createDialog "dialog_LoadoutRequest" },"",6,true,false,"","(side player == civilian)"];};
+    case "CUP_USSpecialWeapons_EP1":{["AmmoboxInit",[_crate, true]] spawn BIS_fnc_arsenal; _crate addAction["<t color='#B570E8C9'>Loadout</t>", { createDialog "dialog_LoadoutRequest" },"",6,true,false,"","(side player == civilian)"];};
     case "Box_CSAT_Equip_F": {{_crate addItemCargoGlobal [_x select 0, _x select 1]}forEach _insAceEquipment};
     case "Box_CSAT_Uniforms_F": {{_crate addItemCargoGlobal [_x select 0, _x select 1]}forEach _insClothes};
 };
