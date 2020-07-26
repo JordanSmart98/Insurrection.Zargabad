@@ -10,6 +10,7 @@ clearBackpackCargoGlobal iedCache;
 clearMagazineCargoGlobal iedCache;
 
 //TODO REWORK -> SHOULD BE ABLE TO JUST PLACE THE CRATE AND IT GO THERE WITHOUT FUCKING EXPLODING
+//just delete this trash
 
 iedCache addItemCargoGlobal ["ACE_Cellphone", 40];
 iedCache addItemCargoGlobal ["CUP_IED_V4_M", 10];

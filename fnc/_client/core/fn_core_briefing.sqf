@@ -16,7 +16,7 @@ player createDiaryRecord ["INS_Diary", ["How to play", "1. The game ends when al
 sleep 5;
 if (serverCommandAvailable "#kick" || true) then
 {
-	_briefing ="
+	private _briefing ="
     <br/>
     <font size='18'>ADMIN SECTION</font><br/>
     This briefing section can only be seen by the current admin.

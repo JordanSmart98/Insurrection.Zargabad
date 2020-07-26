@@ -1,8 +1,6 @@
-private ["_target", "_preset"];
-_target = _this select 0;
-_preset = _this select 1;
+params ["_preset"];
 
-_BLUFORloadout1 = {
+private _BLUFORloadout1 = {
     private ["_target"];
     _target = _this select 0;
     hint "Rifleman Loadout Equiped";
@@ -39,6 +37,7 @@ _BLUFORloadout1 = {
     for "_i" from 1 to 2 do {_target addItemToUniform "ACE_packingBandage";};
     for "_i" from 1 to 2 do {_target addItemToUniform "ACE_morphine";};
     for "_i" from 1 to 2 do {_target addItemToUniform "ACE_tourniquet";};
+    for "_i" from 1 to 10 do {_target addItemToUniform "ACE_CableTie";};
     for "_i" from 1 to 9 do {_target addItemToVest "CUP_30Rnd_556x45_Stanag_L85";};
     for "_i" from 1 to 2 do {_target addItemToVest "CUP_17Rnd_9x19_glock17";};
     for "_i" from 1 to 3 do {_target addItemToVest "CUP_HandGrenade_L109A1_HE";};
@@ -54,7 +53,7 @@ _BLUFORloadout1 = {
 
 };
 
-_BLUFORloadout2 = {
+private _BLUFORloadout2 = {
     private ["_target"];
     _target = _this select 0;
     hint "Marksman Loadout Equiped";
@@ -100,6 +99,7 @@ _BLUFORloadout2 = {
     for "_i" from 1 to 3 do {_target addItemToVest "SmokeShell";};
     for "_i" from 1 to 3 do {_target addItemToVest "CUP_17Rnd_9x19_glock17";};
     for "_i" from 1 to 6 do {_target addItemToVest "CUP_20Rnd_762x51_L129_M";};
+    for "_i" from 1 to 10 do {_target addItemToVest "ACE_CableTie";};
     _target addHeadgear "CUP_H_BAF_DDPM_Mk6_NETTING_PRR";
 
     comment "Add items";
@@ -111,7 +111,7 @@ _BLUFORloadout2 = {
 
 };
 
-_BLUFORloadout3 = {
+private _BLUFORloadout3 = {
     private ["_target"];
     _target = _this select 0;
     hint "Demolition Loadout Equiped";
@@ -147,6 +147,7 @@ _BLUFORloadout3 = {
     _target addItemToUniform "ACE_packingBandage";
     _target addItemToUniform "ACE_morphine";
     _target addItemToUniform "ACE_tourniquet";
+    for "_i" from 1 to 10 do {_target addItemToUniform "ACE_CableTie";};
     _target addItemToVest "ACE_EarPlugs";
     _target addItemToVest "ACE_M26_Clacker";
     for "_i" from 1 to 5 do {_target addItemToVest "CUP_30Rnd_556x45_Stanag_L85";};
@@ -171,7 +172,7 @@ _BLUFORloadout3 = {
 
 };
 
-_INSloadout1  = {
+private _INSloadout1  = {
     private ["_target"];
     _target = _this select 0;
     hint "Gunner Loadout Equiped";
@@ -206,7 +207,7 @@ _INSloadout1  = {
 
 };
 
-_INSloadout2  = {
+private _INSloadout2  = {
     private ["_target"];
     _target = _this select 0;
     hint "Sniper Loadout Equiped";
@@ -246,7 +247,7 @@ _INSloadout2  = {
     _target linkItem "ItemRadio";
 };
 
-_INSloadout3  = {
+private _INSloadout3  = {
    private ["_target"];
    _target = _this select 0;
    hint "Rocketman Loadout Equiped";
@@ -290,40 +291,22 @@ _INSloadout3  = {
 switch (playerSide) do{
     case west:
     {
-         switch(_preset) do
-            {
-                case "1":
-                {
-                [player] call _BLUFORloadout1;
-                };
-                case "2":
-                {
-                [player] call _BLUFORloadout2;
-                };
-                case "3":
-                {
-                [player] call _BLUFORloadout3;
-                };
-            };
+        switch(_preset) do
+        {
+            case "1":{[player] call _BLUFORloadout1;};
+            case "2":{[player] call _BLUFORloadout2;};
+            case "3":{[player] call _BLUFORloadout3;};
+        };
     };
     case civilian:
+    {
+    	switch(_preset) do
         {
-        switch(_preset) do
-            {
-                case "1":
-                {
-                [player] call _INSloadout1;
-                };
-                case "2":
-                {
-                [player] call _INSloadout2;
-                };
-                case "3":
-                {
-                [player] call _INSloadout3;
-                };
-            };
+            case "1": {[player] call _INSloadout1;};
+            case "2": {[player] call _INSloadout2;};
+            case "3": {[player] call _INSloadout3;};
         };
+    };
 };
 
 
