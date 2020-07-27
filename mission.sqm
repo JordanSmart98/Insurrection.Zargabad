@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=53;
+		nextID=55;
 	};
 	class Camera
 	{
-		pos[]={4701.5903,33.910374,6191.2344};
-		dir[]={0.16743617,-0.29787135,0.93984133};
-		up[]={0.052247938,0.95460093,0.29327399};
-		aside[]={0.98452824,-2.7905844e-007,-0.17539857};
+		pos[]={4693.5439,84.145668,6180.0625};
+		dir[]={0.05432963,-0.85316348,0.51887465};
+		up[]={0.088845737,0.52165622,0.84851855};
+		aside[]={0.994596,5.9214653e-007,-0.10414111};
 	};
 };
 binarizationWanted=0;
@@ -59,14 +59,13 @@ addons[]=
 	"CUP_WheeledVehicles_Ridgeback",
 	"CUP_WheeledVehicles_Jackal",
 	"CUP_TrackedVehicles_Bulldog",
-	"CUP_Creatures_Military_BAF",
-	"CUP_Creatures_Military_SLA"
+	"CUP_Creatures_Military_BAF"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=27;
+		items=26;
 		class Item0
 		{
 			className="CUP_Misc_e_Config";
@@ -227,11 +226,6 @@ class AddonsMetaData
 			className="CUP_Creatures_Military_BAF";
 			name="CUP_Creatures_Military_BAF";
 		};
-		class Item26
-		{
-			className="CUP_Creatures_Military_SLA";
-			name="CUP_Creatures_Military_SLA";
-		};
 	};
 };
 randomSeed=15127478;
@@ -252,7 +246,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -293,7 +287,7 @@ class CustomAttributes
 		};
 		nAttributes=1;
 	};
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -21507,7 +21501,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=98;
+		items=97;
 		class Item0
 		{
 			dataType="Object";
@@ -21561,17 +21555,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4030.3474,16.192614,4101.061};
+						position[]={4030.3469,16.192636,4101.061};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						isPlayer=1;
 						isPlayable=1;
 					};
 					id=33;
 					type="CUP_C_TK_Man_04";
-					atlOffset=-5.7220459e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21794,7 +21788,6 @@ class Mission
 			{
 			};
 			id=32;
-			atlOffset=-5.7220459e-006;
 		};
 		class Item2
 		{
@@ -23534,7 +23527,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=7;
+				items=6;
 				class Item0
 				{
 					dataType="Object";
@@ -23549,7 +23542,7 @@ class Mission
 					{
 						skill=1;
 						description="Team Leader";
-						isPlayer=1;
+						isPlayable=1;
 					};
 					id=2316;
 					type="CUP_B_BAF_Soldier_Competitor_DDPM";
@@ -23896,97 +23889,11 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4703.0679,29.855846,6206.4653};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-					};
-					id=2352;
-					type="CUP_B_BAF_Soldier_RiflemanUnarmed_DDPM";
-				};
 			};
 			class Attributes
 			{
 			};
 			id=2317;
-		};
-		class Item97
-		{
-			dataType="Group";
-			side="East";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4704.7168,29.828526,6201.1089};
-					};
-					side="East";
-					flags=7;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=2358;
-					type="CUP_O_sla_Officer";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male02GRE";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=2357;
 		};
 	};
 };

@@ -13,7 +13,7 @@ while {count _selectedBuildings != _count + _amount} do
 		{
 			if ((_selectedBuildings pushBackUnique _randomBuilding) != -1) then
 			{
-                [typeOf _randomBuilding, getPos _randomBuilding, getDir _randomBuilding] call server_fnc_ins_safehouseLoad;
+                [_randomBuilding] call server_fnc_ins_safehouseLoad;
 			};
 		};
 	};
