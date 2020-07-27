@@ -5,6 +5,7 @@ allowFunctionsLog = 1;
 #include "hpp\cfgNotifications.hpp"
 #include "hpp\cfgSounds.hpp"
 #include "hpp\cfgParams.hpp"
+#include "hpp\cfgMusic.hpp"
 
 #include "hpp\dialogs\common.hpp"
 #include "hpp\dialogs\dialog_VehicleRequest.hpp"

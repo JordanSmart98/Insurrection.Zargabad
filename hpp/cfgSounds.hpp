@@ -69,11 +69,4 @@ class CfgSounds
 		sound[] = {"\sounds\effects\snd_effect_vigil2.ogg", 1.0, 1.0, 25};
 		titles[] = {0, ""};
 	};
-
-	class introMusic
-	{
-		name = "introMusic";
-		sound[] = {"\sounds\introMusic.ogg", 1.0, 1.0};
-		titles[] = {0, ""};
-	};
 };
