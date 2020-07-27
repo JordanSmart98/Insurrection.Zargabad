@@ -23,7 +23,7 @@ private _safehouseDataArray = missionNamespace getVariable["server_safehouseData
                     if ((side _x == west) && (isPlayer _x)) then
                     {
                         _x setVariable ["local_bluforMoney", ((_x getVariable ["local_bluforMoney", 0]) + 5000)];
-                        "<t font='PuristaBold' align='center' size='2' color='#28b858'>+$5000</t>" remoteExec ["client_fnc_core_displayStructuredText", _x];
+                        "<br/><t font='PuristaBold' align='center' size='2' color='#28b858'>+$5000</t>" remoteExec ["client_fnc_core_displayStructuredText", _x];
                     };
                 } forEach allPlayers;
             };

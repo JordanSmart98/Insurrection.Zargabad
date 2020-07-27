@@ -1,10 +1,10 @@
 private _objects = nearestObjects [player, ["LandVehicle"], 3.5];
-if (count _objects == 0) exitWith {["<t font='PuristaLight' align='center' size='1'>No valid vehicles in range</t>"] call client_fnc_core_displayStructuredText;};
+if (count _objects == 0) exitWith {"<br/><t font='PuristaMedium' align='center' size='1.5'>No valid vehicles</t>" call client_fnc_core_displayStructuredText;};
 
 [player, "AmovPercMstpSrasWpstDnon_AinvPknlMstpSnonWnonDnon", 1] call ace_common_fnc_doAnimation;
 private _statementOnSuccess = {
     params ["_params"];
-    ["<t font='PuristaMedium' align='center' size='2'>IED Armed</t>"] call client_fnc_core_displayStructuredText;
+    "<br/><t font='PuristaMedium' align='center' size='2'>IED Armed</t>" call client_fnc_core_displayStructuredText;
     [player, "snd_effect_carbomb"] call client_fnc_core_say3DMP;
 
     private _car = _params select 0;
@@ -18,7 +18,7 @@ private _statementOnSuccess = {
 };
 
 private _statementOnFailure = {
-    ["<t font='PuristaMedium' align='center' size='2'>Interrupted</t>"] call client_fnc_core_displayStructuredText;
+    "<br/><t font='PuristaBold' align='center' size='2'>Interrupted</t>" call client_fnc_core_displayStructuredText;
 };
 
 private _car = _objects select 0;

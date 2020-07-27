@@ -13,7 +13,6 @@ if (_playerMoney >= _itemValue) then
 {
     private _string = format["<t font='PuristaBold' align='center' size='2'>Purchased</t>
     <br/><t font='PuristaMedium' align='center' size='1.5' color='#FFA83B3B'>-%1$</t>", _itemValue];
-
     [_string] call client_fnc_core_displayStructuredText;
 
     player setVariable ["local_insMoney", _playerMoney - _itemValue, true];

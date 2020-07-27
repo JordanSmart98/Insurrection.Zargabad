@@ -28,7 +28,7 @@ _insPlayer addAction [ "Setup Roadblock",
 		
 		deleteVehicle _roadBlock;
 
-        ["<t font='PuristaBold' align='center' size='2'>Roadblock Placed</t>"] call client_fnc_core_displayStructuredText;
+        "<t font='PuristaMedium' align='center' size='2'>Roadblock Placed</t>" call client_fnc_core_displayStruacturedText;
 		[_insPlayer, 1, ["ACE_SelfActions", "INS_AceMenu", "INS_PlaceRoadblock"]] call ace_interact_menu_fnc_removeActionFromObject;
 	},
 	{
