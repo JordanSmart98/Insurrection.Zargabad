@@ -12,6 +12,6 @@ if (missionNamespace getVariable["server_safehouseCount", 0] != 0) then
     } forEach _safehouseArray;
 
     if (_closest < 10) then {createDialog "dialog_InsurgentItemShop";}
-    else {["<t font='PuristaMedium' align='center' size='1.5'>You must be at a safehouse</t>"] call client_fnc_core_displayStructuredText;};
+    else {"<t font='PuristaMedium' align='center' size='1.5'>You must be at a safehouse</t>" call client_fnc_core_displayStructuredText;};
 }
-else {["<t font='PuristaMedium' align='center' size='1.5'>You have no safehouses left</t>"] call client_fnc_core_displayStructuredText;}
+else {"<t font='PuristaMedium' align='center' size='1.5'>You have no safehouses left</t>" call client_fnc_core_displayStructuredText;}

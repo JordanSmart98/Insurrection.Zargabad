@@ -6,7 +6,7 @@ params ["_target", "_player", "_params"];
     _target = _params select 0;
 
     if (missionNamespace getVariable["server_safehouseCount", 0] <= 0) exitWith {
-        ["<t font='PuristaMedium' align='center' size='2'>No safehouse's</t>"] call client_fnc_core_displayStructuredText;
+        ["<t font='PuristaMedium' align='center' size='1.55'>All safehouse have been destroyed</t>"] call client_fnc_core_displayStructuredText;
     };
 
     private _safehouseArray = missionNamespace getVariable["server_safehouseArray", []];
@@ -34,5 +34,5 @@ params ["_target", "_player", "_params"];
     missionNamespace setVariable ["server_dickersCount", count _dickersArray, true];
 },
 {
-    ["<t font='PuristaBold' align='center' size='2'>Interrupted</t>"] call client_fnc_core_displayStructuredText;
+    "<br/><t font='PuristaBold' align='center' size='2'>Interrupted</t>" call client_fnc_core_displayStructuredText;
 }, "Interrogating"] call ace_common_fnc_progressBar;

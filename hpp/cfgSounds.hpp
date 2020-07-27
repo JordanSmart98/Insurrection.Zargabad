@@ -24,7 +24,7 @@ class CfgSounds
 	class snd_effect_phonedialing
 	{
 	    name = "snd_effect_phonedialing";
-	    sound[] = {"\sounds\effects\snd_effect_phonedialing.ogg", 0.5, 1.0, 25};
+	    sound[] = {"\sounds\effects\snd_effect_phonedialing.ogg", 0.5, 1.0, 15};
 	    titles[] = {0, ""};
 	}
 
@@ -67,27 +67,6 @@ class CfgSounds
 	{
 		name = "snd_effect_vigil2";
 		sound[] = {"\sounds\effects\snd_effect_vigil2.ogg", 1.0, 1.0, 25};
-		titles[] = {0, ""};
-	};
-
-	class introMusic
-	{
-		name = "introMusic";
-		sound[] = {"\sounds\introMusic.ogg", 1.0, 1.0};
-		titles[] = {0, ""};
-	};
-
-	class outroMusic
-	{
-		name = "outroMusic";
-		sound[] = {"\sounds\outroMusic.ogg", 1.0, 1.0};
-		titles[] = {0, ""};
-	};
-
-	class chapersMusic
-	{
-		name = "chapersMusic";
-		sound[] = {"\sounds\chapersMusic.ogg", 1.0, 1.0};
 		titles[] = {0, ""};
 	};
 };

@@ -5,7 +5,7 @@ class cfgNotifications
 		title = "SAFE START";
 		description = "%1";
 		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
-		duration = 5;
+		duration = 2;
 		priority = 0;
 	};
 
@@ -14,8 +14,8 @@ class cfgNotifications
 		title = "SAFE START";
 		description = "%1";
 		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
-		duration = 3;
-		priority = 1;
+		duration = 2;
+		priority = 0;
 	};
 
 	class CivilianKilled
@@ -33,15 +33,15 @@ class cfgNotifications
 		description = "%1";
 		iconPicture="\A3\ui_f\data\map\mapcontrol\taskIconCreated_ca.paa";
 		duration = 3;
-		priority = 1;
+		priority = 2;
 	};
 	
-	class VipSecured
+	class SafehouseDestroyed
 	{
-		title = "VIP SECURED";
+		title = "Safehouse Destryoed";
 		description = "%1";
 		iconPicture="\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
 		duration = 3;
-		priority = 1;
+		priority = 2;
 	};
 };

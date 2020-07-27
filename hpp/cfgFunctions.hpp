@@ -87,6 +87,7 @@ class cfgFunctions {
             class ins_safehouseEquipment;
             class ins_safehouseCreate;
             class ins_safehouseLoad;
+            class ins_safehouseEH;
 	    };
 	};
 };
