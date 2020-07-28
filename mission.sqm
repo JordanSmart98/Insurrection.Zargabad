@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=69;
+		nextID=73;
 	};
 	class Camera
 	{
-		pos[]={4072.179,138.06319,4261.3364};
-		dir[]={0.11001444,-0.87925005,0.46353939};
-		up[]={0.20303801,0.47635072,0.8554914};
-		aside[]={0.97299618,6.5728091e-007,-0.23092751};
+		pos[]={4174.165,138.06319,4173.4238};
+		dir[]={0.75690645,-0.6410169,-0.12745818};
+		up[]={0.63214821,0.76750034,-0.10644871};
+		aside[]={-0.16606024,4.4924673e-007,-0.98614174};
 	};
 };
 binarizationWanted=0;
@@ -5228,7 +5228,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=1;
+														value=2;
 													};
 												};
 												class Item1
@@ -10574,7 +10574,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=1;
+														value=4.75;
 													};
 												};
 												class Item1
@@ -12992,7 +12992,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=2.25;
+														value=1.5;
 													};
 												};
 												class Item1
@@ -13037,7 +13037,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=2.25;
+														value=1.5;
 													};
 												};
 												class Item1
@@ -13172,7 +13172,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=1;
+														value=0;
 													};
 												};
 												class Item1
@@ -13262,7 +13262,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=300;
+														value=1;
 													};
 												};
 												class Item1
@@ -14207,7 +14207,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=0;
+														value=1;
 													};
 												};
 												class Item1
