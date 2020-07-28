@@ -31,7 +31,7 @@ params ["_target", "_player", "_params"];
     _target setVariable["local_insDicker", 0, true];
     _target removeItem "ACE_Cellphone";
     missionNamespace setVariable ["server_dickersArray", _dickersArray, true];
-    missionNamespace setVariable ["server_dickersCount", count _dickersArray, true];
+    [] remoteExec["server_fnc_ins_dickersOnEventDeleted", 2];
 },
 {
     "<br/><t font='PuristaBold' align='center' size='2'>Interrupted</t>" call client_fnc_core_displayStructuredText;
