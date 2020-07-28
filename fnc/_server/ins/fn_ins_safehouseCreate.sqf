@@ -4,7 +4,7 @@ private _count = missionNamespace getVariable ["server_safehouseCount", 0];
 while {count _selectedBuildings != _count + _amount} do
 {
 	private _pos = "marker_1" call BIS_fnc_randomPosTrigger;
-	private _objBuildings = nearestObjects [_pos, ["Land_House_C_10_EP1", "Land_House_C_9_EP1", "Land_House_C_4_EP1", "Land_House_C_3_EP1"], 200];
+	private _objBuildings = nearestObjects [_pos, ["Land_House_C_10_EP1", "Land_House_C_9_EP1", "Land_House_C_4_EP1", "Land_House_C_3_EP1"], 175];
 	if (count _objBuildings > 0) then
 	{
 		private _randomBuilding = _objBuildings select 0;
