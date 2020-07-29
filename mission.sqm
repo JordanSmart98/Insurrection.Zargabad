@@ -8,7 +8,7 @@ class EditorData
 	toggles=553;
 	class ItemIDProvider
 	{
-		nextID=2361;
+		nextID=2363;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4737.0728,144.37994,6128.3174};
-		dir[]={-0.36754578,-0.8190847,0.44047093};
-		up[]={-0.52477479,0.57367128,0.6288957};
-		aside[]={0.76780444,2.8288923e-008,0.6406855};
+		pos[]={5151.6289,105.05434,-821.8717};
+		dir[]={-0.022790376,-0.90817553,0.41800764};
+		up[]={-0.04944187,0.41859263,0.90682852};
+		aside[]={0.99852973,-8.7369699e-007,0.054441888};
 	};
 };
 binarizationWanted=0;
@@ -21493,7 +21493,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=97;
+		items=95;
 		class Item0
 		{
 			dataType="Object";
@@ -23041,15 +23041,6 @@ class Mission
 		class Item70
 		{
 			dataType="Marker";
-			position[]={5159.1089,74.392998,-769.172};
-			name="marker_safespawn";
-			type="Empty";
-			id=670;
-			atlOffset=-0.00044250488;
-		};
-		class Item71
-		{
-			dataType="Marker";
 			position[]={4079.917,13.921,4156.5161};
 			name="marker_1";
 			markerType="RECTANGLE";
@@ -23063,7 +23054,7 @@ class Mission
 			id=817;
 			atlOffset=-2.708931;
 		};
-		class Item72
+		class Item71
 		{
 			dataType="Marker";
 			position[]={4037.1331,16.182251,4098.7681};
@@ -23074,7 +23065,7 @@ class Mission
 			id=1301;
 			atlOffset=-0.020828247;
 		};
-		class Item73
+		class Item72
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23115,7 +23106,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item74
+		class Item73
 		{
 			dataType="Marker";
 			position[]={4037.0032,16.182129,4115.2539};
@@ -23126,7 +23117,7 @@ class Mission
 			id=1303;
 			atlOffset=-0.0014133453;
 		};
-		class Item75
+		class Item74
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23143,7 +23134,7 @@ class Mission
 			type="Land_HBarrierBig_F";
 			atlOffset=7.6293945e-006;
 		};
-		class Item76
+		class Item75
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23160,7 +23151,7 @@ class Mission
 			type="CUP_B_L111A1_BAF_DDPM";
 			atlOffset=0.0011672974;
 		};
-		class Item77
+		class Item76
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23177,7 +23168,7 @@ class Mission
 			type="CUP_B_L111A1_BAF_DDPM";
 			atlOffset=0.0032310486;
 		};
-		class Item78
+		class Item77
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23194,7 +23185,7 @@ class Mission
 			type="CUP_B_Ridgback_LMG_GB_D";
 			atlOffset=-0.00012207031;
 		};
-		class Item79
+		class Item78
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23211,7 +23202,7 @@ class Mission
 			type="CUP_B_Ridgback_LMG_GB_D";
 			atlOffset=-0.0010547638;
 		};
-		class Item80
+		class Item79
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23228,7 +23219,7 @@ class Mission
 			type="CUP_B_Ridgback_LMG_GB_D";
 			atlOffset=0.00064277649;
 		};
-		class Item81
+		class Item80
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23245,7 +23236,7 @@ class Mission
 			type="CUP_B_Ridgback_LMG_GB_D";
 			atlOffset=-0.0010852814;
 		};
-		class Item82
+		class Item81
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23262,7 +23253,7 @@ class Mission
 			type="Land_HBarrierBig_F";
 			atlOffset=1.9073486e-006;
 		};
-		class Item83
+		class Item82
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23279,7 +23270,7 @@ class Mission
 			type="Land_HBarrierBig_F";
 			atlOffset=-1.9073486e-006;
 		};
-		class Item84
+		class Item83
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23296,7 +23287,7 @@ class Mission
 			type="Land_HBarrierBig_F";
 			atlOffset=-3.8146973e-006;
 		};
-		class Item85
+		class Item84
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23313,7 +23304,7 @@ class Mission
 			type="CUP_B_Jackal2_L2A1_GB_D";
 			atlOffset=-4.196167e-005;
 		};
-		class Item86
+		class Item85
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23330,7 +23321,7 @@ class Mission
 			type="CUP_B_Jackal2_L2A1_GB_D";
 			atlOffset=-0.00010299683;
 		};
-		class Item87
+		class Item86
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23347,7 +23338,7 @@ class Mission
 			type="CUP_B_Jackal2_L2A1_GB_D";
 			atlOffset=-6.6757202e-005;
 		};
-		class Item88
+		class Item87
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23364,7 +23355,7 @@ class Mission
 			type="CUP_B_Jackal2_L2A1_GB_D";
 			atlOffset=-0.00032424927;
 		};
-		class Item89
+		class Item88
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23381,21 +23372,7 @@ class Mission
 			type="CUP_B_FV432_GB_Ambulance";
 			atlOffset=0.0085525513;
 		};
-		class Item90
-		{
-			dataType="Layer";
-			name="Mosque";
-			id=1429;
-			atlOffset=-110.95;
-		};
-		class Item91
-		{
-			dataType="Layer";
-			name="Hasty Roadblock";
-			id=1437;
-			atlOffset=-110.95;
-		};
-		class Item92
+		class Item89
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23413,7 +23390,7 @@ class Mission
 			type="CUP_A1_Road_empty6";
 			atlOffset=1.9073486e-006;
 		};
-		class Item93
+		class Item90
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23431,7 +23408,7 @@ class Mission
 			id=2301;
 			type="AmmoCrate_NoInteractive_";
 		};
-		class Item94
+		class Item91
 		{
 			dataType="Group";
 			side="West";
@@ -23805,7 +23782,7 @@ class Mission
 			};
 			id=2317;
 		};
-		class Item95
+		class Item92
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23823,7 +23800,7 @@ class Mission
 			type="CUP_A1_Road_empty6";
 			atlOffset=1.9073486e-006;
 		};
-		class Item96
+		class Item93
 		{
 			dataType="Object";
 			class PositionInfo
@@ -23840,6 +23817,26 @@ class Mission
 			id=2360;
 			type="CUP_A1_Road_empty6";
 			atlOffset=-1.9073486e-006;
+		};
+		class Item94
+		{
+			dataType="Trigger";
+			position[]={4079.781,16.632673,4156.2622};
+			angle=1.5707964;
+			class Attributes
+			{
+				name="core_triggerViewDistance";
+				condition="call{this}";
+				onActivation="call{setViewDistance 1000;}";
+				onDeactivation="call{setViewDistance -1;}";
+				sizeA=350;
+				sizeB=350;
+				repeatable=1;
+				activationBy="ANYPLAYER";
+				isRectangle=1;
+			};
+			id=2362;
+			type="EmptyDetector";
 		};
 	};
 };
