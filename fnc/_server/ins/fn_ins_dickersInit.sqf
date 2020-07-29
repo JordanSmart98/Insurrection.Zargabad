@@ -11,7 +11,6 @@ _Popularity = 0;
 
 _CivCount = ({alive _x AND side _x == civilian} count allUnits);
 _DickerCount = round(_CivCount * (((_Popularity * 10) / 100) + 0.1));
-systemChat format["server_fnc_ins_dickersInit: Initalised %1 civs, creating %2 dickers.", _CivCount, _DickerCount];
 
 _dickersArray = [];
 while {count _dickersArray < _DickerCount} do

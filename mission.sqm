@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=57;
+		nextID=73;
 	};
 	class Camera
 	{
-		pos[]={4668.4248,249.04185,6125.6309};
-		dir[]={0.14080265,-0.89739323,0.41825542};
-		up[]={0.28631091,0.44124725,0.8504886};
-		aside[]={0.9477734,6.2829349e-007,-0.31906146};
+		pos[]={4174.165,138.06319,4173.4238};
+		dir[]={0.75690645,-0.6410169,-0.12745818};
+		up[]={0.63214821,0.76750034,-0.10644871};
+		aside[]={-0.16606024,4.4924673e-007,-0.98614174};
 	};
 };
 binarizationWanted=0;
@@ -5228,7 +5228,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=1;
+														value=2;
 													};
 												};
 												class Item1
@@ -10574,7 +10574,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=1;
+														value=4.75;
 													};
 												};
 												class Item1
@@ -12992,7 +12992,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=2.25;
+														value=1.5;
 													};
 												};
 												class Item1
@@ -13037,7 +13037,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=2.25;
+														value=1.5;
 													};
 												};
 												class Item1
@@ -13172,7 +13172,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=1;
+														value=0;
 													};
 												};
 												class Item1
@@ -13262,7 +13262,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=300;
+														value=1;
 													};
 												};
 												class Item1
@@ -14207,7 +14207,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=0;
+														value=1;
 													};
 												};
 												class Item1
@@ -23115,13 +23115,13 @@ class Mission
 		class Item73
 		{
 			dataType="Marker";
-			position[]={4036.6763,16.184448,4099.6821};
+			position[]={4037.1331,16.182251,4098.7681};
 			name="marker_26";
-			text="Civilian Car Shop";
+			text="Civilian Vehicles";
 			type="c_car";
 			colorName="ColorBlue";
 			id=1301;
-			atlOffset=-0.019931793;
+			atlOffset=-0.020828247;
 		};
 		class Item74
 		{
@@ -23167,13 +23167,13 @@ class Mission
 		class Item75
 		{
 			dataType="Marker";
-			position[]={4037.0032,16.183533,4115.2539};
+			position[]={4037.0032,16.182129,4115.2539};
 			name="marker_27";
 			text="Black Market Vehicles";
 			type="c_car";
 			colorName="ColorRed";
 			id=1303;
-			atlOffset=-9.5367432e-006;
+			atlOffset=-0.0014133453;
 		};
 		class Item76
 		{
