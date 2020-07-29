@@ -58,6 +58,11 @@ class cfgFunctions {
             class items_Roadblock;
             class items_Safehouse;
         };
+        class tunnels {
+            tag = "tunnels";
+            file = "fnc\_client\ins\tunnels";
+            class tunnels_placeTunnel;
+        };
     };
 	class server {
         class blufor {

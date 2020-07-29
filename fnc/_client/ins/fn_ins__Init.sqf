@@ -53,11 +53,12 @@ player addWeapon "ItemMap";
 openMap true;
 
 createDialog "dialog_InsurgentSelection";
-waitUntil {!((findDisplay 7000) isEqualTo displayNull)};
+waitUntil {((findDisplay 7000) isEqualTo displayNull)};
 (findDisplay 7000) displaySetEventHandler ["KeyDown", "if ((_this select 1) == 1 || (_this select 1) == 57 || (_this select 1) == 28) then { true }"];
-
+// Set money
 player setVariable ["local_insMoney", 10000, true];
 
+// Set random clothing for player
 private _playerUniform = _insClothes select round random ((count _insClothes)-1);
 [player, _playerUniform] remoteExec ["addUniform", 0];
 
@@ -74,11 +75,22 @@ if (_insHead findIf { face player == _x } == -1) then
     [player, _playerHead] remoteExec ["setFace", 0];
 };
 
+// Add INS Menu
 private _insActionMenu = ["INS_AceMenu","Insurrection Menu","hpp\images\insIcon.paa",{nil},{true}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], _insActionMenu] call ace_interact_menu_fnc_addActionToObject;
 
+// Add Itemshop to INS Menu
 private _hook = ["INS_ItemShop", "Item Shop", "hpp\images\insShop.paa", {call client_fnc_itemShop_openShop;}, {true}, {}, []] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "INS_AceMenu"], _hook] call ace_interact_menu_fnc_addActionToObject;
+
+// Add Tunnel Option to INS Menu if Osama
+// TODO Change Icon
+if (player getVariable "local_insSelected" == 1)then
+{
+    private _tunnelAction = ["INS_tunnelPlace", "Place Tunnel", "hpp\images\insIcon.paa", {call client_fnc_tunnels_placeTunnel;}, {true}, {}, []] call ace_interact_menu_fnc_createAction;
+    [player, 1, ["ACE_SelfActions", "INS_AceMenu"], _tunnelAction] call ace_interact_menu_fnc_addActionToObject;
+    player setVariable["local_insTunnelCount", 0, true];
+};
 
 [] spawn client_fnc_ins_markerManagerStatic;
 [] spawn client_fnc_ins_markerManagerDynamic;
