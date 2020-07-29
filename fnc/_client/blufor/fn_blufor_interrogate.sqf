@@ -27,7 +27,7 @@ params ["_target", "_player", "_params"];
     [_target, 0, ["ACE_MainActions", "BLU_Interrogate"]] call ace_interact_menu_fnc_removeActionFromObject;
 
     private _dickersArray = missionNamespace getVariable ["server_dickersArray", []];
-    _dickersArray = _dickersArray - [_target];
+    _dickersArray deleteAt (_dickersArray find _target);
     _target setVariable["local_insDicker", 0, true];
     _target removeItem "ACE_Cellphone";
     missionNamespace setVariable ["server_dickersArray", _dickersArray, true];

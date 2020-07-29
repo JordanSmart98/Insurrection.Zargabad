@@ -15,7 +15,7 @@ private _safehouseDataArray = missionNamespace getVariable["server_safehouseData
             private _safehouseIndex = _safehouseArray findIf {_x == _safehouse};
             if (_safehouseIndex != -1) then
             {
-                _safehouseArray = _safehouseArray - [_safehouse];
+                _safehouseArray deleteAt (_safehouseArray find _safehouse);
                 missionNamespace setVariable ["server_safehouseArray", _safehouseArray, true];
                 format["_local_safehousemarker_%1", _safehouseIndex] remoteExec ["deleteMarkerLocal", 0];
                 ["SafehouseDestroyed", ["A safehouse has been destroyed."]] remoteExec ["bis_fnc_showNotification", 0];
