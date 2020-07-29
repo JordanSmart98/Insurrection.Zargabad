@@ -1,10 +1,8 @@
-private["_Popularity", "_dickersArray", "_CivCount", "_randomCiv", "_potentialCivs", "_DickerCount"];
-
 _Popularity = 0;
 {
 	if (side _x == CIVILIAN && isPlayer _x) then
 	{
-		private _insPopularity = _x getVariable["local_insPopularity", 0];
+		private _insPopularity = _x getVariable["cl_insPop", 0];
 		_Popularity = _Popularity + _insPopularity;
 	};
 }forEach allPlayers; 
@@ -24,7 +22,7 @@ while {count _dickersArray < _DickerCount} do
 		{		
 			if (alive _potentialCiv AND side _potentialCiv == civilian AND !isPlayer _potentialCiv AND !(_potentialCiv in _dickersArray)) then
 			{
-				_potentialCiv setVariable["local_insDicker", 1, true];
+				_potentialCiv setVariable["cl_insDicker", 1, true];
 				_potentialCiv addEventHandler ["Deleted", {[] remoteExec["server_fnc_ins_dickersOnEventDeleted", 2];}];
 				_potentialCiv addItem "ACE_Cellphone";
 				_dickersArray pushBack _potentialCiv; //ADD MORE SHIT HERE FOR REGISTERING THESE CIVS AS DICKERS
@@ -33,6 +31,6 @@ while {count _dickersArray < _DickerCount} do
 	};
 };
 
-missionNamespace setVariable ["server_dickersArray", _dickersArray, true];
-missionNamespace setVariable ["server_dickersCount", count _dickersArray, true];
+missionNamespace setVariable ["svr_dickersArray", _dickersArray, true];
+missionNamespace setVariable ["svr_dickersCount", count _dickersArray, true];
 call server_fnc_ins_dickersBehaviourLoop;

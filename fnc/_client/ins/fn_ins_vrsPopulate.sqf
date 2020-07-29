@@ -61,4 +61,4 @@ private _vehicleList = switch (player getVariable ["local_insVSType", -1]) do
     lbSetData [3002, _itemIndex, _x select 0];
 }forEach _vehicleList;
 
-_Text_Fund ctrlSetText format["$%1", player getVariable ["local_insMoney", 0]];
+_Text_Fund ctrlSetText format["$%1", player getVariable ["cl_money", 0]];

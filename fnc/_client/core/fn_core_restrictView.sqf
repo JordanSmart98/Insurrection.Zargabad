@@ -2,7 +2,7 @@ switch (paramsArray select 2) do
 {
     case 1:
     {
-        while {(true)} do
+        while {sleep 0.1; true} do
         {
             if (cameraView == "External") then
             {
@@ -11,12 +11,11 @@ switch (paramsArray select 2) do
                     player switchCamera "Internal";
                 };
             };
-            sleep 0.1;
         };
     };
     case 2:
     {
-        while {(true)} do
+        while {sleep 0.1; true} do
         {
             if (cameraView == "External") then
             {
@@ -25,12 +24,11 @@ switch (paramsArray select 2) do
                     (vehicle player) switchCamera "Internal";
                 };
             };
-            sleep 0.1;
         };
     };
     case 3:
     {
-        while {(true)} do
+        while {sleep 0.1; true} do
         {
             if (cameraView == "External") then
             {
@@ -39,7 +37,6 @@ switch (paramsArray select 2) do
                     (vehicle player) switchCamera "Internal";
                 };
             };
-            sleep 0.1;
         };
     };
 };

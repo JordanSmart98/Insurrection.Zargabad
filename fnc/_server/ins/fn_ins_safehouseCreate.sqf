@@ -1,6 +1,6 @@
 params["_amount"];
-private _selectedBuildings = missionNamespace getVariable ["server_safehouseArray", []];
-private _count = missionNamespace getVariable ["server_safehouseCount", 0];
+private _selectedBuildings = missionNamespace getVariable ["svr_safehouseArray", []];
+private _count = missionNamespace getVariable ["svr_safehouseCount", 0];
 while {count _selectedBuildings != _count + _amount} do
 {
 	private _pos = "marker_1" call BIS_fnc_randomPosTrigger;
@@ -19,5 +19,5 @@ while {count _selectedBuildings != _count + _amount} do
 	};
 };
 
-missionNamespace setVariable ["server_safehouseArray", _selectedBuildings, true];
-missionNamespace setVariable ["server_safehouseCount", count _selectedBuildings, true];
+missionNamespace setVariable ["svr_safehouseArray", _selectedBuildings, true];
+missionNamespace setVariable ["svr_safehouseCount", count _selectedBuildings, true];

@@ -1,13 +1,29 @@
 params ["_killedUnit", "_killer", "_triggerMan"];
+
+switch (side _killedUnit) do
+{
+    case west:
+    {
+        if (_triggerMan isEqualTo west) exitWith {0};
+        if (_triggerMan isEqualTo civilian) exitWith {1};
+    };
+
+    case civilian:
+    {
+        if (_triggerMan isEqualTo civilian) exitWith {1};
+        if (_triggerMan isEqualTo west) exitWith {0};
+    };
+};
+
 if (side _killedUnit isEqualTo civilian AND !isPlayer _killedUnit) then
 {
-	private _isDicker = _killedUnit getVariable["local_insDicker", -1];
+	private _isDicker = _killedUnit getVariable["cl_insDicker", -1];
 	if (side _triggerMan isEqualTo west) then
 	{
-		private _civKillCounter = missionNamespace getVariable["server_civiliansKilled", 0];
+		private _civKillCounter = missionNamespace getVariable["svr_civiliansKilled", 0];
 		_civKillCounter = _civKillCounter + 1;
 		[["CivilianKilled",[format["%1 killed a civilian. %2", name _triggerMan, _civKillCounter]]],"bis_fnc_showNotification",true] call BIS_fnc_MP;
-		missionNamespace setVariable["server_civiliansKilled", _civKillCounter, true];
+		missionNamespace setVariable["svr_civiliansKilled", _civKillCounter, true];
 	};
 	
 	if (side _triggerMan isEqualTo civilian) then

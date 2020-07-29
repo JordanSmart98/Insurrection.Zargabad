@@ -1,4 +1,4 @@
-if (((player getVariable ["local_bluforLastScanTime", 0]) + 60) <= time) then
+if (((player getVariable ["cl_lastScan", 0]) + 60) <= time) then
 {
 	[] spawn
 	{
@@ -28,7 +28,7 @@ if (((player getVariable ["local_bluforLastScanTime", 0]) + 60) <= time) then
 			};
 		} forEach allPlayers;
 	};
-	player setVariable ["local_bluforLastScanTime", time, true];
+	player setVariable ["cl_lastScan", time, true];
 }
 else
 {

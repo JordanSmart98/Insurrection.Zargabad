@@ -2,9 +2,9 @@ private _staticMarkerList = [];
 private _staticMarkedObjects = [];
 while {true} do
 {
-    if (missionNamespace getVariable["server_safehouseCount", 0] != 0) then
+    if (missionNamespace getVariable["svr_safehouseCount", 0] != 0) then
     {
-        private _safehouseArray = missionNamespace getVariable["server_safehouseArray", []];
+        private _safehouseArray = missionNamespace getVariable["svr_safehouseArray", []];
         {
             if ((_staticMarkedObjects pushBackUnique _x) != -1) then
             {
@@ -17,5 +17,5 @@ while {true} do
         } forEach _safehouseArray;
     };
 
-    sleep 0.1;
+    sleep 1;
 };

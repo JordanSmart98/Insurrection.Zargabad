@@ -56,7 +56,7 @@ createDialog "dialog_InsurgentSelection";
 waitUntil {!((findDisplay 7000) isEqualTo displayNull)};
 (findDisplay 7000) displaySetEventHandler ["KeyDown", "if ((_this select 1) == 1 || (_this select 1) == 57 || (_this select 1) == 28) then { true }"];
 
-player setVariable ["local_insMoney", 10000, true];
+player setVariable ["cl_money", 10000, true];
 
 private _playerUniform = _insClothes select round random ((count _insClothes)-1);
 [player, _playerUniform] remoteExec ["addUniform", 0];
@@ -83,9 +83,9 @@ private _hook = ["INS_ItemShop", "Item Shop", "hpp\images\insShop.paa", {call cl
 [] spawn client_fnc_ins_markerManagerStatic;
 [] spawn client_fnc_ins_markerManagerDynamic;
 [] spawn {
-    waitUntil {missionNamespace getVariable["server_safehouseDataCount", 0] > 0};
+    waitUntil {missionNamespace getVariable["svr_safehouseDataCount", 0] > 0};
     sleep 1;
-    private _data = missionNamespace getVariable["server_safehouseData", []] select 0;
+    private _data = missionNamespace getVariable["svr_safehouseData", []] select 0;
     private _box = _data select 2;
     player attachTo [_box, [0, 0 ,0]];
     sleep 1;

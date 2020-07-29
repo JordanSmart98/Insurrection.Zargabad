@@ -17,7 +17,7 @@ private _insLoadoutList = [
 
 private _LoadoutList = switch (playerSide) do { case west: {_bluforLoadoutList;}; case civilian: {_insLoadoutList;}; };
 
-private _moneyLocalVariable = switch (playerSide) do { case west: {"local_bluforMoney";}; case civilian: {"local_insMoney";}; };
+private _moneyLocalVariable = switch (playerSide) do { case west: {"cl_money";}; case civilian: {"cl_money";}; };
 
 {
     private _displayName = _x select 0;
