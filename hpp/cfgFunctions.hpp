@@ -26,6 +26,7 @@ class cfgFunctions {
             class core_restrictView;
             class core_unflipVehicle;
             class core_unflipVehicleAddAction;
+            class core_vrsPopulate;
 
         };
         class ins {

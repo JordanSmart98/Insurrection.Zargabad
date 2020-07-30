@@ -2,7 +2,7 @@
 class MyDialog
 {
 	idd = 7900;
-	
+
 	class ControlsBackground
 	{
 		class BackgroundFrame
@@ -19,7 +19,7 @@ class MyDialog
 			colorText[] = {0,0,0,1};
 			font = "EtelkaNarrowMediumPro";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
-			
+
 		};
 		class Background
 		{
@@ -36,7 +36,7 @@ class MyDialog
 			font = "PuristaMedium";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			onLoad = "[] spawn client_fnc_core_vrsPopulate;";
-			
+
 		};
 		class EditorPreviewFrame
 		{
@@ -53,16 +53,16 @@ class MyDialog
 			font = "PuristaMedium";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			shadow = 1;
-			
+
 		};
-		
+
 	};
 	class Controls
 	{
 		class EditorPreview
 		{
 			type = 0;
-			idc = -1;
+			idc = 7900;
 			x = safeZoneX + safeZoneW * 0.29375;
 			y = safeZoneY + safeZoneH * 0.22444445;
 			w = safeZoneW * 0.17;
@@ -73,7 +73,7 @@ class MyDialog
 			colorText[] = {1,1,1,1};
 			font = "PuristaMedium";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
-			
+
 		};
 		class VehicleList
 		{
@@ -100,14 +100,14 @@ class MyDialog
 				arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
 				arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
 				border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-				
+
 			};
-			
+
 		};
 		class VehicleType
 		{
 			type = 4;
-			idc = -1;
+			idc = 7902;
 			x = safeZoneX + safeZoneW * 0.294375;
 			y = safeZoneY + safeZoneH * 0.42222223;
 			w = safeZoneW * 0.169375;
@@ -117,7 +117,7 @@ class MyDialog
 			arrowFull = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_active_ca.paa";
 			colorBackground[] = {0.2,0.2,0.2,0.75};
 			colorDisabled[] = {0.2,0.2,0.2,1};
-			colorSelect[] = {0,0,0,1};
+			colorSelect[] = {1,1,1,1};
 			colorSelectBackground[] = {0.102,0.102,0.102,0.25};
 			colorText[] = {1,1,1,1};
 			font = "PuristaBold";
@@ -138,12 +138,12 @@ class MyDialog
 			};
 
 		};
-		class Title1
+		class Title
 		{
 			type = 13;
-			idc = -1;
-			x = safeZoneX + safeZoneW * 0.466875;
-			y = safeZoneY + safeZoneH * 0.22888889;
+			idc = 7903;
+			x = safeZoneX + safeZoneW * 0.46875;
+			y = safeZoneY + safeZoneH * 0.22444445;
 			w = safeZoneW * 0.236875;
 			h = safeZoneH * 0.11555556;
 			style = 0;
@@ -158,9 +158,9 @@ class MyDialog
 				shadowColor = "#1a1a1a";
 
 			};
-			
+
 		};
-		
+
 	};
-	
+
 };
