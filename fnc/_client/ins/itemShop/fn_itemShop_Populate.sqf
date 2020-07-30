@@ -7,7 +7,7 @@ private _Text_Dickers = _display displayCtrl 4004;
 
 private _itemList = [
     ["Roadblock Kit", 250, "['INS_PlaceRoadblock', 'Place Roadblock', '', '[player] call client_fnc_items_RoadBlock;'] call client_fnc_itemShop_addAceAction;"],
-    ["Carbomb Kit", 500, "['INS_MountCarbomb', 'Mount Carbomb', '', 'call client_fnc_items_Carbomb;'] call client_fnc_itemShop_addAceAction;"],
+    ["Carbomb Kit", 500, "['INS_MountCarbomb', 'Mount Carbomb', 'hpp\images\insCarbombMount.paa', 'call client_fnc_items_Carbomb;'] call client_fnc_itemShop_addAceAction;"],
     ["Heal to full", 1000, "call client_fnc_items_AceHeal;"],
     ["Additonal Safehouse", 2000, "call client_fnc_items_Safehouse;"]
 ];
@@ -20,8 +20,9 @@ private _itemList = [
 
 _Text_Fund ctrlSetStructuredText parseText format["$%1", player getVariable["cl_money", 0]];
 
-private _safehouseArray = missionNamespace getVariable ["svr_safehouseCount", []];
-_Text_Safehouses ctrlSetStructuredText parseText format["%1", count _safehouseArray];
+private _safehouseCount = missionNamespace getVariable ["svr_safehouseCount", []];
+_Text_Safehouses ctrlSetStructuredText parseText format["%1", _safehouseArray];
 
 private _dickersArray = missionNamespace getVariable ["svr_dickersArray", []];
 _Text_Dickers ctrlSetStructuredText parseText format["%1", count _dickersArray];
+_safehouseArray

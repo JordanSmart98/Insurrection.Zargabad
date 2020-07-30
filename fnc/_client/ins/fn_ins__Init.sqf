@@ -88,7 +88,7 @@ private _hook = ["INS_ItemShop", "Item Shop", "hpp\images\insShop.paa", {call cl
 // TODO Change Icon
 if (player getVariable "cl_insChoice" == 1) then
 {
-    private _tunnelAction = ["INS_tunnelPlace", "Place Tunnel", "", {call client_fnc_abilities_tunnelPlace;}, {true}, {}, []] call ace_interact_menu_fnc_createAction;
+    private _tunnelAction = ["INS_tunnelPlace", "Place Tunnel", "hpp\images\insTunnel.paa", {call client_fnc_abilities_tunnelPlace;}, {true}, {}, []] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions", "INS_AceMenu"], _tunnelAction] call ace_interact_menu_fnc_addActionToObject;
     player setVariable["local_insTunnelCount", 0, true];
 };

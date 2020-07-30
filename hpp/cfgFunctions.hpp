@@ -20,7 +20,7 @@ class cfgFunctions {
             class core_briefing;
             class core_keyDownHandler;
             class core_displayStructuredText;
-            class core_loadouts;
+            class core_lrsLoadouts;
             class core_lrsPopulate;
             class core_lrsRequest;
             class core_restrictView;

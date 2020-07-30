@@ -8,6 +8,37 @@ class RscTitles
         duration = 0;
     }
 
+    class CHAPO_FACE
+    {
+        idd = 9021;
+        movingEnable = 0;
+        enableSimulation = 1;
+        enableDisplay = 1;
+        fadein = 5;
+        fadeout = 0;
+        duration = 9999;
+        name = "CHAPO_FACE";
+        onLoad = "with uiNameSpace do { CHAPO_FACE = _this select 0 }";
+        class Controls
+        {
+            class MRCHAPO
+            {
+                type = 0;
+                idc = 0;
+                x = safeZoneX + safeZoneW * 0.19375;
+                y = safeZoneY + safeZoneH * 0.00444445;
+                w = safeZoneW * 0.8125;
+                h = safeZoneH * 0.99;
+                style = 48;
+                text = "hpp\images\chap.paa";
+                colorBackground[] = {1,1,1,1};
+                colorText[] = {1,1,1,1};
+                font = "PuristaMedium";
+                sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+            };
+        };
+    };
+
     class Phone_HUD
     {
         idd = 1014;
@@ -49,8 +80,8 @@ class RscTitles
                 size = 0.018;
                 text = "";
             };
-        }
-    }
+        };
+    };
 
     class Insurrection_Message
     {
