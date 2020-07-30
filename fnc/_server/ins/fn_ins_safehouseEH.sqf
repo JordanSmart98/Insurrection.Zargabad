@@ -1,5 +1,4 @@
 params ["_unit", "_killer", "_instigator", "_useEffects"];
-diag_log "_EVENT_BOX_DESTROYED_";
 
 private _safehouse = _unit getVariable ["local_safehouse", objNull];
 private _safehouseDataArray = missionNamespace getVariable["svr_safehouseData", []];

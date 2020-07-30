@@ -1,31 +1,28 @@
-_Popularity = 0;
+private _Popularity = 0;
 {
-	if (side _x == CIVILIAN && isPlayer _x) then
-	{
-		private _insPopularity = _x getVariable["cl_insPop", 0];
-		_Popularity = _Popularity + _insPopularity;
-	};
+	if (side _x == civilian && isPlayer _x) then {_Popularity = _Popularity + (_x getVariable["cl_insPop", 0]);};
 }forEach allPlayers; 
 
-_CivCount = ({alive _x AND side _x == civilian} count allUnits);
-_DickerCount = round(_CivCount * (((_Popularity * 10) / 100) + 0.1));
+private _civCount = ({alive _x and side _x == civilian} count allUnits);
+private _dickerCount = round(_civCount * (((_Popularity * 10) / 100) + 0.1));
 
-_dickersArray = [];
-while {count _dickersArray < _DickerCount} do
+private _dickersArray = [];
+while {count _dickersArray < _dickerCount} do
 {
-	_potentialCivs = nearestObjects[getMarkerPos "marker_0", ["CAManBase"], 600];	
-	if (!isNil("_potentialCivs")) then
+	private _potentialCivs = nearestObjects[getMarkerPos "marker_0", ["CAManBase"], 600];
+	if (!isNil "_potentialCivs") then
 	{
-		_randomCiv = random count _potentialCivs;
+		private _randomCiv = random count _potentialCivs;
 		private _potentialCiv = _potentialCivs select _randomCiv;
-		if (!isNil("_potentialciv")) then
+		if (!isNil "_potentialciv") then
 		{		
-			if (alive _potentialCiv AND side _potentialCiv == civilian AND !isPlayer _potentialCiv AND !(_potentialCiv in _dickersArray)) then
+			if (alive _potentialCiv and side _potentialCiv == civilian and !isPlayer _potentialCiv and !(_potentialCiv in _dickersArray)) then
 			{
 				_potentialCiv setVariable["cl_insDicker", 1, true];
 				_potentialCiv addEventHandler ["Deleted", {[] remoteExec["server_fnc_ins_dickersOnEventDeleted", 2];}];
+				_potentialCiv addEventHandler ["Killed", {[] remoteExec["server_fnc_ins_dickersOnEventDeleted", 2];}];
 				_potentialCiv addItem "ACE_Cellphone";
-				_dickersArray pushBack _potentialCiv; //ADD MORE SHIT HERE FOR REGISTERING THESE CIVS AS DICKERS
+				_dickersArray pushBack _potentialCiv;
 			};
 		};
 	};

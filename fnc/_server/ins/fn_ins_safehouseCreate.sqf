@@ -1,4 +1,5 @@
 params["_amount"];
+
 private _selectedBuildings = missionNamespace getVariable ["svr_safehouseArray", []];
 private _count = missionNamespace getVariable ["svr_safehouseCount", 0];
 while {count _selectedBuildings != _count + _amount} do
