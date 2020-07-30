@@ -24,6 +24,8 @@ class cfgFunctions {
             class core_lrsPopulate;
             class core_lrsRequest;
             class core_restrictView;
+            class core_unflipVehicle;
+            class core_unflipVehicleAddAction;
 
         };
         class ins {
@@ -71,7 +73,6 @@ class cfgFunctions {
             class blufor__Init;
         };
 	    class core {
-            tag = "core";
             file = "fnc\_server\core";
             class core_mE_entityKilled;
             class core_mE_aceCaptiveStatus;
