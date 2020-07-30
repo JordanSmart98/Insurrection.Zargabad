@@ -7,8 +7,7 @@ ScriptFnc = {
     detach _tunnel;
     [player, "AmovPercMstpSrasWpstDnon_AinvPknlMstpSnonWnonDnon", 1] call ace_common_fnc_doAnimation;
 
-    [2,
-    [_actionId, _tunnel], // arguments
+    [2,[_actionId, _tunnel],
     {
         params ["_params"];
         _actionId = _params select 0;
@@ -38,9 +37,8 @@ ScriptFnc = {
         _tunnel = _params select 1;
         deleteVehicle _tunnel;
         ["ace_common_displayTextStructured", ["<t size='1.5'>Interrupted</t>", 2, player], [player]] call CBA_fnc_targetEvent;
-    }, // script on fail
-    "Building" // localised title
-    ] call ace_common_fnc_progressBar;
+    },
+    "Building"] call ace_common_fnc_progressBar;
 };
 
 
