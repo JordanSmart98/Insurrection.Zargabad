@@ -1,11 +1,12 @@
 params["_insPlayer"];
 
+[] remoteExec ["addAction", 0, true];
+
 private _tunnel = "Land_KBud" createVehicle position _insPlayer;
 _tunnel attachTo [_insPlayer, [0, 3, 0], "Pelvis"];
 
 // Place Tunnel Action
-_insPlayer addAction
-    [
+[
     "Setup tunnel", // title
     {
         params ["_target", "_insPlayer", "_actionId", "_arguments"];
@@ -90,5 +91,5 @@ _insPlayer addAction
     false,		// unconscious
     "",			// selection
      ""			// memoryPoint
-    ];
+    ]remoteExec ["addAction", 0, true];
 
