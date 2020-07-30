@@ -2,9 +2,9 @@ private _staticMarkerList = [];
 private _staticMarkedObjects = [];
 while {true} do
 {
-    if (missionNamespace getVariable["server_bluforIntelCount", 0] != 0) then
+    if (missionNamespace getVariable["svr_bluforIntelCount", 0] != 0) then
     {
-        private _intelArray = missionNamespace getVariable["server_bluforIntelArray", []];
+        private _intelArray = missionNamespace getVariable["svr_bluforIntelArray", []];
         {
             if ((_staticMarkedObjects pushBackUnique _x) != -1) then
             {
@@ -16,5 +16,5 @@ while {true} do
         } forEach _intelArray;
     };
 
-    sleep 0.1;
+    sleep 1;
 };

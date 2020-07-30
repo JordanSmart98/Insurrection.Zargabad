@@ -4,7 +4,7 @@
 	while {true} do 
 	{
 		private ["_dickersArray", "_Dicker", "_CloseBluforPlayer", "_LastDistance", "_CurrentDistance"];
-		_dickersArray = missionNamespace getVariable "server_dickersArray";
+		_dickersArray = missionNamespace getVariable "svr_dickersArray";
 		if (!isNil "_dickersArray") then
 		{
 			{
@@ -29,10 +29,10 @@
 				}
 				else
 				{
-					private _LastDetection = _Dicker getVariable["local_dickerLastDetection", 0];
+					private _LastDetection = _Dicker getVariable["cl_lastDetect", 0];
 					if (_LastDetection + (DETECTION_COOLDOWN + (random 10)) < time) then
 					{
-						_Dicker setVariable ["local_dickerLastDetection", time, true];
+						_Dicker setVariable ["cl_lastDetect", time, true];
 						_Dicker disableAI "move";
 						_Dicker lookAt _CloseBluforPlayer;
 						[_Dicker, "AinvPercMstpSnonWnonDnon_G01"] remoteExec ["switchMove", 0, true];
@@ -42,29 +42,20 @@
 						private _TimeSecond = floor (((((daytime) - (_TimeHour))*60) - _TimeMinute)*60);
 						private _Time24 = text format ["%1:%2:%3", _TimeHour, _TimeMinute, _TimeSecond];
 												
-						private _markerArray = missionNamespace getVariable["server_dickerSpottedArray", []];
-						private _markerArrayCount = missionNamespace getVariable["server_dickerSpottedCount", 0];
-						if (_markerArrayCount == 0) then
+						private _markerArray = missionNamespace getVariable["svr_dickerSpottedArray", []];
+						private _markerArrayCount = missionNamespace getVariable["svr_dickerSpotC", 0];
+						if (_markerArrayCount == 0 || _markerArrayCount <= 4) then
 						{
 							_markerArray pushBack [_CloseBluforPlayer, _Time24, (position _CloseBluforPlayer)];
-							missionNamespace setVariable["server_dickerSpottedArray", _markerArray, true];
-							missionNamespace setVariable["server_dickerSpottedCount", count _markerArray, true];
+							missionNamespace setVariable["svr_dickerSpottedArray", _markerArray, true];
+							missionNamespace setVariable["svr_dickerSpotC", count _markerArray, true];
 						}
 						else
 						{
-							if (_markerArrayCount > 4) then
-							{
-								_markerArray deleteAt 0;
-								_markerArray pushBack [_CloseBluforPlayer, _Time24, (position _CloseBluforPlayer)];
-								missionNamespace setVariable["server_dickerSpottedArray", _markerArray, true];
-							    missionNamespace setVariable["server_dickerSpottedCount", count _markerArray, true];
-							}
-							else
-							{
-								_markerArray pushBack [_CloseBluforPlayer, _Time24, (position _CloseBluforPlayer)];
-								missionNamespace setVariable["server_dickerSpottedArray", _markerArray, true];
-								missionNamespace setVariable["server_dickerSpottedCount", count _markerArray, true];
-							};
+                            _markerArray deleteAt 0;
+                            _markerArray pushBack [_CloseBluforPlayer, _Time24, (position _CloseBluforPlayer)];
+                            missionNamespace setVariable["svr_dickerSpottedArray", _markerArray, true];
+                            missionNamespace setVariable["svr_dickerSpotC", count _markerArray, true];
 						};
 					};
 				};

@@ -4,7 +4,7 @@ private _roadBlock = "Land_Canal_Wall_10m_F" createVehicle position _insPlayer;
 _roadBlock attachTo [_insPlayer, [0, 3, -3.1], "Pelvis"];
 _roadBlock setDir 180;
 
-_insPlayer addAction [ "Setup Roadblock",
+_insPlayer addAction ["Setup Roadblock",
 {		
 	params ["_target", "_insPlayer", "_actionId", "_arguments"];
 	
@@ -37,7 +37,7 @@ _insPlayer addAction [ "Setup Roadblock",
 		_roadBlock = _params select 2;
 		
 		deleteVehicle _roadBlock;
-		["ace_common_displayTextStructured", ["<t size='1.5'>Interrupted</t>", 2, _insPlayer], [_insPlayer]] call CBA_fnc_targetEvent;
+		"<br/><t font='PuristaBold' align='center' size='2'>Interrupted</t>" call client_fnc_core_displayStructuredText;
 	}, "Building"] call ace_common_fnc_progressBar;
 },
 [_roadBlock],

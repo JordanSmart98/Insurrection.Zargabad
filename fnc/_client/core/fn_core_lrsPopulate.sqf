@@ -16,9 +16,6 @@ private _insLoadoutList = [
 ];
 
 private _LoadoutList = switch (playerSide) do { case west: {_bluforLoadoutList;}; case civilian: {_insLoadoutList;}; };
-
-private _moneyLocalVariable = switch (playerSide) do { case west: {"local_bluforMoney";}; case civilian: {"local_insMoney";}; };
-
 {
     private _displayName = _x select 0;
     private _itemIndex = lbAdd [5002, _displayName + format[": %1$", _x select 1] ];
@@ -26,4 +23,4 @@ private _moneyLocalVariable = switch (playerSide) do { case west: {"local_blufor
     lbSetData [5002, _itemIndex, _x select 0];
 }forEach _LoadoutList;
 
-_Text_Fund ctrlSetText format["$%1", player getVariable [_moneyLocalVariable, 0]];
+_Text_Fund ctrlSetText format["$%1", player getVariable ["cl_money", 0]];

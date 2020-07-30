@@ -1,6 +1,6 @@
 params["_x1", "_y1", "_z1"];
 private _pos = [_x1, _y1, _z1];
-if (missionNamespace getVariable["server_missionTimer", 0] > 0) then
+if (missionNamespace getVariable["svr_missionTimer", 0] > 0) then
 {
 	if (_pos inArea civ_triggerPlayArea) then
 	{

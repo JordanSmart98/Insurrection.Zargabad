@@ -36,11 +36,11 @@ private _obj2 = [_building, "Box_CSAT_Equip_F", _centerObj, _dataArrays select 3
 private _obj3 = [_building, "Box_CSAT_Uniforms_F", _centerObj, _dataArrays select 5, _dataArrays select 6] call _fnc_CreateVehicle;
 
 private _safehouseData = [_building, _obj1, _obj2, _obj3];
-private _safehouseDataArray = missionNamespace getVariable["server_safehouseData", []];
+private _safehouseDataArray = missionNamespace getVariable["svr_safehouseData", []];
 _safehouseDataArray pushBackUnique _safehouseData;
 
-missionNamespace setVariable["server_safehouseData", _safehouseDataArray, true];
-missionNamespace setVariable["server_safehouseDataCount", count _safehouseDataArray, true];
+missionNamespace setVariable["svr_safehouseData", _safehouseDataArray, true];
+missionNamespace setVariable["svr_safehouseDataCount", count _safehouseDataArray, true];
 
 _centerObj setPos (getPos _building);
 _centerObj setDir (getDir _building);
