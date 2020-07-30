@@ -15,5 +15,5 @@ if (_playerMoney >= _itemValue) then
 
 	player setVariable [_moneyLocalVariable, _playerMoney - _itemValue, true];
 
-    [str(_itemIndex + 1)] call client_fnc_core_loadouts;
+    [str(_itemIndex + 1)] call client_fnc_core_lrsLoadouts;
 };

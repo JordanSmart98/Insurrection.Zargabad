@@ -13,6 +13,7 @@ allowFunctionsLog = 1;
 #include "hpp\dialogs\dialog_InsurgentVehicleRequest.hpp"
 #include "hpp\dialogs\dialog_InsurgentSelection.hpp"
 #include "hpp\dialogs\dialog_InsurgentItemShop.hpp"
+#include "hpp\dialogs\dialog_VechicleRS.hpp"
 #include "hpp\dialogs\RscTitles.hpp"
 
 #include "compositions\compositions.cfg"

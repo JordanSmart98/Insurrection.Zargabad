@@ -62,5 +62,5 @@ private _modifierFunc = {
 };
 
 private _randomId = round random[0, 50, 100];
-private _hook = ["INS_DetonateCarbomb" + str _randomId, "_", "", _statement, {true}, {}, [_car, _randomId], "", 1, [false, false, false, false, false], _modifierFunc] call ace_interact_menu_fnc_createAction;
+private _hook = ["INS_DetonateCarbomb" + str _randomId, "_", "hpp\images\insCarbombMount.paa", _statement, {true}, {}, [_car, _randomId], "", 1, [false, false, false, false, false], _modifierFunc] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "INS_AceMenu"], _hook] call ace_interact_menu_fnc_addActionToObject;
