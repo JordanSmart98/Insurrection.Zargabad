@@ -97,11 +97,10 @@ if (player getVariable "cl_insChoice" == 1) then
 [] spawn client_fnc_ins_markerManagerDynamic;
 [] spawn {
     waitUntil {missionNamespace getVariable["svr_safehouseDataCount", 0] > 0};
-    sleep 1;
     private _data = missionNamespace getVariable["svr_safehouseData", []] select 0;
     private _box = _data select 2;
     player attachTo [_box, [0, 0 ,0]];
-    sleep 1;
+    sleep 0.25;
     detach player;
     waitUntil { not visibleMap };
     ["Zargabad","Kandahar Region", format["%1/%2/%3", date select 2, date select 1, date select 0]] spawn BIS_fnc_infoText;

@@ -114,14 +114,14 @@ class dialog_InsurgentSelection
 			w = safeZoneW * 0.16625;
 			h = safeZoneH * 0.48666667;
 			style = 0;
-			text = "<t size=2 shadow='2' font='Bitstream' align='center'>Osama Bin Laden</t><br/><br/><t font='PuristaLight' >Lead the people of Zargabadd through a holy Jihad against the infidles.</t><br/><br/><t size='1' font='Caveat' align='left'>Dickers: 40%<br/>Carbomb Range: 500m</t>";
+			text = "<t size=2 shadow='2' font='Bitstream' align='center'>Osama Bin Laden</t><br/><br/><t font='PuristaLight' >Lead the people of Zargabadd through a holy Jihad against the infidles.</t><br/><br/><t size ='1' font='RobotoCondensed' align='left'>Placeable Tunnel</t><br/><br/><t size='1' font='Caveat' align='left'>Dickers: 40%<br/>Carbomb Range: 500m</t>";
 			size = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			colorBackground[] = {1,1,1,0};
 			class Attributes
 			{
 				
 			};
-			
+
 		};
 		class Insurgent2Brief
 		{
