@@ -1,7 +1,9 @@
-waitUntil {!isNull (findDisplay 2900)};
+waitUntil {!isNull (findDisplay 7900)};
 disableSerialization;
-private _display = findDisplay 2900;
-private _Text_Fund = _display displayCtrl 2901;
+private _display = findDisplay 7900;
+//private _Editor_Preview = _display displayCtrl 7900;
+private _List_Vehicles = _display displayCtrl 7901;
+private _Combo_List = _display displayCtrl 7902;
 
 private _bluforAirVehicleList = [
     ["CUP_B_MH6J_USA", 1000],
@@ -42,17 +44,22 @@ private _bluforLandVehicleList = [
     ["CUP_B_MCV80_GB_D_SLAT", 6000]
 ];
 
-private _vehicleList = switch (player getVariable ["local_bluforVSType", -1]) do
-{
-    case 1: {_bluforAirVehicleList;};
-    case 2: {_bluforLandVehicleList};
-};
-
 {
     private _displayName = getText (configFile >> "CfgVehicles" >> _x select 0 >> "displayName");
-    private _itemIndex = lbAdd [2902, format["$%1: ", _x select 1] + _displayName];
-    lbSetValue [2902, _itemIndex, _x select 1];
-    lbSetData [2902, _itemIndex, _x select 0];
-}forEach _vehicleList;
+    private _itemIndex = lbAdd [7901, format["$%1: ", _x select 1] + _displayName];
+    lbSetValue [7901, _itemIndex, _x select 1];
+    lbSetData [7901, _itemIndex, _x select 0];
+}forEach _bluforLandVehicleList;
 
-_Text_Fund ctrlSetText format["$%1", player getVariable ["cl_money", 0]];
+private _shops = [
+    "Black Market Vehicles",
+    "Civilian Vehicles",
+    "Land Vehicles",
+    "Air Vehicles"
+];
+
+{
+    private _itemIndex = lbAdd [7902, _x];
+}forEach _shops;
+
+//_Text_Fund ctrlSetText format["$%1", player getVariable ["cl_money", 0]];
