@@ -5,14 +5,14 @@ private _itemIndex = lbCurSel 2902;
 private _itemValue = lbValue [2902, _itemIndex];
 private _itemData = lbData [2902, _itemIndex];
 
-private _playerMoney = player getVariable["local_bluforMoney", 0];
+private _playerMoney = player getVariable["cl_money", 0];
 if (_playerMoney >= _itemValue) then
 {
     private _string = format["<t font='PuristaBold' align='center' size='2'>Purchased</t>
     <br/><t font='PuristaMedium' align='center' size='1.5' color='#FFA83B3B'>-%1$</t>", _itemValue];
     [_string] call client_fnc_core_displayStructuredText;
 
-	player setVariable ["local_bluforMoney", _playerMoney - _itemValue, true];
+	player setVariable ["cl_money", _playerMoney - _itemValue, true];
 
 	private _displayVehicle = player getVariable ["vrsVehicle", objNull];
 	if (!(isNull _displayVehicle)) then {deleteVehicle _displayVehicle};

@@ -18,10 +18,10 @@ private _itemList = [
     lbSetData [4001, _itemIndex, _x select 2];
 }forEach _itemList;
 
-_Text_Fund ctrlSetStructuredText parseText format["$%1", player getVariable["local_insMoney", 0]];
+_Text_Fund ctrlSetStructuredText parseText format["$%1", player getVariable["cl_money", 0]];
 
-private _safehouseArray = missionNamespace getVariable ["server_insSafehouseMarkers", []];
+private _safehouseArray = missionNamespace getVariable ["svr_safehouseCount", []];
 _Text_Safehouses ctrlSetStructuredText parseText format["%1", count _safehouseArray];
 
-private _dickersArray = missionNamespace getVariable ["server_dickersArray", []];
+private _dickersArray = missionNamespace getVariable ["svr_dickersArray", []];
 _Text_Dickers ctrlSetStructuredText parseText format["%1", count _dickersArray];

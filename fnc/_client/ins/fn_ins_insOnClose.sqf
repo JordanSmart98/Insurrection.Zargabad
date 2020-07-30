@@ -1,5 +1,5 @@
 disableSerialization;
-if (player getVariable["local_insSelected", 0] == 0) then
+if (player getVariable["cl_insChoice", 0] == 0) then
 {
     createDialog "dialog_InsurgentSelection";
     waitUntil {!((findDisplay 7000) isEqualTo displayNull)};

@@ -5,7 +5,7 @@ private _statement = {
     {
         params ["_target", "_player", "_actionParams"];
         private _car = _actionParams select 0;
-        private _activationRange = switch (_player getVariable["local_insSelected", 0]) do
+        private _activationRange = switch (_player getVariable["cl_insChoice", 0]) do
         {
             case 1: {500};
             case 2: {1000};

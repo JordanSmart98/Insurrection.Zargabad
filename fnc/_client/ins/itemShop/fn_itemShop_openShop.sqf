@@ -1,7 +1,7 @@
-if (missionNamespace getVariable["server_safehouseCount", 0] != 0) then
+if (missionNamespace getVariable["svr_safehouseCount", 0] != 0) then
 {
     private _closest = -1;
-    private _safehouseArray = missionNamespace getVariable["server_safehouseArray", []];
+    private _safehouseArray = missionNamespace getVariable["svr_safehouseArray", []];
     {
         private _dist = _x distance2D player;
         if (_closest > 0) then

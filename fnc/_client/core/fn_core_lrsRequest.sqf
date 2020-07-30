@@ -4,7 +4,7 @@ disableSerialization;
 private _itemIndex = lbCurSel 5002;
 private _itemValue = lbValue [5002, _itemIndex];
 
-private _moneyLocalVariable = switch (playerSide) do{case west: {"local_bluforMoney";};case civilian: {"local_insMoney";};};
+private _moneyLocalVariable = switch (playerSide) do{case west: {"cl_money";};case civilian: {"cl_money";};};
 private _playerMoney = player getVariable[_moneyLocalVariable, 0];
 
 if (_playerMoney >= _itemValue) then
