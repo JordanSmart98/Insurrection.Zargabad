@@ -53,8 +53,9 @@ player addWeapon "ItemMap";
 openMap true;
 
 createDialog "dialog_InsurgentSelection";
-waitUntil {((findDisplay 7000) isEqualTo displayNull)};
+waitUntil {!((findDisplay 7000) isEqualTo displayNull)}; //Ensure the display is on screen, then prevent it from being accidentally closed.
 (findDisplay 7000) displaySetEventHandler ["KeyDown", "if ((_this select 1) == 1 || (_this select 1) == 57 || (_this select 1) == 28) then { true }"];
+waitUntil {(findDisplay 7000) isEqualTo displayNull}; //Wait until the display is closed.
 
 player setVariable ["cl_money", 10000, true];
 
@@ -85,9 +86,9 @@ private _hook = ["INS_ItemShop", "Item Shop", "hpp\images\insShop.paa", {call cl
 
 // Add Tunnel Option to INS Menu if Osama
 // TODO Change Icon
-if (player getVariable "local_insSelected" == 1)then
+if (player getVariable "cl_insChoice" == 1) then
 {
-    private _tunnelAction = ["INS_tunnelPlace", "Place Tunnel", "hpp\images\insIcon.paa", {call client_fnc_tunnels_placeTunnel;}, {true}, {}, []] call ace_interact_menu_fnc_createAction;
+    private _tunnelAction = ["INS_tunnelPlace", "Place Tunnel", "", {call client_fnc_abilities_tunnelPlace;}, {true}, {}, []] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions", "INS_AceMenu"], _tunnelAction] call ace_interact_menu_fnc_addActionToObject;
     player setVariable["local_insTunnelCount", 0, true];
 };
