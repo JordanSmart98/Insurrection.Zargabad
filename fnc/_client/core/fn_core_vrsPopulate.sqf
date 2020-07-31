@@ -1,13 +1,4 @@
-<<<<<<< Updated upstream
-waitUntil {!isNull (findDisplay 2900)};
-disableSerialization;
-private _display = findDisplay 2900;
-private _Text_Fund = _display displayCtrl 2901;
-
-private _bluforAirVehicleList = [
-=======
 BluforAirVL = [
->>>>>>> Stashed changes
     ["CUP_B_MH6J_USA", 1000],
     ["CUP_O_UH1H_SLA", 1000],
     ["CUP_B_AW159_Unarmed_RN_Blackcat", 1000],
@@ -46,13 +37,6 @@ BluforLandVL = [
     ["CUP_B_MCV80_GB_D_SLAT", 6000]
 ];
 
-<<<<<<< Updated upstream
-private _vehicleList = switch (player getVariable ["local_bluforVSType", -1]) do
-{
-    case 1: {_bluforAirVehicleList;};
-    case 2: {_bluforLandVehicleList};
-};
-=======
 insCivVL = [
     ["CUP_C_Lada_GreenTK_CIV", 200],
     ["CUP_C_Lada_TK2_CIV", 200],
@@ -98,7 +82,6 @@ insBlackmarketVL = [
     ["CUP_I_Ural_ZU23_TK_Gue", 6000],
     ["CUP_I_Hilux_zu23_TK", 6000]
 ];
->>>>>>> Stashed changes
 
 waitUntil {!isNull (findDisplay 7900)};
 disableSerialization;
@@ -111,15 +94,6 @@ _Text_PlayerMoney ctrlSetStructuredText parseText format["<t font='EtelkaMonospa
 
 private _curVehicleArray = switch (playerSide) do
 {
-<<<<<<< Updated upstream
-    private _displayName = getText (configFile >> "CfgVehicles" >> _x select 0 >> "displayName");
-    private _itemIndex = lbAdd [2902, format["$%1: ", _x select 1] + _displayName];
-    lbSetValue [2902, _itemIndex, _x select 1];
-    lbSetData [2902, _itemIndex, _x select 0];
-}forEach _vehicleList;
-
-_Text_Fund ctrlSetText format["$%1", player getVariable ["cl_money", 0]];
-=======
     case west:
     {
         private _itemIndex = lbAdd [7902, "Land Vehicles"];
@@ -146,8 +120,7 @@ _Text_Fund ctrlSetText format["$%1", player getVariable ["cl_money", 0]];
     };
 };
 
-
-_List_Vehicles = _display displayCtrl 7901;
+private _List_Vehicles = _display displayCtrl 7901;
 {
     private _displayName = getText (configFile >> "CfgVehicles" >> _x select 0 >> "displayName");
     private _displayIcon = getText(configFile >> "cfgVehicles" >> _x select 0 >> "picture");
@@ -159,4 +132,3 @@ _List_Vehicles = _display displayCtrl 7901;
     _List_Vehicles lbSetPictureRightColorSelected[_itemIndex, [1,1,1,1]];
 } forEach _curVehicleArray;
 lbSortByValue _List_Vehicles;
->>>>>>> Stashed changes

@@ -45,7 +45,7 @@ class dialog_InsurgentItemShop
 			w = safeZoneW * 0.188125;
 			h = safeZoneH * 0.25555556;
 			style = 48;
-			text = "hpp\images\flag.paa";
+			text = "hpp\images\coreDialogFlag.paa";
 			colorBackground[] = {0,0,0,0};
 			colorText[] = {1,1,1,1};
 			font = "PuristaMedium";

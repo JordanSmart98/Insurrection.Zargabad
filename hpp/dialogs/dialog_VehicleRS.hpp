@@ -1,5 +1,4 @@
-#include "CustomControlClasses.h"
-class MyDialog
+class dialog_VehicleRS
 {
 	idd = 7900;
 	
@@ -55,9 +54,6 @@ class MyDialog
 			shadow = 1;
 			
 		};
-<<<<<<< Updated upstream
-		
-=======
 		class TitleText
 		{
 			type = 0;
@@ -71,29 +67,51 @@ class MyDialog
 			colorBackground[] = {1,1,1,0};
 			colorText[] = {0.949,0.949,0.949,1};
 			font = "PuristaBold";
-			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 2.75);
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 3);
 			fixedWidth = false;
 			lineSpacing = 2;
 			shadow = 0;
 
 		};
+		class PlayerSpawnDriverText
+		{
+			type = 0;
+			idc = 0;
+			x = safeZoneX + safeZoneW * 0.536875;
+			y = safeZoneY + safeZoneH * 0.66777778;
+			w = safeZoneW * 0.125;
+			h = safeZoneH * 0.03666667;
+			style = 0;
+			text = "Spawn as driver: ";
+			colorBackground[] = {1,1,1,0};
+			colorText[] = {1,1,1,1};
+			font = "PuristaLight";
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.5);
 
->>>>>>> Stashed changes
+		};
+		class PlayerSpawnDriverFrame
+		{
+			type = 0;
+			idc = 0;
+			x = safeZoneX + safeZoneW * 0.65875;
+			y = safeZoneY + safeZoneH * 0.67;
+			w = safeZoneW * 0.039375;
+			h = safeZoneH * 0.03777778;
+			style = 64;
+			text = "";
+			colorBackground[] = {0,0,0,1};
+			colorText[] = {0,0,0,1};
+			font = "PuristaMedium";
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+
+		};
+
 	};
 	class Controls
 	{
 		class EditorPreview
 		{
 			type = 0;
-<<<<<<< Updated upstream
-			idc = -1;
-			x = safeZoneX + safeZoneW * 0.29375;
-			y = safeZoneY + safeZoneH * 0.22444445;
-			w = safeZoneW * 0.17;
-			h = safeZoneH * 0.19666667;
-			style = 2+48;
-			text = "I:\Bluekiller\Documents\Arma 3\Screenshots\EditorPreviews\@CUP Vehicles\CUP_B_T810_Reammo_CZ_WDL.png";
-=======
 			idc = 7910;
 			x = safeZoneX + safeZoneW * 0.50625;
 			y = safeZoneY + safeZoneH * 0.22555556;
@@ -101,12 +119,11 @@ class MyDialog
 			h = safeZoneH * 0.22;
 			style = 48;
 			text = "";
->>>>>>> Stashed changes
 			colorBackground[] = {0.7373,0.2667,0.0157,1};
 			colorText[] = {1,1,1,1};
 			font = "PuristaMedium";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
-			
+
 		};
 		class VehicleList
 		{
@@ -115,7 +132,7 @@ class MyDialog
 			x = safeZoneX + safeZoneW * 0.29375;
 			y = safeZoneY + safeZoneH * 0.52;
 			w = safeZoneW * 0.240625;
-			h = safeZoneH * 0.25111112;
+			h = safeZoneH * 0.25222223;
 			style = 16;
 			colorBackground[] = {0.1279,0.1309,0.1393,0.2};
 			colorDisabled[] = {0.2,0.2,0.2,1};
@@ -135,37 +152,25 @@ class MyDialog
 				arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
 				arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
 				border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-				
+
 			};
-			
+
 		};
 		class VehicleType
 		{
 			type = 4;
-<<<<<<< Updated upstream
-			idc = -1;
-			x = safeZoneX + safeZoneW * 0.294375;
-			y = safeZoneY + safeZoneH * 0.42222223;
-			w = safeZoneW * 0.169375;
-=======
 			idc = 7902;
 			x = safeZoneX + safeZoneW * 0.295;
 			y = safeZoneY + safeZoneH * 0.41888889;
-			w = safeZoneW * 0.210625;
->>>>>>> Stashed changes
+			w = safeZoneW * 0.209375;
 			h = safeZoneH * 0.02888889;
 			style = 16;
 			arrowEmpty = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_ca.paa";
 			arrowFull = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_active_ca.paa";
 			colorBackground[] = {0.1526,0.1175,0.2582,0.75};
 			colorDisabled[] = {0.2,0.2,0.2,1};
-<<<<<<< Updated upstream
-			colorSelect[] = {0,0,0,1};
-			colorSelectBackground[] = {0.102,0.102,0.102,0.25};
-=======
 			colorSelect[] = {1,1,1,1};
 			colorSelectBackground[] = {0.1529,0.1176,0.2905,0.85};
->>>>>>> Stashed changes
 			colorText[] = {1,1,1,1};
 			font = "PuristaBold";
 			maxHistoryDelay = 0;
@@ -187,16 +192,6 @@ class MyDialog
 			};
 
 		};
-<<<<<<< Updated upstream
-		class Title1
-		{
-			type = 13;
-			idc = -1;
-			x = safeZoneX + safeZoneW * 0.466875;
-			y = safeZoneY + safeZoneH * 0.22888889;
-			w = safeZoneW * 0.236875;
-			h = safeZoneH * 0.11555556;
-=======
 		class PlayerMoney
 		{
 			type = 13;
@@ -220,9 +215,9 @@ class MyDialog
 			type = 1;
 			idc = -1;
 			x = safeZoneX + safeZoneW * 0.535;
-			y = safeZoneY + safeZoneH * 0.72333334;
-			w = safeZoneW * 0.170625;
-			h = safeZoneH * 0.05;
+			y = safeZoneY + safeZoneH * 0.72111112;
+			w = safeZoneW * 0.17;
+			h = safeZoneH * 0.05111112;
 			style = 0+2;
 			text = "Purchase";
 			borderSize = 0;
@@ -245,6 +240,7 @@ class MyDialog
 			soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1.0};
 			soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1.0};
 			blinkingPeriod = -1;
+			onMouseButtonClick = "call client_fnc_core_vrsRequest;";
 			shadow = 0;
 
 		};
@@ -292,7 +288,6 @@ class MyDialog
 			y = safeZoneY + safeZoneH * 0.56;
 			w = safeZoneW * 0.16625;
 			h = safeZoneH * 0.02777778;
->>>>>>> Stashed changes
 			style = 0;
 			text = "";
 			size = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
@@ -319,9 +314,33 @@ class MyDialog
 			{
 
 			};
-			
+
 		};
-		
+		class PlayerSpawnDriver
+		{
+            type = 7;
+            idc = 7908;
+			x = safeZoneX + safeZoneW * 0.659375;
+			y = safeZoneY + safeZoneH * 0.67;
+			w = safeZoneW * 0.038125;
+			h = safeZoneH * 0.03666667;
+            style = 2;
+
+            colorText[] = {1, 0, 0, 1};
+            colorTextSelect[] = {0, 1, 0, 1};
+            colorBackground[] = {0.05, 0.3, 0.23, 0.15};
+            colorSelectedBg[] = {0.05, 0.3, 0.23, 0.15};
+
+            font = "RobotoCondensedBold";
+            sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.5);
+
+            columns = 1;
+            rows = 1;
+            strings[] = {"No"};
+            checked_strings[] = {"Yes"};
+            values[] = {0};
+		};
+
 	};
-	
+
 };
