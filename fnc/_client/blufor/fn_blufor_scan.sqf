@@ -26,9 +26,9 @@ if (((player getVariable ["cl_lastScan", 0]) + 60) <= time) then
                     _marker setMarkerAlpha 0.2;
 				};
 			};
-			if (((side _x) == civilian) && ((_x getVariable "local_insSatDecoyPlaced") == 1)) then
+			if (((side _x) == civilian) && ((_x getVariable "cl_insSatDecoyPlaced") == 1)) then
 			{
-			    private _decoy = _x getVariable "local_insSatDecoy";
+			    private _decoy = _x getVariable "cl_insSatDecoy";
                 private _pos = getPosATL _decoy;
                 private _px = floor ((_pos select 0) / 100);
                 private _py = floor ((_pos select 1) / 100);
