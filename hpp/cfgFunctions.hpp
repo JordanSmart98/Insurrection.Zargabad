@@ -65,6 +65,7 @@ class cfgFunctions {
             tag = "abilities";
             file = "fnc\_client\ins\abilities";
             class abilities_tunnelPlace;
+            class abilities_satDecoyPlace;
         };
     };
 	class server {
