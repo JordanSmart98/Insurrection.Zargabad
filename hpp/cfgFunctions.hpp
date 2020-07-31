@@ -27,10 +27,7 @@ class cfgFunctions {
             class core_unflipVehicle;
             class core_unflipVehicleAddAction;
             class core_vrsPopulate;
-            class core_vrsOnSelChange;
-            class core_vrsOnComboChange;
-            class core_vrsRequest;
-            class core_vrsConditionCheck;
+
         };
         class ins {
             tag = "ins";
@@ -68,6 +65,7 @@ class cfgFunctions {
             tag = "abilities";
             file = "fnc\_client\ins\abilities";
             class abilities_tunnelPlace;
+            class abilities_satDecoyPlace;
         };
     };
 	class server {
