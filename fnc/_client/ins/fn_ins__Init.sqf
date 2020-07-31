@@ -88,12 +88,19 @@ private _vehicleShopAction = ["INS_VehicleShop", "Vehicle Shop", "", {createDial
 [player, 1, ["ACE_SelfActions", "INS_AceMenu"], _vehicleShopAction] call ace_interact_menu_fnc_addActionToObject;
 
 // Add Tunnel Option to INS Menu if Osama
-// TODO Change Icon
 if (player getVariable "cl_insChoice" == 1) then
 {
     private _tunnelAction = ["INS_tunnelPlace", "Place Tunnel", "hpp\images\insTunnel.paa", {call client_fnc_abilities_tunnelPlace;}, {true}, {}, []] call ace_interact_menu_fnc_createAction;
     [player, 1, ["ACE_SelfActions", "INS_AceMenu"], _tunnelAction] call ace_interact_menu_fnc_addActionToObject;
     player setVariable["local_insTunnelCount", 0, true];
+};
+
+// Add Tunnel Option to INS Menu if Osama
+if (player getVariable "cl_insChoice" == 1) then
+{
+    private _satDecoyAction = ["INS_satDecoyPlace", "Place Sat Decoy", "hpp\images\insSatDecoy.paa", {call client_fnc_abilities_satDecoyPlace;}, {true}, {}, []] call ace_interact_menu_fnc_createAction;
+    [player, 1, ["ACE_SelfActions", "INS_AceMenu"], _satDecoyAction] call ace_interact_menu_fnc_addActionToObject;
+    player setVariable["local_insSatDecoyPlaced", 0, true];
 };
 
 [] spawn client_fnc_ins_markerManagerStatic;
