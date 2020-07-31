@@ -15,7 +15,7 @@ fnc_addAction_Roadblock =
         [player, "snd_effect_roadblock"] call client_fnc_core_say3DMP;
         player removeAction (_parameters select 0);
         private _roadBlock = (_parameters select 1);
-        ["roadBlock", getPos _roadBlock, [0,0,0], (getDir _roadBlock + 180), false] remoteExec ["server_fnc_core_spawnComp", 2];
+        ["roadBlock", getPos _roadBlock, [0,0,0], (getDir _roadBlock + 180), false] remoteExec ["server_fnc_core_compSpawn", 2];
         deleteVehicle _roadBlock;
 
         "<t font='PuristaMedium' align='center' size='2'>Roadblock Placed</t>" call client_fnc_core_displayStructuredText;

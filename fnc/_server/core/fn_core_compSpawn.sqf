@@ -17,7 +17,7 @@ if ( isNil "LARs_spawnedCompositions" ) then {
 };
 
 //Call function to spawn composition
-_objects = _this call server_fnc_core_createComp;
+_objects = _this call server_fnc_core_compCreate;
 
 //For each of the objects returned that the composition spawned
 {
