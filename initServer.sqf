@@ -7,11 +7,3 @@ addMissionEventHandler ["EntityKilled", {_this remoteExec["server_fnc_core_mE_en
 
 call server_fnc_ins__Init;
 call server_fnc_blufor__Init;
-
-sleep 1;
-waitUntil {missionNamespace getVariable["svr_missionTimer", 0] < 0};
-
-deleteVehicle blueNorth;
-deleteVehicle blueEast;
-deleteVehicle blueSouth;
-deleteVehicle blueWest;
