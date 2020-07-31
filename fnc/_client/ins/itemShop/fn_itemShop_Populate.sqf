@@ -19,10 +19,5 @@ private _itemList = [
 }forEach _itemList;
 
 _Text_Fund ctrlSetStructuredText parseText format["$%1", player getVariable["cl_money", 0]];
-
-private _safehouseCount = missionNamespace getVariable ["svr_safehouseCount", []];
-_Text_Safehouses ctrlSetStructuredText parseText format["%1", _safehouseArray];
-
-private _dickersArray = missionNamespace getVariable ["svr_dickersArray", []];
-_Text_Dickers ctrlSetStructuredText parseText format["%1", count _dickersArray];
-_safehouseArray
+_Text_Safehouses ctrlSetStructuredText parseText format["%1", missionNamespace getVariable ["svr_safehouseCount", 0]];
+_Text_Dickers ctrlSetStructuredText parseText format["%1", missionNamespace getVariable ["svr_dickersCount", 0]];
