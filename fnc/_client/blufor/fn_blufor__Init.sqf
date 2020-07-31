@@ -9,7 +9,13 @@ private _hook = ["BLU_VehicleShop", "Vehicle Shop", "", {createDialog "dialog_Ve
 
 ["FOB Price", "Kandahar Region", format["%1/%2/%3", date select 2, date select 1, date select 0]] spawn BIS_fnc_infoText;
 
-waitUntil {missionNamespace getVariable["svr_missionTimer", 0] < 0};
+while {missionNamespace getVariable["svr_missionTimer", 0] > 0} do
+{
+    if (!([blufor_triggerStartArea, (getPos player), false, false] call BIS_fnc_inTrigger)) then
+    {
+        player setDammage 1;
+    };
+};
 
 private _hook = ["BLU_SatelliteScan", "Satellite Scan",  "hpp\images\bluforScan.paa", {[player] call client_fnc_blufor_scan},{true}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "BLU_AceMenu"], _hook] call ace_interact_menu_fnc_addActionToObject;
