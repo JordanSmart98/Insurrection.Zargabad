@@ -24,15 +24,7 @@ class cfgFunctions {
             class core_lrsPopulate;
             class core_lrsRequest;
             class core_restrictView;
-<<<<<<< Updated upstream
 
-=======
-            class core_unflipVehicle;
-            class core_unflipVehicleAddAction;
-            class core_vrsPopulate;
-            class core_vrsOnSelChange;
-            class core_vrsOnComboChange;
->>>>>>> Stashed changes
         };
         class ins {
             tag = "ins";
