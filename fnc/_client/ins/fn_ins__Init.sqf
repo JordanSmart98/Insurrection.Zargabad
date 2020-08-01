@@ -77,14 +77,14 @@ if (_insHead findIf { face player == _x } == -1) then
 };
 
 // Add INS Menu
-private _insMenuAction = ["INS_AceMenu","Insurrection Menu","hpp\images\insIcon.paa",{nil},{true}] call ace_interact_menu_fnc_createAction;
+private _insMenuAction = ["INS_AceMenu","Insurrection Menu","hpp\images\insMenu.paa",{nil},{true}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], _insMenuAction] call ace_interact_menu_fnc_addActionToObject;
 
 // Add Itemshop to INS Menu
-private _itemShopAction = ["INS_ItemShop", "Item Shop", "hpp\images\insShop.paa", {call client_fnc_itemShop_openShop;}, {true}, {}, []] call ace_interact_menu_fnc_createAction;
+private _itemShopAction = ["INS_ItemShop", "Item Shop", "hpp\images\insItemShop.paa", {call client_fnc_itemShop_openShop;}, {true}, {}, []] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "INS_AceMenu"], _itemShopAction] call ace_interact_menu_fnc_addActionToObject;
 
-private _vehicleShopAction = ["INS_VehicleShop", "Vehicle Shop", "", {createDialog "dialog_VehicleRS";}, {call client_fnc_core_vrsConditionCheck;}, {}, []] call ace_interact_menu_fnc_createAction;
+private _vehicleShopAction = ["INS_VehicleShop", "Vehicle Shop", "hpp\images\coreVehicleRS.paa", {createDialog "dialog_VehicleRS";}, {call client_fnc_core_vrsConditionCheck;}, {}, []] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions", "INS_AceMenu"], _vehicleShopAction] call ace_interact_menu_fnc_addActionToObject;
 
 // Add Tunnel Option to INS Menu if Osama
