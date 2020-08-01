@@ -10,8 +10,8 @@ if (_bluforCount > 0) then
     } forEach allPlayers;
 
     if ((_deathTotal mod _bluforCount) == 0) then {
-        missionNamespace setVariable["svr_esclationPhase", ((missionNamespace getVariable["svr_esclationPhase", 0]) + 1)];
-        ["EsclationPhaseUp", ["Blufor Phase Up"]] remoteExec ["bis_fnc_showNotification", 0];
+        missionNamespace setVariable["svr_esclationPhase", ((missionNamespace getVariable["svr_esclationPhase", 0]) + 1), true];
+        ["EsclationPhaseUp", ["The insurrection has escalated."]] remoteExec ["bis_fnc_showNotification", 0];
         {
             if ((side _x == civilian) && (isPlayer _x)) then
             {
@@ -21,5 +21,3 @@ if (_bluforCount > 0) then
         } forEach allPlayers;
     }
 };
-
-//NEEDS MP TESTED
