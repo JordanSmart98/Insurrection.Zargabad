@@ -1,7 +1,7 @@
 private _tunnel = "Land_KBud" createVehicle position player;
 _tunnel attachTo [player, [0, 3, 0], "Pelvis"];
 
-ScriptFnc = {
+tunnelScriptFnc = {
     params ["_target", "_player", "_actionId", "_arguments"];
     _tunnel = _arguments select 0;
     detach _tunnel;
@@ -16,7 +16,7 @@ ScriptFnc = {
         // TODO Change Sound Effect
         [player, "snd_effect_roadblock"] call client_fnc_core_say3DMP;
         player removeAction _actionId;
-        "<t font='PuristaMedium' align='center' size='2'>tunnel Placed</t>" call client_fnc_core_displayStruacturedText;
+        "<t font='PuristaMedium' align='center' size='2'>tunnel Placed</t>" call client_fnc_core_displayStructuredText;
         player setVariable["local_insTunnelCount",(player getVariable "local_insTunnelCount")+1,true];
 
         switch (player getVariable "local_insTunnelCount") do
@@ -27,8 +27,8 @@ ScriptFnc = {
 
         if (player getVariable "local_insTunnelCount" == 2) then
         {
-             [(player getVariable "local_insTunnel1"), ["Enter Tunnels", {player setPos (getPos (player getVariable "local_insTunnel2"))},[],1,true,true,"","(side _this == CIVILIAN)",1,false,""]] remoteExec ["addAction", 0, true];
-             [(player getVariable "local_insTunnel2"), ["Enter Tunnels", { player setPos (getPos (player getVariable "local_insTunnel1")) }, [], 1, true, true, "", "(side _this == CIVILIAN)", 1, false, ""]] remoteExec ["addAction", 0, true];
+             [(player getVariable "local_insTunnel2"), ["Enter Tunnels", {[10,[],{player setPos (getPos (player getVariable "local_insTunnel1"));},{["ace_common_displayTextStructured", ["<t size='1.5'>Interrupted</t>", 2, player], [player]] call CBA_fnc_targetEvent;},"Traveling..."] call ace_common_fnc_progressBar; },[],1,true,true,"","(side _this == CIVILIAN)",1,false,""]] remoteExec ["addAction", 0, true];
+             [(player getVariable "local_insTunnel1"), ["Enter Tunnels", {[10,[],{player setPos (getPos (player getVariable "local_insTunnel2"));},{["ace_common_displayTextStructured", ["<t size='1.5'>Interrupted</t>", 2, player], [player]] call CBA_fnc_targetEvent;},"Traveling..."] call ace_common_fnc_progressBar; },[],1,true,true,"","(side _this == CIVILIAN)",1,false,""]] remoteExec ["addAction", 0, true];
              [player, 1, ["ACE_SelfActions", "INS_AceMenu", "INS_tunnelPlace"]] call ace_interact_menu_fnc_removeActionFromObject;
         };
     },
@@ -43,5 +43,5 @@ ScriptFnc = {
 
 
 // Place Tunnel Action
-[player, ["Setup tunnel", {_this call ScriptFnc},[_tunnel],1,true,true,"","(side _this == CIVILIAN)",50,false,"",""]] remoteExec ["addAction", 0, true];
+[player, ["Setup tunnel", {_this call tunnelScriptFnc},[_tunnel],1,true,true,"","(side _this == CIVILIAN)",50,false,"",""]] remoteExec ["addAction", 0, true];
 
