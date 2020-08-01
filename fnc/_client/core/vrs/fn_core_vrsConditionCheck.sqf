@@ -6,7 +6,7 @@ switch (playerSide) do {
     case civilian:
     {
         b3525325 = false;
-        {private _dist = _x distance2D player; if (_dist <= 10) exitWith {b3525325 = true;};} forEach (missionNamespace getVariable["svr_safehouseArray", []]);
+        {if ((_x distance2D player) <= 10) exitWith {b3525325 = true;};} forEach (missionNamespace getVariable["svr_safehouseArray", []]);
         b3525325;
     };
 }
