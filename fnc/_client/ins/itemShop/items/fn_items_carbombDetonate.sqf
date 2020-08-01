@@ -1,12 +1,10 @@
-params["_car"];
-private _statement = {
-	params ["_target", "_player", "_actionParams"];
+private _fnc_insDetonateCarbomb = {
+    params ["_target", "_player", "_actionParams"];
     [_target, _player, _actionParams] spawn
     {
         params ["_target", "_player", "_actionParams"];
         private _car = _actionParams select 0;
-        private _activationRange = switch (_player getVariable["cl_insChoice", 0]) do
-        {
+        private _activationRange = switch (_player getVariable["cl_insChoice", 0]) do {
             case 1: {500};
             case 2: {1000};
             case 3: {200};
@@ -52,15 +50,15 @@ private _statement = {
     };
 };
 
-private _modifierFunc = {
+private _fnc_insDetonateCarbombModifier = {
     params ["_target", "_player", "_params", "_actionData"];
-    diag_log format ["_modifierFunc [%1, %2, %3]", _target, _player, _params];
     private _car = _params select 0;
     private _carType = typeOf _car;
     private _name = getText(configFile >> "CfgVehicles" >> _carType >> "displayName");
-    _actionData set [1, format ["Detonate: %1 - %2 m", _name, str round (player distance2D _car)]];
+    _actionData set [1, format ["%1 - %2 m", _name, str round (player distance2D _car)]];
 };
 
-private _randomId = round random[0, 50, 100];
-private _hook = ["INS_DetonateCarbomb" + str _randomId, "_", "hpp\images\insCarbombMount.paa", _statement, {true}, {}, [_car, _randomId], "", 1, [false, false, false, false, false], _modifierFunc] call ace_interact_menu_fnc_createAction;
-[player, 1, ["ACE_SelfActions", "INS_AceMenu"], _hook] call ace_interact_menu_fnc_addActionToObject;
+params["_car"];
+private _randomIndex = round random[0, 50, 100];
+private _detonateAction = ["INS_DetonateCarbomb" + str _randomIndex, "_", "hpp\images\insCarbombDetonate.paa", _fnc_insDetonateCarbomb, {true}, {}, [_car, _randomIndex], "", 1, [false, false, false, false, false], _fnc_insDetonateCarbombModifier] call ace_interact_menu_fnc_createAction;
+[player, 1, ["ACE_SelfActions", "INS_AceMenu"], _detonateAction] call ace_interact_menu_fnc_addActionToObject;

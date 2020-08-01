@@ -1,7 +1,6 @@
 class dialog_VehicleRS
 {
 	idd = 7900;
-	
 	class ControlsBackground
 	{
 		class BackgroundFrame
@@ -18,7 +17,6 @@ class dialog_VehicleRS
 			colorText[] = {0,0,0,1};
 			font = "EtelkaNarrowMediumPro";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
-			
 		};
 		class Background
 		{
@@ -35,7 +33,6 @@ class dialog_VehicleRS
 			font = "PuristaMedium";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			onLoad = "[] spawn client_fnc_core_vrsPopulate;";
-			
 		};
 		class EditorPreviewFrame
 		{
@@ -52,7 +49,6 @@ class dialog_VehicleRS
 			font = "PuristaMedium";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			shadow = 1;
-			
 		};
 		class TitleText
 		{
@@ -66,28 +62,27 @@ class dialog_VehicleRS
 			text = "Vehicle Shop";
 			colorBackground[] = {1,1,1,0};
 			colorText[] = {0.949,0.949,0.949,1};
-			font = "PuristaBold";
+			font = "Zeppelin33";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 3);
 			fixedWidth = false;
-			lineSpacing = 2;
-			shadow = 0;
-
+			lineSpacing = 0;
+			shadow = 2;
 		};
-		class PlayerSpawnDriverText
+        class PlayerSpawnDriverText
 		{
 			type = 0;
 			idc = 0;
-			x = safeZoneX + safeZoneW * 0.536875;
-			y = safeZoneY + safeZoneH * 0.66777778;
-			w = safeZoneW * 0.125;
+			x = safeZoneX + safeZoneW * 0.54;
+			y = safeZoneY + safeZoneH * 0.67;
+			w = safeZoneW * 0.12;
 			h = safeZoneH * 0.03666667;
-			style = 0;
-			text = "Spawn as driver: ";
+			style = 1;
+			text = "Spawn as driver:";
 			colorBackground[] = {1,1,1,0};
 			colorText[] = {1,1,1,1};
-			font = "PuristaLight";
-			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.5);
-
+			font = "Zeppelin32";
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.3);
+			shadow = 2;
 		};
 		class PlayerSpawnDriverFrame
 		{
@@ -103,9 +98,7 @@ class dialog_VehicleRS
 			colorText[] = {0,0,0,1};
 			font = "PuristaMedium";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
-
 		};
-
 	};
 	class Controls
 	{
@@ -123,7 +116,6 @@ class dialog_VehicleRS
 			colorText[] = {1,1,1,1};
 			font = "PuristaMedium";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
-
 		};
 		class VehicleList
 		{
@@ -136,8 +128,8 @@ class dialog_VehicleRS
 			style = 16;
 			colorBackground[] = {0.1279,0.1309,0.1393,0.2};
 			colorDisabled[] = {0.2,0.2,0.2,1};
-			colorSelect[] = {0.2,0.302,0.702,0.6};
-			colorText[] = {0.6,0.302,0,1};
+			colorSelect[] = {0.7176,0.5098,0.6471,1};
+			colorText[] = {0.7176,0.5804,0.5098,1};
 			font = "PuristaBold";
 			maxHistoryDelay = 0;
 			rowHeight = 0;
@@ -145,6 +137,7 @@ class dialog_VehicleRS
 			soundSelect[] = {"\A3\ui_f\data\sound\RscListbox\soundSelect",0.09,1.0};
 			colorSelectBackground[] = {1,1,1,0.2};
 			onLBSelChanged = "[] spawn client_fnc_core_vrsOnSelChange;";
+			shadow = 2;
 			class ListScrollBar
 			{
 				color[] = {1,1,1,1};
@@ -154,7 +147,6 @@ class dialog_VehicleRS
 				border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
 
 			};
-
 		};
 		class VehicleType
 		{
@@ -170,7 +162,7 @@ class dialog_VehicleRS
 			colorBackground[] = {0.1526,0.1175,0.2582,0.75};
 			colorDisabled[] = {0.2,0.2,0.2,1};
 			colorSelect[] = {1,1,1,1};
-			colorSelectBackground[] = {0.1529,0.1176,0.2905,0.85};
+			colorSelectBackground[] = {0.0941,0.0745,0.1608,1};
 			colorText[] = {1,1,1,1};
 			font = "PuristaBold";
 			maxHistoryDelay = 0;
@@ -190,7 +182,6 @@ class dialog_VehicleRS
 				border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
 
 			};
-
 		};
 		class PlayerMoney
 		{
@@ -204,11 +195,7 @@ class dialog_VehicleRS
 			text = "";
 			size = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			colorBackground[] = {1,1,1,0};
-			class Attributes
-			{
-
-			};
-
+			class Attributes {};
 		};
 		class Purchase
 		{
@@ -242,7 +229,6 @@ class dialog_VehicleRS
 			blinkingPeriod = -1;
 			onMouseButtonClick = "call client_fnc_core_vrsRequest;";
 			shadow = 0;
-
 		};
 		class VehicleInfoName
 		{
@@ -256,11 +242,7 @@ class dialog_VehicleRS
 			text = "";
 			size = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			colorBackground[] = {1,1,1,0};
-			class Attributes
-			{
-
-			};
-
+			class Attributes {};
 		};
 		class VehicleInfoSpeed
 		{
@@ -274,11 +256,7 @@ class dialog_VehicleRS
 			text = "";
 			size = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			colorBackground[] = {1,1,1,0};
-			class Attributes
-			{
-
-			};
-
+			class Attributes {};
 		};
 		class VehicleInfoPassengers
 		{
@@ -292,11 +270,7 @@ class dialog_VehicleRS
 			text = "";
 			size = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			colorBackground[] = {1,1,1,0};
-			class Attributes
-			{
-
-			};
-
+			class Attributes {};
 		};
 		class VehicleInfoArmor
 		{
@@ -310,11 +284,7 @@ class dialog_VehicleRS
 			text = "";
 			size = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			colorBackground[] = {1,1,1,0};
-			class Attributes
-			{
-
-			};
-
+			class Attributes {};
 		};
 		class PlayerSpawnDriver
 		{
