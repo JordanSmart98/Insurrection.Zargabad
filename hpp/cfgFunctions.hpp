@@ -47,8 +47,9 @@ class cfgFunctions {
             tag = "items";
             file = "fnc\_client\ins\itemShop\items";
             class items_AceHeal;
-            class items_Carbomb;
+            class items_CarbombAdd;
             class items_CarbombDetonate;
+            class items_CarbombMount;
             class items_Roadblock;
             class items_Safehouse;
         };

@@ -2,8 +2,7 @@ private _roadBlock = "Land_Canal_Wall_10m_F" createVehicle position player;
 _roadBlock attachTo [player, [0, 3, -3.1], "Pelvis"];
 _roadBlock setDir 180;
 
-fnc_addAction_Roadblock =
-{
+fnc_addAction_Roadblock = {
     params ["_target", "_caller", "_actionId", "_arguments"];
 
     _roadBlock = _arguments select 0;
@@ -22,7 +21,8 @@ fnc_addAction_Roadblock =
         [_insPlayer, 1, ["ACE_SelfActions", "INS_AceMenu", "INS_PlaceRoadblock"]] call ace_interact_menu_fnc_removeActionFromObject;
     },
     {
-        deleteVehicle (_this select 1);
+        params["_parameters"];
+        deleteVehicle (_parameters select 1);
         "<br/><t font='PuristaBold' align='center' size='2'>Interrupted</t>" call client_fnc_core_displayStructuredText;
     }, "Building"] call ace_common_fnc_progressBar;
 };
