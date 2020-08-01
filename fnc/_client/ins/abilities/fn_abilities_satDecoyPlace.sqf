@@ -22,11 +22,9 @@ satDecoyScriptFnc =
     detach _Decoy;
     missionNamespace setVariable ["cl_satDecoyArray", _sat_array, true];
     missionNamespace setVariable ["cl_satDecoyArrayCount", count _sat_array, true];
+    [player, 1, ["ACE_SelfActions", "INS_AceMenu", "INS_satDecoyPlace"]] call ace_interact_menu_fnc_removeActionFromObject;
 };
 
 // Place Sat Decoy Action
 [player, ["Setup sattelite scan decoy", {_this call satDecoyScriptFnc},[_decoy],1,true,true,"","(side _this == CIVILIAN)",50,false,"",""]] remoteExec ["addAction", 0, true];
 [player, ["local_insSatDecoyPlaced", 1, true]] remoteExec ["setVariable", 0, true];
-
-
-

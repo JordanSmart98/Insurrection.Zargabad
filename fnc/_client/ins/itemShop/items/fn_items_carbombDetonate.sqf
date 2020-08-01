@@ -28,12 +28,15 @@ private _fnc_insDetonateCarbomb = {
                 _setText ctrlSetStructuredText (parseText format ["<t color='#2b2c2e' font='PuristaMedium' size='4'> %1 </t>", _phoneNumber select [0, _i]]);
             }forEach _timings;
 
-            createVehicle ["Bo_GBU12_LGB", getPos _car, [], 0, "CAN_COLLIDE"];
-            createVehicle ["Bo_GBU12_LGB", getPos _car, [], 0, "CAN_COLLIDE"];
-            createVehicle ["Bo_GBU12_LGB", getPos _car, [], 0, "CAN_COLLIDE"];
-            createVehicle ["Bo_GBU12_LGB", getPos _car, [], 0, "CAN_COLLIDE"];
-            createVehicle ["Bo_GBU12_LGB", getPos _car, [], 0, "CAN_COLLIDE"];
-            createVehicle ["Bo_GBU12_LGB", getPos _car, [], 0, "CAN_COLLIDE"];
+            [_car] spawn
+            {
+                params["_car"];
+                for "_i" from 1 to 6 do {
+                    _pos = [[[position _car, 1.5]],[]] call BIS_fnc_randomPos;
+                    createVehicle ["Bomb_03_F", _pos, [], 0, "CAN_COLLIDE"];
+                };
+                sleep 0.01;
+            };
 
             sleep 0.8;
             [_player, "snd_effect_allahuakbar"] call client_fnc_core_say3DMP;
