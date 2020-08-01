@@ -38,7 +38,7 @@ class CfgSounds
 	class snd_effect_satDecoy
     {
         name = "snd_effect_satDecoy";
-        sound[] = {"\sounds\effects\snd_effect_satDecoy.ogg", 1.0, 1.0, 100};
+        sound[] = {"\sounds\effects\snd_effect_satDecoy.ogg", 1.0, 1.0, 25};
         titles[] = {0, ""};
     };
 
