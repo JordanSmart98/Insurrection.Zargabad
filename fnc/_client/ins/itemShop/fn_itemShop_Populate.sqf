@@ -6,7 +6,7 @@ private _Text_Safehouses = _display displayCtrl 4003;
 private _Text_Dickers = _display displayCtrl 4004;
 
 private _itemList = [
-    ["Roadblock Kit", 250, "['INS_PlaceRoadblock', 'Place Roadblock', 'hpp\images\insRoadblock.paa', '[] call client_fnc_items_RoadBlock;'] call client_fnc_itemShop_addAceAction;"],
+    ["Roadblock Kit", 250, "call client_fnc_items_roadblockAdd;"],
     ["Carbomb Kit", 500, "call client_fnc_items_carbombAdd;"],
     ["Heal to full", 1000, "call client_fnc_items_AceHeal;"],
     ["Additonal Safehouse", 2000, "call client_fnc_items_Safehouse;"]

@@ -8,35 +8,21 @@ private _fnc_insMountCarbomb = {
     _bomb attachTo [_car, [0,0,0]];
     _bomb setVectorDirAndUp [[1,-0,-0],[0,0,1]];
 
-    private _carbombCount = (player getVariable["cl_items_Carbomb", 0]) - 1;
-    player setVariable["cl_items_Carbomb", _carbombCount];
-    /*
-    if (_carbombCount isEqualTo 0) then {
+    private _itemCount = (player getVariable["cl_items_Carbomb", 0]) - 1;
+    player setVariable["cl_items_Carbomb", _itemCount];
+
+    if (_itemCount isEqualTo 0) then {
         [player, 1, ["ACE_SelfActions", "INS_AceMenu", "INS_MountCarbomb"]] call ace_interact_menu_fnc_removeActionFromObject;
     };
 
-    if (_carbombCount isEqualTo 1) then {
+    if (_itemCount isEqualTo 1) then {
         [player, 1, ["ACE_SelfActions", "INS_AceMenu", "INS_MountCarbomb"]] call ace_interact_menu_fnc_removeActionFromObject;
         ['INS_MountCarbomb', "Mount Carbomb", 'hpp\images\insCarbombMount.paa', 'call client_fnc_items_carbombMount;'] call client_fnc_itemShop_addAceAction;
     };
 
-    if (_carbombCount > 1) then {
+    if (_itemCount > 1) then {
         [player, 1, ["ACE_SelfActions", "INS_AceMenu", "INS_MountCarbomb"]] call ace_interact_menu_fnc_removeActionFromObject;
-        ['INS_MountCarbomb', format["Mount Carbomb x%1", _carbombCount], 'hpp\images\insCarbombMount.paa', 'call client_fnc_items_carbombMount;'] call client_fnc_itemShop_addAceAction;
-    };*/
-
-    switch (_carbombCount) do {
-        case 0:{
-            [player, 1, ["ACE_SelfActions", "INS_AceMenu", "INS_MountCarbomb"]] call ace_interact_menu_fnc_removeActionFromObject;
-        };
-        case 1:{
-            [player, 1, ["ACE_SelfActions", "INS_AceMenu", "INS_MountCarbomb"]] call ace_interact_menu_fnc_removeActionFromObject;
-            ['INS_MountCarbomb', "Mount Carbomb", 'hpp\images\insCarbombMount.paa', 'call client_fnc_items_carbombMount;'] call client_fnc_itemShop_addAceAction;
-        };
-        case (_carbombCount > 1):{
-            [player, 1, ["ACE_SelfActions", "INS_AceMenu", "INS_MountCarbomb"]] call ace_interact_menu_fnc_removeActionFromObject;
-            ['INS_MountCarbomb', format["Mount Carbomb x%1", _carbombCount], 'hpp\images\insCarbombMount.paa', 'call client_fnc_items_carbombMount;'] call client_fnc_itemShop_addAceAction;
-        };
+        ['INS_MountCarbomb', format["Mount Carbomb x%1", _itemCount], 'hpp\images\insCarbombMount.paa', 'call client_fnc_items_carbombMount;'] call client_fnc_itemShop_addAceAction;
     };
 
     _car call client_fnc_items_carbombDetonate;

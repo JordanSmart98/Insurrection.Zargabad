@@ -47,10 +47,11 @@ class cfgFunctions {
             tag = "items";
             file = "fnc\_client\ins\itemShop\items";
             class items_AceHeal;
-            class items_CarbombAdd;
-            class items_CarbombDetonate;
-            class items_CarbombMount;
-            class items_Roadblock;
+            class items_carbombAdd;
+            class items_carbombDetonate;
+            class items_carbombMount;
+            class items_roadblockAdd;
+            class items_roadblockPlace;
             class items_Safehouse;
         };
         class ins {
