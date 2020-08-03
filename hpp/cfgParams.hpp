@@ -13,7 +13,7 @@ class Params
 	{
 	    title = "Stamina";
 	    values[] = {0, 1};
-	    texts[] = {"Disabled", "Enabled"};
+	    texts[] = {$STR_DISABLED, $STR_ENABLED};
 	    default = 1;
 	};
 
@@ -23,5 +23,15 @@ class Params
         values[] = {1, 2, 3, 4};
         texts[] = {"Vehicles only", "Infantry only", "Disabled", "Enabled"};
         default = 4;
+    };
+
+    class marker3D//3
+    {
+        title = "3D markers";
+        values[] = {0,1};
+        texts[] = {$STR_DISABLED,$STR_ENABLED};
+        default = 1;
+        isGlobal = 1;
+        function = "client_fnc_core_3Dmarkers";
     };
 };

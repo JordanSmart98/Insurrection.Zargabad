@@ -17,6 +17,7 @@ class cfgFunctions {
             class core_vrsPopulate {file = "fnc\_client\core\vrs\fn_core_vrsPopulate.sqf";};
             class core_vrsRequest {file = "fnc\_client\core\vrs\fn_core_vrsRequest.sqf";};
             class core_briefing;
+            class core_3Dmarkers;
             class core_displayStructuredText;
             class core_keyDownHandler;
             class core_safety;
