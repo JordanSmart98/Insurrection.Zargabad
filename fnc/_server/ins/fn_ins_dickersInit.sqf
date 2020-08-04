@@ -1,4 +1,4 @@
-fnc_dickerspersistence = {
+private _fnc_dickerspersistence = {
     private _dickerCount = missionNamespace getVariable ["svr_dickersCount", 0];
     private _civCount = ({alive _x and side _x == civilian} count allUnits);
     private _civPercentage = missionNamespace getVariable["svr_dickersPopulation", 20];
@@ -22,12 +22,11 @@ fnc_dickerspersistence = {
                     //found a civ in the area that isnt a player and isnt a dicker
                     //while our pop is lower than wanted.
                     private _result = _dickersArray pushBackUnique _pC;
-                    if (_result == -1) then
+                    if (!(_result isEqualTo -1)) then
                     {
                         _pC setVariable ["cl_insDicker", true];
                         _pC addItem "ACE_Cellphone";
-                    }
-                    else {diag_log "dickers: duplicate entry";};
+                    };
                 };
             };
         };
@@ -37,13 +36,13 @@ fnc_dickerspersistence = {
     };
 };
 
-fnc_dickerscleanup = {
+private _fnc_dickerscleanup = {
     private _dickerCount = missionNamespace getVariable ["svr_dickersCount", 0];
     private _civCount = ({alive _x and side _x == civilian} count allUnits);
     private _civPercentage = missionNamespace getVariable["svr_dickersPopulation", 20];
     private _dickerPopulation = round(_civCount * (_civPercentage / 100));
 
-    if (_dickerCount > _dickerPopulation) then
+    if (_dickerCount > _dickerPopulation && false) then //TODO: change move to own function for calling when reducing dicker rate which is yet to be implemented.
     {
         systemChat "dickers: wiping";
         diag_log "dickers: wiping";
@@ -73,74 +72,75 @@ fnc_dickerscleanup = {
     };
 };
 
-fnc_dickersbehaviour =
-{
-    private _dickersArray = missionNamespace getVariable ["svr_dickersArray", []];
+private _fnc_dickersbehaviour = {
+    while {true} do
     {
-        _Dicker = _x;
-        _CloseBluforPlayer = objNull;
-        _LastDistance = 10;
+        private _dickersArray = missionNamespace getVariable ["svr_dickersArray", []];
         {
-           if(!((vehicle _x) isKindOf "AIR")) then
-           {
-               _CurrentDistance = _x distance _Dicker;
-               if((isPlayer _x && side _x != civilian) && (_CurrentDistance < _LastDistance)) then
-               {
-                   _CloseBluforPlayer = _x;
-                   _LastDistance = _CurrentDistance;
-               };
-           };
-        } forEach allPlayers;
-
-        if (isNull _CloseBluforPlayer) then
-        {
-            _Dicker enableAI "Move";
-        }
-        else
-        {
-            private _LastDetection = _Dicker getVariable["cl_lastDetect", 0];
-            if (_LastDetection + (30 + (random 10)) < time) then
+            private _xDicker = _x;
+            private _lastDistance = 30;
+            private _closestBluforPlayer = objNull;
             {
-                _Dicker setVariable ["cl_lastDetect", time, true];
-                _Dicker disableAI "move";
-                _Dicker lookAt _CloseBluforPlayer;
-                [_Dicker, "AinvPercMstpSnonWnonDnon_G01"] remoteExec ["switchMove", 0, true];
-
-                _insTeam = [];
+                if !((vehicle _x) isKindOf "AIR") then
                 {
-                    if (side _x == civilian) then {_insTeam pushBackUnique _x};
-                } forEach allPlayers;
-                ["DickerSpotted", ["An infidel has been spotted by our brothers!"]] remoteExec ["bis_fnc_showNotification", _insTeam];
+                    _currentDistance = _x distance _xDicker;
+                    if (_currentDistance < _lastDistance) then
+                    {
+                        _closestBluforPlayer = _x;
+                        _lastDistance = _currentDistance;
+                    };
+                };
+            } forEach (west call server_fnc_core_getPlayers);
 
-                private _TimeHour = floor daytime;
-                private _TimeMinute = floor ((daytime - _TimeHour) * 60);
-                private _TimeSecond = floor (((((daytime) - (_TimeHour))*60) - _TimeMinute)*60);
-                private _Time24 = text format ["%1:%2:%3", _TimeHour, _TimeMinute, _TimeSecond];
+            if (isNull _closestBluforPlayer) then
+            {
+                _xDicker enableAI "Move";
+            }
+            else
+            {
+                private _lastDetect = _xDicker getVariable["cl_lastDetect", 0];
+                if (_lastDetect + (30 + (random 10)) < time) then
+                {
+                    _xDicker setVariable ["cl_lastDetect", time, true];
+                    _xDicker disableAI "move";
+                    _xDicker lookAt _closestBluforPlayer;
+                    [_xDicker, "AinvPercMstpSnonWnonDnon_G01"] remoteExec ["switchMove", 0, true];
 
-                private _markerArray = missionNamespace getVariable["svr_dickerSpottedArray", []];
-                private _markerArrayCount = missionNamespace getVariable["svr_dickerSpotC", 0];
-                if (_markerArrayCount == 0 || _markerArrayCount <= 4) then
-                {
-                    _markerArray pushBack [_CloseBluforPlayer, _Time24, (position _CloseBluforPlayer)];
-                    missionNamespace setVariable["svr_dickerSpottedArray", _markerArray, true];
-                    missionNamespace setVariable["svr_dickerSpotC", count _markerArray, true];
-                }
-                else
-                {
-                    _markerArray deleteAt 0;
-                    _markerArray pushBack [_CloseBluforPlayer, _Time24, (position _CloseBluforPlayer)];
-                    missionNamespace setVariable["svr_dickerSpottedArray", _markerArray, true];
-                    missionNamespace setVariable["svr_dickerSpotC", count _markerArray, true];
+                    _civilianPlayers = (civilian call server_fnc_core_getPlayers);
+                    ["DickerSpotted", ["An infidel has been spotted by our brothers!"]] remoteExec ["bis_fnc_showNotification", _civilianPlayers];
+
+                    private _TimeHour = floor daytime;
+                    private _TimeMinute = floor ((daytime - _TimeHour) * 60);
+                    private _TimeSecond = floor (((((daytime) - (_TimeHour))*60) - _TimeMinute)*60);
+                    private _Time24 = text format ["%1:%2:%3", _TimeHour, _TimeMinute, _TimeSecond];
+
+                    private _markerArray = missionNamespace getVariable["svr_dickerSpottedArray", []];
+                    private _markerArrayCount = missionNamespace getVariable["svr_dickerSpotC", 0];
+                    if (_markerArrayCount == 0 || _markerArrayCount <= 4) then
+                    {
+                        _markerArray pushBack [_closestBluforPlayer, _Time24, (position _closestBluforPlayer)];
+                        missionNamespace setVariable["svr_dickerSpottedArray", _markerArray, true];
+                        missionNamespace setVariable["svr_dickerSpotC", count _markerArray, true];
+                    }
+                    else
+                    {
+                        _markerArray deleteAt 0;
+                        _markerArray pushBack [_closestBluforPlayer, _Time24, (position _closestBluforPlayer)];
+                        missionNamespace setVariable["svr_dickerSpottedArray", _markerArray, true];
+                        missionNamespace setVariable["svr_dickerSpotC", count _markerArray, true];
+                    };
                 };
             };
-        };
-    } forEach _dickersArray;
+        } forEach _dickersArray;
+        sleep 1;
+    };
 };
 
+[] spawn _fnc_dickersbehaviour;
 while {true} do
 {
-    call fnc_dickerscleanup;
-    call fnc_dickerspersistence;
-    call fnc_dickersbehaviour;
-    sleep 5;
-}
+    call _fnc_dickerspersistence;
+    sleep 1;
+    call _fnc_dickerscleanup;
+    sleep 3;
+};
