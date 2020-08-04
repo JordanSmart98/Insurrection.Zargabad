@@ -12,6 +12,7 @@ satDecoyScriptFnc =
     player removeAction _actionId;
     [player, 1, ["ACE_SelfActions", "INS_AceMenu", "INS_satDecoyPlace"]] call ace_interact_menu_fnc_removeActionFromObject;
 
+
     // Store Sat Decoy data in missionNamespace variables
     private _sat_array = missionNamespace getVariable["cl_satDecoyArray",[]];
     _sat_array pushBack _decoy;
@@ -56,5 +57,7 @@ satDecoyScriptFnc =
 
 };
 
+
 // Place Satellite Decoy Action
 [player, ["Place Satellite Scan decoy", {_this call satDecoyScriptFnc},[_decoy],1,true,true,"","(side _this == CIVILIAN)",50,false,"",""]] remoteExec ["addAction", 0, true];
+
