@@ -21,3 +21,6 @@ private _hook = ["BLU_SatelliteScan", "Satellite Scan",  "hpp\images\bluforScan.
 [player, 1, ["ACE_SelfActions", "BLU_AceMenu"], _hook] call ace_interact_menu_fnc_addActionToObject;
 
 [] spawn client_fnc_blufor_markerManagerStatic;
+
+sleep 5;
+call client_fnc_blufor_createTask;
