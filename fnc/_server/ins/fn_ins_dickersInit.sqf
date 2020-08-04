@@ -106,6 +106,12 @@ fnc_dickersbehaviour =
                 _Dicker lookAt _CloseBluforPlayer;
                 [_Dicker, "AinvPercMstpSnonWnonDnon_G01"] remoteExec ["switchMove", 0, true];
 
+                _insTeam = [];
+                {
+                    if (side _x == civilian) then {_insTeam pushBackUnique _x};
+                } forEach allPlayers;
+                ["DickerSpotted", ["An infidel has been spotted by our brothers!"]] remoteExec ["bis_fnc_showNotification", _insTeam];
+
                 private _TimeHour = floor daytime;
                 private _TimeMinute = floor ((daytime - _TimeHour) * 60);
                 private _TimeSecond = floor (((((daytime) - (_TimeHour))*60) - _TimeMinute)*60);

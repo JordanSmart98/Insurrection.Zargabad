@@ -1,7 +1,3 @@
-private _roadBlock = "Land_Canal_Wall_10m_F" createVehicle position player;
-_roadBlock attachTo [player, [0, 3, -3.1], "Pelvis"];
-_roadBlock setDir 180;
-
 fnc_addAction_Roadblock = {
     params ["_target", "_caller", "_actionId", "_arguments"];
 
@@ -41,4 +37,7 @@ fnc_addAction_Roadblock = {
     }, "Building"] call ace_common_fnc_progressBar;
 };
 
+private _roadBlock = "Land_Canal_Wall_10m_F" createVehicle position player;
+_roadBlock attachTo [player, [0, 3, -3.1], "Pelvis"];
+_roadBlock setDir 180;
 player addAction ["Setup Roadblock", {_this call fnc_addAction_Roadblock}, [_roadBlock], 1, true, true, "", "(side _this == CIVILIAN)"];
