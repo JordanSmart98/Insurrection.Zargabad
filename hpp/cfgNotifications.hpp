@@ -50,7 +50,7 @@ class cfgNotifications
         title = "Infidels Spotted";
         description = "%1";
         iconPicture="";
-        duration = 0.5;
+        duration = 1;
         priority = 10;
     };
 };
