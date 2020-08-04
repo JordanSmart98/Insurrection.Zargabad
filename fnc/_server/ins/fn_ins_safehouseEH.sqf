@@ -14,8 +14,11 @@ private _safehouseDataArray = missionNamespace getVariable["svr_safehouseData", 
             private _safehouseIndex = _safehouseArray findIf {_x == _safehouse};
             if (_safehouseIndex != -1) then
             {
-                _safehouseArray deleteAt (_safehouseArray find _safehouse);
+                private _safehouseIndex = _safehouseArray find _safehouse;
+                _safehouseArray deleteAt _safehouseIndex;
                 missionNamespace setVariable ["svr_safehouseArray", _safehouseArray, true];
+                // Set state of safehouse child task
+                [format ["Destroy_Safehouse_%1_Task",_safehouseIndex+1],"SUCCEEDED"] call BIS_fnc_taskSetState;
                 format["_local_safehousemarker_%1", _safehouseIndex] remoteExec ["deleteMarkerLocal", 0];
                 ["SafehouseDestroyed", ["A safehouse has been destroyed."]] remoteExec ["bis_fnc_showNotification", 0];
                 {

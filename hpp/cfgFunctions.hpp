@@ -7,6 +7,7 @@ class cfgFunctions {
             class blufor_interrogate;
             class blufor_markerManagerStatic;
             class blufor_scan;
+            class blufor_createTask;
         };
         class core {
             tag = "core";
