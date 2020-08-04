@@ -55,7 +55,7 @@ openMap true;
 createDialog "dialog_InsurgentSelection";
 waitUntil {!((findDisplay 7000) isEqualTo displayNull)}; //Ensure the display is on screen, then prevent it from being accidentally closed.
 (findDisplay 7000) displaySetEventHandler ["KeyDown", "if ((_this select 1) == 1 || (_this select 1) == 57 || (_this select 1) == 28) then { true }"];
-waitUntil {(findDisplay 7000) isEqualTo displayNull}; //Wait until the display is closed.
+//waitUntil {(findDisplay 7000) isEqualTo displayNull}; //Wait until the display is closed.
 
 player setVariable ["cl_money", 10000, true];
 
@@ -90,6 +90,7 @@ private _vehicleShopAction = ["INS_VehicleShop", "Vehicle Shop", "hpp\images\cor
 [] spawn client_fnc_ins_markerManagerStatic;
 [] spawn client_fnc_ins_markerManagerDynamic;
 [] spawn {
+    sleep 1;
     waitUntil {missionNamespace getVariable["svr_safehouseDataCount", 0] > 0};
     private _data = missionNamespace getVariable["svr_safehouseData", []] select 0;
     private _box = _data select 2;

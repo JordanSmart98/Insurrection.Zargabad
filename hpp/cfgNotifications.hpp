@@ -44,4 +44,13 @@ class cfgNotifications
 		duration = 3;
 		priority = 2;
 	};
+
+    class DickerSpotted
+    {
+        title = "Infidels Spotted";
+        description = "%1";
+        iconPicture="";
+        duration = 0.5;
+        priority = 10;
+    };
 };
