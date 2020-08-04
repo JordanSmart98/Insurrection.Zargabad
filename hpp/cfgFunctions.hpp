@@ -89,9 +89,7 @@ class cfgFunctions {
 	        tag = "ins";
 	        file = "fnc\_server\ins";
             class ins__Init;
-            class ins_dickersBehaviourLoop;
             class ins_dickersInit;
-            class ins_dickersOnEventDeleted;
             class ins_safehouseCreate;
             class ins_safehouseEH;
             class ins_safehouseEquipment;
