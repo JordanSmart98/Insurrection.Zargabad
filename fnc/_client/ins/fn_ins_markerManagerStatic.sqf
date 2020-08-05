@@ -8,11 +8,12 @@ while {true} do
         {
             if ((_staticMarkedObjects pushBackUnique _x) != -1) then
             {
-                private _marker = createMarkerLocal[format["_local_safehousemarker_%1", _forEachIndex], position _x];
+                private _marker = createMarkerLocal[format["_cl_sh_marker_%1", _forEachIndex], position _x];
                 _marker setMarkerColorLocal "ColorCIV";
                 _marker setMarkerTypeLocal "loc_hospital";
-                //_marker setMarkerTextLocal format["Safehouse: %1", _forEachIndex + 1];
+                _marker setMarkerTextLocal format["%1", _forEachIndex];
                 _staticMarkerList pushBack _marker;
+                _x setVariable["cl_sh_index", _forEachIndex, true];
             };
         } forEach _safehouseArray;
     };

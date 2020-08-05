@@ -107,7 +107,7 @@ private _fnc_dickersbehaviour = {
                     _xDicker lookAt _closestBluforPlayer;
                     [_xDicker, "AinvPercMstpSnonWnonDnon_G01"] remoteExec ["switchMove", 0, true];
 
-                    _civilianPlayers = (civilian call server_fnc_core_getPlayers);
+                    private _civilianPlayers = (civilian call server_fnc_core_getPlayers);
                     ["DickerSpotted", ["An infidel has been spotted by our brothers!"]] remoteExec ["bis_fnc_showNotification", _civilianPlayers];
 
                     private _TimeHour = floor daytime;

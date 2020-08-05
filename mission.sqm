@@ -8,7 +8,7 @@ class EditorData
 	toggles=553;
 	class ItemIDProvider
 	{
-		nextID=2378;
+		nextID=2382;
 	};
 	class MarkerIDProvider
 	{
@@ -21638,7 +21638,7 @@ class Mission
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorOrange";
-			alpha=0.69908476;
+			alpha=0.2;
 			fillName="SolidBorder";
 			a=450;
 			b=450;
@@ -22012,7 +22012,7 @@ class Mission
 			class Attributes
 			{
 				name="civ_triggerPlayArea";
-				condition="call{!isNull player && side player == civilian}";
+				condition="call{!isNull player && side player == civilian && !(player getVariable [""BIS_revive_incapacitated"", false]);}";
 				onActivation="call{thisTrigger triggerAttachVehicle [ player ]; " \n "thisTrigger setTriggerActivation [ ""VEHICLE"", ""NOT PRESENT"", true ]; " \n "thisTrigger setTriggerStatements [""this"", "" " \n "    triggerAttachedVehicle thisTrigger setdamage 1; " \n """, """"];}";
 				sizeA=450;
 				sizeB=450;
@@ -22031,7 +22031,7 @@ class Mission
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorWhite";
-			alpha=0.80074573;
+			alpha=0;
 			fillName="SolidFull";
 			a=280;
 			b=280;
@@ -22592,7 +22592,7 @@ class Mission
 			class Attributes
 			{
 				name="civ_triggerPlayArea_Warning";
-				condition="call{!isNull player && side player == civilian}";
+				condition="call{!isNull player && side player == civilian && !(player getVariable [""BIS_revive_incapacitated"", false]);}";
 				onActivation="call{thisTrigger triggerAttachVehicle [ player ]; " \n "thisTrigger setTriggerActivation [ ""VEHICLE"", ""NOT PRESENT"", true ]; " \n "thisTrigger setTriggerStatements [""this"", ""(triggerAttachedVehicle thisTrigger) call client_fnc_ins_insBorder;"", """"];}";
 				sizeA=420;
 				sizeB=420;

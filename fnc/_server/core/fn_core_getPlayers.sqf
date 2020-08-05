@@ -1,6 +1,9 @@
 params["_side"];
-_array = [];
-{
-    if ((side _x) isEqualTo _side) then {_array pushBack _x}
-} forEach allPlayers;
-_array;
+switch(_side) do {
+    case west: {
+        missionNamespace getVariable ["svr_allP_blufor", []];
+    };
+    case civilian: {
+        missionNamespace getVariable ["svr_allP_civ", []];
+    };
+};
