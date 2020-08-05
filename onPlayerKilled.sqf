@@ -12,12 +12,11 @@ if (_bluforCount > 0) then
     if ((_deathTotal mod _bluforCount) == 0) then {
         missionNamespace setVariable["svr_esclationPhase", ((missionNamespace getVariable["svr_esclationPhase", 0]) + 1), true];
         ["EsclationPhaseUp", ["The insurrection has escalated."]] remoteExec ["bis_fnc_showNotification", 0];
+
+        private _civilianPlayers = (civilian call server_fnc_core_getPlayers);
         {
-            if ((side _x == civilian) && (isPlayer _x)) then
-            {
-                _x setVariable ["cl_money", ((_x getVariable ["cl_money", 0]) + 2000), true];
-                "<br/><t font='PuristaBold' align='center' size='2' color='#28b858'>+ $2000</t>" remoteExec ["client_fnc_core_displayStructuredText", _x];
-            };
-        } forEach allPlayers;
+            _x setVariable ["cl_money", ((_x getVariable ["cl_money", 0]) + 2000), true];
+            "<br/><t font='PuristaBold' align='center' size='2' color='#28b858'>+ $2000</t>" remoteExec ["client_fnc_core_displayStructuredText", _x];
+        } forEach _civilianPlayers;
     }
 };

@@ -47,7 +47,7 @@ if (([_this, 0, 1, [1]] call BIS_fnc_param) == 0) exitWith {};
 
 ///////////////////////////////////////////////////////////////editable parameters//////////////////////////////////////////////////////////////////////
 
-BH_fnc_mkr3D_toggleKey = DIK_Y; //replace with whatever key you want to use for showing/hiding 3D markers in game. DIK code macros are provided.
+BH_fnc_mkr3D_toggleKey = DIK_O; //replace with whatever key you want to use for showing/hiding 3D markers in game. DIK code macros are provided.
 BH_fnc_mkr3D_JIPsync = true; //sync markers in global and side chat for JIP players
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -132,7 +132,7 @@ BH_fnc_mkr3D =
 	_logic setVariable
 	[
 		"BH_UserMkr_EH",
-		addMissionEventhandler
+		addMissionEventHandler
 		[
 			"draw3D",
 			compile format
@@ -195,6 +195,7 @@ BH_fnc_mkr3D =
 		"BH_UserMkr_Array",
 		_grp
 	];
+	_name;
 };
 
 BH_fnc_mkr3D_VON =

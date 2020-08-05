@@ -28,7 +28,7 @@ params ["_target", "_player", "_params"];
 
     private _dickersArray = missionNamespace getVariable ["svr_dickersArray", []];
     _dickersArray deleteAt (_dickersArray find _target);
-    _target setVariable["cl_insDicker", 0, true];
+    _target setVariable["cl_insDicker", false, true];
     _target removeItem "ACE_Cellphone";
     missionNamespace setVariable ["svr_dickersArray", _dickersArray, true];
     [] remoteExec["server_fnc_ins_dickersOnEventDeleted", 2];

@@ -9,8 +9,7 @@ BluforAirVL = [
     ["CUP_B_Merlin_HC3_Armed_GB", 1750],
     ["CUP_B_CH47F_GB", 2500],
     ["CUP_B_CH47F_VIV_GB", 2500],
-    ["CUP_B_MH47E_GB", 3000],
-    ["CUP_B_AW159_RN_Blackcat", 5000]
+    ["CUP_B_MH47E_GB", 3000]
 ];
 
 BluforLandVL = [
@@ -29,12 +28,7 @@ BluforLandVL = [
     ["CUP_B_Wolfhound_LMG_GB_D", 2500],
     ["CUP_B_Wolfhound_HMG_GB_D", 2500],
     ["CUP_B_Mastiff_LMG_GB_D", 3000],
-    ["CUP_B_Mastiff_HMG_GB_D", 3000],
-    ["CUP_B_FV432_Bulldog_GB_D_RWS", 6000],
-    ["CUP_B_FV510_GB_D", 6000],
-    ["CUP_B_FV510_GB_D_SLAT", 6000],
-    ["CUP_B_MCV80_GB_D", 6000],
-    ["CUP_B_MCV80_GB_D_SLAT", 6000]
+    ["CUP_B_Mastiff_HMG_GB_D", 3000]
 ];
 
 insCivVL = [

@@ -24,7 +24,7 @@ private _fnc_dickerspersistence = {
                     private _result = _dickersArray pushBackUnique _pC;
                     if (!(_result isEqualTo -1)) then
                     {
-                        _pC setVariable ["cl_insDicker", true];
+                        _pC setVariable ["cl_insDicker", true, true];
                         _pC addItem "ACE_Cellphone";
                     };
                 };
@@ -44,11 +44,9 @@ private _fnc_dickerscleanup = {
 
     if (_dickerCount > _dickerPopulation && false) then //TODO: change move to own function for calling when reducing dicker rate which is yet to be implemented.
     {
-        systemChat "dickers: wiping";
-        diag_log "dickers: wiping";
         private _dickersArray = missionNamespace getVariable ["svr_dickersArray", []];
         {
-            _x setVariable ["cl_insDicker", false];
+            _x setVariable ["cl_insDicker", false, true];
             _x removeItem "ACE_Cellphone";
         } forEach _dickersArray;
 
@@ -62,10 +60,13 @@ private _fnc_dickerscleanup = {
         private _cleanedArray = [];
         {   if (!(isNull _x) && alive _x) then
             {
-                _x setVariable ["cl_insDicker", false];
-                _x removeItem "ACE_Cellphone";
+                _x setVariable ["cl_insDicker", true, true];
                 _cleanedArray pushBack _x;
             }
+            else
+            {
+                _x setVariable ["cl_insDicker", false, true];
+            };
         } forEach _dickersArray;
         missionNamespace setVariable ["svr_dickersArray", _cleanedArray, true];
         missionNamespace setVariable ["svr_dickersCount", count _cleanedArray, true];

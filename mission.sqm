@@ -8,7 +8,7 @@ class EditorData
 	toggles=553;
 	class ItemIDProvider
 	{
-		nextID=2373;
+		nextID=2378;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3966.8855,105.12573,4047.4426};
-		dir[]={0.62294543,-0.43285945,0.65169829};
-		up[]={0.29915416,0.90141243,0.31296274};
-		aside[]={0.72291875,2.7776696e-007,-0.69102567};
+		pos[]={4078.8447,91.626091,4066.3042};
+		dir[]={-0.76302385,-0.4800458,0.43285793};
+		up[]={-0.41754183,0.87723869,0.23686822};
+		aside[]={0.49342802,-1.4167745e-007,0.86979264};
 	};
 };
 binarizationWanted=0;
@@ -21371,7 +21371,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=37;
+		items=38;
 		class Item0
 		{
 			dataType="Group";
@@ -21384,7 +21384,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4030.5247,16.195059,4106.2915};
+						position[]={4030.146,16.222157,4108.3379};
 					};
 					side="Civilian";
 					flags=7;
@@ -21395,7 +21395,7 @@ class Mission
 					};
 					id=33;
 					type="CUP_C_TK_Man_04";
-					atlOffset=-3.8146973e-006;
+					atlOffset=-1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21463,7 +21463,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4028.7419,16.22036,4106.3027};
+						position[]={4028.3633,16.222185,4108.3486};
 					};
 					side="Civilian";
 					flags=5;
@@ -21540,7 +21540,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4029.6807,16.212507,4107.4546};
+						position[]={4029.3018,16.225063,4109.501};
 						angles[]={0,2.1457672e-006,0};
 					};
 					side="Civilian";
@@ -21619,7 +21619,7 @@ class Mission
 			{
 			};
 			id=32;
-			atlOffset=-3.8146973e-006;
+			atlOffset=-1.9073486e-006;
 		};
 		class Item1
 		{
@@ -21633,18 +21633,18 @@ class Mission
 		class Item2
 		{
 			dataType="Marker";
-			position[]={4079.917,13.921,4156.5151};
+			position[]={4150,19.096001,4150};
 			name="marker_0";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorOrange";
-			alpha=0.25;
+			alpha=0.69908476;
 			fillName="SolidBorder";
-			a=350;
-			b=350;
+			a=450;
+			b=450;
 			drawBorder=1;
 			id=114;
-			atlOffset=-2.7089481;
+			atlOffset=2.2860012;
 		};
 		class Item3
 		{
@@ -22007,17 +22007,17 @@ class Mission
 		class Item24
 		{
 			dataType="Trigger";
-			position[]={4079.906,16.630108,4156.498};
+			position[]={4150,16.809999,4150};
 			angle=1.5707964;
 			class Attributes
 			{
 				name="civ_triggerPlayArea";
 				condition="call{!isNull player && side player == civilian}";
 				onActivation="call{thisTrigger triggerAttachVehicle [ player ]; " \n "thisTrigger setTriggerActivation [ ""VEHICLE"", ""NOT PRESENT"", true ]; " \n "thisTrigger setTriggerStatements [""this"", "" " \n "    triggerAttachedVehicle thisTrigger setdamage 1; " \n """, """"];}";
-				sizeA=350;
-				sizeB=350;
+				sizeA=450;
+				sizeB=450;
 				repeatable=1;
-				activationBy="ANYPLAYER";
+				activationBy="CIV";
 				isRectangle=1;
 			};
 			id=368;
@@ -22026,18 +22026,17 @@ class Mission
 		class Item25
 		{
 			dataType="Marker";
-			position[]={4079.917,13.921,4156.5161};
+			position[]={4150,18.524,4150};
 			name="marker_1";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorWhite";
-			alpha=0;
-			fillName="Border";
+			alpha=0.80074573;
+			fillName="SolidFull";
 			a=280;
 			b=280;
-			drawBorder=1;
 			id=817;
-			atlOffset=-2.708931;
+			atlOffset=1.7140007;
 		};
 		class Item26
 		{
@@ -22501,7 +22500,7 @@ class Mission
 		class Item32
 		{
 			dataType="Trigger";
-			position[]={4079.781,16.632673,4156.2622};
+			position[]={4150,16.809999,4150};
 			angle=1.5707964;
 			class Attributes
 			{
@@ -22584,6 +22583,25 @@ class Mission
 			id=2372;
 			type="Land_HBarrierBig_F";
 			atlOffset=3.8146973e-006;
+		};
+		class Item37
+		{
+			dataType="Trigger";
+			position[]={4150,16.809999,4150};
+			angle=1.5707964;
+			class Attributes
+			{
+				name="civ_triggerPlayArea_Warning";
+				condition="call{!isNull player && side player == civilian}";
+				onActivation="call{thisTrigger triggerAttachVehicle [ player ]; " \n "thisTrigger setTriggerActivation [ ""VEHICLE"", ""NOT PRESENT"", true ]; " \n "thisTrigger setTriggerStatements [""this"", ""(triggerAttachedVehicle thisTrigger) call client_fnc_ins_insBorder;"", """"];}";
+				sizeA=420;
+				sizeB=420;
+				repeatable=1;
+				activationBy="CIV";
+				isRectangle=1;
+			};
+			id=2373;
+			type="EmptyDetector";
 		};
 	};
 };

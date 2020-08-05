@@ -63,6 +63,7 @@ class cfgFunctions {
             class ins_insOnClose;
             class ins_insPopulate;
             class ins_insRequest;
+            class ins_insBorder;
             class ins_insurgentTeleport;
             class ins_markerManagerDynamic;
             class ins_markerManagerStatic;
