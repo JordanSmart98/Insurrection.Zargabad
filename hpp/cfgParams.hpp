@@ -11,7 +11,7 @@ class Params
 
 	class StaminaEnabled//1
 	{
-	    title = "Stamina";
+	    title = "Disable Stamina";
 	    values[] = {0, 1};
 	    texts[] = {$STR_DISABLED, $STR_ENABLED};
 	    default = 1;
