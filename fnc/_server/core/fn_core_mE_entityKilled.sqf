@@ -1,45 +1,45 @@
 params ["_killedUnit", "_killer", "_triggerMan"];
 
-switch (side _killedUnit) do
-{
-    case west:
+if (isPlayer _killedUnit) exitWith {};
+if (_killedUnit isKindOf "Man") then {
+    switch (side _killedUnit) do
     {
-        if (side _triggerMan isEqualTo west) exitWith
+        case west:
         {
-            true;
-        };
-
-        if (side _triggerMan isEqualTo civilian) exitWith
-        {
-            true;
-        };
-    };
-
-    case civilian:
-    {
-        private _isDicker = (_killedUnit getVariable["cl_insDicker", -1]) isEqualTo 1;
-        if (side _triggerMan isEqualTo civilian) exitWith
-        {
-            if (_isDicker) then
+            if (side _triggerMan isEqualTo west) exitWith
             {
-                //[["CivilianKilled", [format["Insurgent %1 killed a dicker.", name _triggerMan]]], "bis_fnc_showNotification", true] call BIS_fnc_MP;
-                ["CivilianKilled", [format["Insurgent %1 killed a dicker.", name _triggerMan]]] remoteExec ["bis_fnc_showNotification"];
+                true;
+            };
+
+            if (side _triggerMan isEqualTo civilian) exitWith
+            {
+                true;
             };
         };
-        if (side _triggerMan isEqualTo west) exitWith
+
+        case civilian:
         {
-            if (_isDicker) then
+            private _isDicker = _killedUnit getVariable["cl_insDicker", false];
+            if (side _triggerMan isEqualTo civilian) exitWith
             {
-                //[["CivilianKilled", [format["%1 killed a dicker.", name _triggerMan]]], "bis_fnc_showNotification", true] call BIS_fnc_MP;
-                ["CivilianKilled", [format["%1 killed a dicker.", name _triggerMan]]] remoteExec ["bis_fnc_showNotification"];
-            }
-            else
+                if (_isDicker) then
+                {
+                    ["CivilianKilled", [format["Insurgent %1 killed a dicker.", name _triggerMan]]] remoteExec ["bis_fnc_showNotification"];
+                };
+            };
+            if (side _triggerMan isEqualTo west) exitWith
             {
-                private _civKillCounter = missionNamespace getVariable["svr_civiliansKilled", 0];
-                _civKillCounter = _civKillCounter + 1;
-                //[["CivilianKilled",[format["%1 killed a civilian. %2", name _triggerMan, _civKillCounter]]],"bis_fnc_showNotification",true] call BIS_fnc_MP;
-                ["CivilianKilled",[format["%1 killed a civilian. %2", name _triggerMan, _civKillCounter]]] remoteExec ["bis_fnc_showNotification"];
-                missionNamespace setVariable["svr_civiliansKilled", _civKillCounter, true];
+                if (_isDicker) then
+                {
+                    ["CivilianKilled", [format["%1 killed a dicker.", name _triggerMan]]] remoteExec ["bis_fnc_showNotification"];
+                }
+                else
+                {
+                    private _civKillCounter = missionNamespace getVariable["svr_civiliansKilled", 0];
+                    _civKillCounter = _civKillCounter + 1;
+                    ["CivilianKilled",[format["%1 killed a civilian. %2", name _triggerMan, _civKillCounter]]] remoteExec ["bis_fnc_showNotification"];
+                    missionNamespace setVariable["svr_civiliansKilled", _civKillCounter, true];
+                };
             };
         };
     };
