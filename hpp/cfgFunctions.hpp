@@ -63,6 +63,7 @@ class cfgFunctions {
             class ins_insOnClose;
             class ins_insPopulate;
             class ins_insRequest;
+            class ins_insBorder;
             class ins_insurgentTeleport;
             class ins_markerManagerDynamic;
             class ins_markerManagerStatic;
@@ -81,6 +82,7 @@ class cfgFunctions {
             class core_drivingAi_main;
             class core_drivingAi_vehiclesAround;
             class core_drivingAi_vehicleSort;
+            class core_getPlayers;
             class core_mE_aceCaptiveStatus;
             class core_mE_entityKilled;
             class core_safeStartLoop;

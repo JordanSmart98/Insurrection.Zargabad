@@ -34,13 +34,11 @@ satDecoyScriptFnc =
         missionNamespace setVariable ["cl_satDecoyArrayCount", count _sat_array, true];
 
         // Add reward
+        private _bluforPlayers = (west call server_fnc_core_getPlayers);
         {
-            if ((side _x == west) && (isPlayer _x)) then
-            {
-                _x setVariable ["cl_money", ((_x getVariable ["cl_money", 0]) + 2000)];
-                "<br/><t font='PuristaBold' align='center' size='2' color='#28b858'>+$2000</t>" remoteExec ["client_fnc_core_displayStructuredText", _x];
-            };
-        } forEach allPlayers;
+            _x setVariable ["cl_money", ((_x getVariable ["cl_money", 0]) + 2000)];
+            "<br/><t font='PuristaBold' align='center' size='2' color='#28b858'>+$2000</t>" remoteExec ["client_fnc_core_displayStructuredText", _x];
+        } forEach _bluforPlayers;
     }
     ];
 

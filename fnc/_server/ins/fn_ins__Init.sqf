@@ -5,8 +5,3 @@ missionNamespace setVariable["svr_insurgent2", 0, true];
 missionNamespace setVariable["svr_insurgent3", 0, true];
 
 [] spawn server_fnc_ins_dickersInit;
-
-//sleep 1;
-//waitUntil {missionNamespace getVariable["svr_missionTimer", 0] < 0};
-
-//call server_fnc_ins_dickersInit;
