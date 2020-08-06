@@ -4,10 +4,10 @@ private _fnc_dickerspersistence = {
     private _civPercentage = missionNamespace getVariable["svr_dickersPopulation", 20];
     private _dickerPopulation = round(_civCount * (_civPercentage / 100));
 
-    diag_log format["dickers: civCount:%1, dickerPop:%2", _civCount, _dickerPopulation];
+    //diag_log format["dickers: dickerCount:%1, dickerPop:%2, civCount:%3", _dickerCount, _dickerPopulation, _civCount];
     if (_dickerCount < _dickerPopulation) then
     {
-        diag_log "dickers: persistenting";
+        //diag_log "dickers: count lower than wanted";
         private _dickersArray = missionNamespace getVariable ["svr_dickersArray", []];
         while {count _dickersArray < _dickerPopulation} do
         {
@@ -26,6 +26,7 @@ private _fnc_dickerspersistence = {
                     {
                         _pC setVariable ["cl_insDicker", true, true];
                         _pC addItem "ACE_Cellphone";
+                        diag_log "dickers: set";
                     };
                 };
             };
@@ -33,6 +34,7 @@ private _fnc_dickerspersistence = {
         //Our population of dickers is now what it should be
         missionNamespace setVariable ["svr_dickersArray", _dickersArray, true];
         missionNamespace setVariable ["svr_dickersCount", count _dickersArray, true];
+        //diag_log "dickers: population equalised";
     };
 };
 
@@ -42,8 +44,9 @@ private _fnc_dickerscleanup = {
     private _civPercentage = missionNamespace getVariable["svr_dickersPopulation", 20];
     private _dickerPopulation = round(_civCount * (_civPercentage / 100));
 
-    if (_dickerCount > _dickerPopulation && false) then //TODO: change move to own function for calling when reducing dicker rate which is yet to be implemented.
+    if (_dickerCount > _dickerPopulation) then //TODO: change move to own function for calling when reducing dicker rate which is yet to be implemented.
     {
+        //diag_log "dickers: dickers wiped";
         private _dickersArray = missionNamespace getVariable ["svr_dickersArray", []];
         {
             _x setVariable ["cl_insDicker", false, true];
@@ -52,7 +55,7 @@ private _fnc_dickerscleanup = {
 
         missionNamespace setVariable ["svr_dickersArray", [], true];
         missionNamespace setVariable ["svr_dickersCount", 0, true];
-        call fnc_dickerspersistence;
+        call _fnc_dickerspersistence;
     }
     else
     {
@@ -66,6 +69,7 @@ private _fnc_dickerscleanup = {
             else
             {
                 _x setVariable ["cl_insDicker", false, true];
+                //diag_log "dickers: unset";
             };
         } forEach _dickersArray;
         missionNamespace setVariable ["svr_dickersArray", _cleanedArray, true];
