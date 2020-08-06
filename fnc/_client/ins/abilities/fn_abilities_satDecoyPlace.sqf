@@ -12,17 +12,15 @@ satDecoyScriptFnc =
     player removeAction _actionId;
     [player, 1, ["ACE_SelfActions", "INS_AceMenu", "INS_satDecoyPlace"]] call ace_interact_menu_fnc_removeActionFromObject;
 
-
     // Store Sat Decoy data in missionNamespace variables
-    private _sat_array = missionNamespace getVariable["cl_satDecoyArray",[]];
+    private _sat_array = missionNamespace getVariable["svr_satDecoyArray",[]];
     _sat_array pushBack _decoy;
-    missionNamespace setVariable ["cl_satDecoyArray", _sat_array, true];
-    missionNamespace setVariable ["cl_satDecoyArrayCount", count _sat_array, true];
+    missionNamespace setVariable ["svr_satDecoyArray", _sat_array, true];
+    missionNamespace setVariable ["svr_satDecoyArrayCount", count _sat_array, true];
 
     // Add explosion event handler
     _decoy addEventHandler
-    ["Explosion",
-    {
+    ["Explosion", {
     	params ["_vehicle", "_damage"];
     	private _decoy = _vehicle;
     	private _sat_array = missionNamespace getVariable["cl_satDecoyArray",[]];
@@ -30,29 +28,25 @@ satDecoyScriptFnc =
     	// Delete vehicle and update global Sat Decoy variables
     	deleteVehicle _decoy;
         _sat_array deleteAt (_sat_array find _decoy);
-        missionNamespace setVariable ["cl_satDecoyArray", _sat_array, true];
-        missionNamespace setVariable ["cl_satDecoyArrayCount", count _sat_array, true];
+        missionNamespace setVariable ["svr_satDecoyArray", _sat_array, true];
+        missionNamespace setVariable ["svr_satDecoyArrayCount", count _sat_array, true];
 
         // Add reward
         private _bluforPlayers = (west call server_fnc_core_getPlayers);
         {
-            _x setVariable ["cl_money", ((_x getVariable ["cl_money", 0]) + 2000)];
+            _x setVariable ["cl_money", ((_x getVariable ["cl_money", 0]) + 2000), true];
             "<br/><t font='PuristaBold' align='center' size='2' color='#28b858'>+$2000</t>" remoteExec ["client_fnc_core_displayStructuredText", _x];
         } forEach _bluforPlayers;
-    }
-    ];
+    }];
 
     // Spawn audio on vehicle loop
-    while{True} do
-    {
-        [_decoy] spawn
-        {
-             params ["_decoy"];
-             [_decoy, "snd_effect_SatDecoy"] call client_fnc_core_say3DMP;
+    [_decoy] spawn {
+        params ["_decoy"];
+        while {alive _decoy} do {
+            [_decoy, "snd_effect_SatDecoy"] call client_fnc_core_say3DMP;
+            sleep 8;
         };
-        sleep 8;
     };
-
 };
 
 
