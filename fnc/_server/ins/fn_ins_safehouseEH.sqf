@@ -24,7 +24,7 @@ private _safehouseDataArray = missionNamespace getVariable["svr_safehouseData", 
                 ["SafehouseDestroyed", ["A safehouse has been destroyed."]] remoteExec ["bis_fnc_showNotification", 0];
                 private _bluforPlayers = (west call server_fnc_core_getPlayers);
                 {
-                    _x setVariable ["cl_money", ((_x getVariable ["cl_money", 0]) + 5000)];
+                    _x setVariable ["cl_money", ((_x getVariable ["cl_money", 0]) + 5000), true];
                     "<br/><t font='PuristaBold' align='center' size='2' color='#28b858'>+$5000</t>" remoteExec ["client_fnc_core_displayStructuredText", _x];
                 } forEach _bluforPlayers;
             };

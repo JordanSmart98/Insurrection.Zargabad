@@ -2,11 +2,12 @@ waitUntil {!isNull (findDisplay 4000)};
 disableSerialization;
 
 private _display = findDisplay 4000;
+private _Lb_List = _display displayCtrl 4001;
 private _Text_Fund = _display displayCtrl 4002;
 
-private _itemIndex = lbCurSel 4001;
-private _itemValue = lbValue [4001, _itemIndex];
-private _itemData = lbData [4001, _itemIndex];
+private _itemIndex = lbCurSel _Lb_List;
+private _itemValue = _Lb_List lbValue _itemIndex;
+private _itemData = _Lb_List lbData _itemIndex;
 
 private _playerMoney = player getVariable["cl_money", 0];
 if (_playerMoney >= _itemValue) then

@@ -17,7 +17,7 @@ class dialog_InsurgentItemShop
 			colorText[] = {0,0,0,1};
 			font = "PuristaMedium";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
-
+			onLoad = "[4000] spawn client_fnc_core_menuConditionMet";
 		};
 		class MainBackground
 		{
@@ -261,7 +261,7 @@ class dialog_InsurgentItemShop
 			soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1.0};
 			soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1.0};
 			colorFocused2[] = {1,0.6,0.6,1};
-			onButtonClick = "closeDialog 0;";
+			onButtonClick = "findDisplay 4000 closeDisplay 0;";
 			shadow = 0;
 
 		};

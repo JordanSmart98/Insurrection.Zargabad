@@ -42,7 +42,7 @@ if (((player getVariable ["cl_lastScan", 0]) + 60) <= time) then
                 _marker setMarkerColor "ColorRed";
                 _marker setMarkerAlpha 0.2;
             };
-		} forEach (missionNamespace getVariable["cl_satDecoyArray",[]]);
+		} forEach (missionNamespace getVariable["svr_satDecoyArray",[]]);
 	};
 	player setVariable ["cl_lastScan", time, true];
 }

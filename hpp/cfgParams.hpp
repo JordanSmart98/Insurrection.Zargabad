@@ -17,15 +17,7 @@ class Params
 	    default = 1;
 	};
 
-    class RestrictView//2
-    {
-        title = "Third-Person";
-        values[] = {1, 2, 3, 4};
-        texts[] = {"Vehicles only", "Infantry only", "Disabled", "Enabled"};
-        default = 4;
-    };
-
-    class marker3D//3
+    class marker3D//2
     {
         title = "3D markers";
         values[] = {0,1};

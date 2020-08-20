@@ -81,6 +81,7 @@ waitUntil {!isNull (findDisplay 7900)};
 disableSerialization;
 
 private _display = findDisplay 7900;
+private _Lb_Type = _display displayCtrl 7902;
 private _Text_PlayerMoney = _display displayCtrl 7903;
 
 private _money = player getVariable ["cl_money", 0];
@@ -90,25 +91,25 @@ private _curVehicleArray = switch (playerSide) do
 {
     case west:
     {
-        private _itemIndex = lbAdd [7902, "Land Vehicles"];
-        lbSetData [7902, _itemIndex, "BluforLandVL"];
+        private _itemIndex = _Lb_Type lbAdd "Land Vehicles";
+        _Lb_Type lbSetData [_itemIndex, "BluforLandVL"];
 
-        lbSetCurSel [7902, _itemIndex];
+        _Lb_Type lbSetCurSel _itemIndex;
 
-        private _itemIndex = lbAdd [7902, "Air Vehicles"];
-        lbSetData [7902, _itemIndex, "BluforAirVL"];
+        private _itemIndex = _Lb_Type lbAdd "Air Vehicles";
+        _Lb_Type lbSetData [_itemIndex, "BluforAirVL"];
 
         BluforLandVL;
     };
     case civilian:
     {
-        private _itemIndex = lbAdd [7902, "Black Market Vehicles"];
-        lbSetData [7902, _itemIndex, "insBlackmarketVL"];
+        private _itemIndex = _Lb_Type lbAdd "Black Market Vehicles";
+        _Lb_Type lbSetData [_itemIndex, "insBlackmarketVL"];
 
-        lbSetCurSel [7902, _itemIndex];
+        _Lb_Type lbSetCurSel _itemIndex;
 
-        private _itemIndex = lbAdd [7902, "Civilian Vehicles"];
-        lbSetData [7902, _itemIndex, "insCivVL"];
+        private _itemIndex = _Lb_Type lbAdd "Civilian Vehicles";
+        _Lb_Type lbSetData [_itemIndex, "insCivVL"];
 
         insBlackmarketVL;
     };
@@ -118,7 +119,7 @@ private _List_Vehicles = _display displayCtrl 7901;
 {
     private _displayName = getText (configFile >> "CfgVehicles" >> _x select 0 >> "displayName");
     private _displayIcon = getText(configFile >> "cfgVehicles" >> _x select 0 >> "picture");
-    private _itemIndex = lbAdd [7901, format["  $%1  ", _x select 1] + _displayName];
+    private _itemIndex = _List_Vehicles lbAdd (format["  $%1  ", _x select 1] + _displayName);
     _List_Vehicles lbSetData [_itemIndex, _x select 0];
     _List_Vehicles lbSetValue [_itemIndex, _x select 1];
     _List_Vehicles lbSetPictureRight[_itemIndex, _displayIcon];

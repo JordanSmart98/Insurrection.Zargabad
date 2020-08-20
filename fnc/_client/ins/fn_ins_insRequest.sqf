@@ -7,7 +7,8 @@ switch (_selectedInsurgent) do
     case 1: {//Osama Bin Laden
         missionNamespace setVariable["svr_insurgent1", 1, true];
         player setVariable["cl_insChoice", 1, true];
-        player setVariable["cl_insPop", 3, true];
+        missionNamespace setVariable["svr_dickersPercent", 30, true];
+        missionNamespace setVariable["svr_dickersWill", 25, true];
 
         private _tunnelAction = ["INS_tunnelPlace", "Place Tunnel", "hpp\images\insTunnel.paa", {call client_fnc_abilities_tunnelPlace;}, {true}, {}, []] call ace_interact_menu_fnc_createAction;
         [player, 1, ["ACE_SelfActions", "INS_AceMenu"], _tunnelAction] call ace_interact_menu_fnc_addActionToObject;
@@ -20,12 +21,14 @@ switch (_selectedInsurgent) do
     case 2: {//Rodall Juhziz
         missionNamespace setVariable["svr_insurgent2", 1, true];
         player setVariable["cl_insChoice", 2, true];
-        player setVariable["cl_insPop", 1, true];
+        missionNamespace setVariable["svr_dickersPercent", 10, true];
+        missionNamespace setVariable["svr_dickersWill", 80, true];
     };
     case 3: {//Mustafa
         missionNamespace setVariable["svr_insurgent3", 1, true];
         player setVariable["cl_insChoice", 3, true];
-        player setVariable["cl_insPop", 2, true];
+        missionNamespace setVariable["svr_dickersPercent", 20, true];
+        missionNamespace setVariable["svr_dickersWill", 30, true];
     };
 };
 

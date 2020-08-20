@@ -2,12 +2,13 @@ waitUntil {!isNull (findDisplay 4000)};
 disableSerialization;
 
 private _display = findDisplay 4000;
+private _Lb_List = _display displayCtrl 4001;
 private _Text_ItemDescription = _display displayCtrl 4005;
 private _Text_ItemPrice = _display displayCtrl 4006;
 
-private _itemIndex = lbCurSel 4001;
-private _itemName = lbText[4001, _itemIndex];
-private _itemPrice = lbValue[4001, _itemIndex];
+private _itemIndex = lbCurSel _Lb_List;
+private _itemName = _Lb_List lbText _itemIndex;
+private _itemPrice = _Lb_List lbValue _itemIndex;
 
 private _text = switch (_itemName) do
 {
