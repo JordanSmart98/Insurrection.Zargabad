@@ -65,9 +65,26 @@ clearItemCargoGlobal _crate;
 clearWeaponCargoGlobal _crate;
 clearMagazineCargo _crate;
 clearBackpackCargoGlobal _crate;
+
+_fnc_MagicCrate = {
+    diag_log "called";
+    params ["_crate"];
+    [_crate, true] call ace_arsenal_fnc_initBox;
+
+    _crate addEventHandler [ "ContainerOpened", {
+        params ["_container", "_unit"];
+       	h = [] spawn {
+       		waitUntil{ !isNull findDisplay 602 };
+       		closeDialog 1;
+       	};
+       	[_container, _unit, true] call ace_arsenal_fnc_openBox
+    }];
+    [_crate, ["<t color='#B570E8C9'>Loadout</t>", {createDialog "dialog_LoadoutRequest"},"",0,true,false,"","(side player == civilian)"]] remoteExec ["addAction"];
+};
+
 switch(_type) do
 {
-    case "CUP_USSpecialWeapons_EP1":{[_crate, true] call ace_arsenal_fnc_initBox; [_crate, ["<t color='#B570E8C9'>Loadout</t>", { createDialog "dialog_LoadoutRequest" },"",6,true,false,"","(side player == civilian)"]] remoteExec ["addAction"];};
+    case "CUP_USSpecialWeapons_EP1":{_crate call _fnc_MagicCrate;};
     case "Box_CSAT_Equip_F": {{_crate addItemCargoGlobal [_x select 0, _x select 1]}forEach _insAceEquipment};
     case "Box_CSAT_Uniforms_F": {{_crate addItemCargoGlobal [_x select 0, _x select 1]}forEach _insClothes};
 };
