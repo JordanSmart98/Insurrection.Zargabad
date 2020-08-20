@@ -12,13 +12,18 @@ class cfgFunctions {
         class core {
             tag = "core";
             file = "fnc\_client\core";
-            class core_vrsConditionCheck {file = "fnc\_client\core\vrs\fn_core_vrsConditionCheck.sqf";};
-            class core_vrsOnComboChange {file = "fnc\_client\core\vrs\fn_core_vrsOnComboChange.sqf";};
-            class core_vrsOnSelChange {file = "fnc\_client\core\vrs\fn_core_vrsOnSelChange.sqf";};
-            class core_vrsPopulate {file = "fnc\_client\core\vrs\fn_core_vrsPopulate.sqf";};
-            class core_vrsRequest {file = "fnc\_client\core\vrs\fn_core_vrsRequest.sqf";};
-            class core_briefing;
+            class core_menuClick {file = "fnc\_client\core\dialogs\fn_core_menuClick.sqf";};
+            class core_menuConditionCheck {file = "fnc\_client\core\dialogs\fn_core_menuConditionCheck.sqf";};
+            class core_menuConditionMet {file = "fnc\_client\core\dialogs\fn_core_menuConditionMet.sqf";};
+            class core_menuKeydown {file = "fnc\_client\core\dialogs\fn_core_menuKeydown.sqf";};
+            class core_menuPopulate {file = "fnc\_client\core\dialogs\fn_core_menuPopulate.sqf";};
+            class core_vrsOnComboChange {file = "fnc\_client\core\dialogs\fn_core_vrsOnComboChange.sqf";};
+            class core_vrsOnSelChange {file = "fnc\_client\core\dialogs\fn_core_vrsOnSelChange.sqf";};
+            class core_vrsPopulate {file = "fnc\_client\core\dialogs\fn_core_vrsPopulate.sqf";};
+            class core_vrsRequest {file = "fnc\_client\core\dialogs\fn_core_vrsRequest.sqf";};
             class core_3Dmarkers;
+            class core_briefing;
+            class core_endSplash {preInit = 1;};
             class core_displayStructuredText;
             class core_keyDownHandler;
             class core_safety;
@@ -26,9 +31,9 @@ class cfgFunctions {
             class core_lrsLoadouts;
             class core_lrsPopulate;
             class core_lrsRequest;
-            class core_restrictView;
             class core_unflipVehicle;
             class core_unflipVehicleAddAction;
+            class core_handleDamage;
         };
         class abilities {
             tag = "abilities";
@@ -91,7 +96,7 @@ class cfgFunctions {
 	        tag = "ins";
 	        file = "fnc\_server\ins";
             class ins__Init;
-            class ins_dickersInit;
+            class ins_dickersCore;
             class ins_safehouseCreate;
             class ins_safehouseEH;
             class ins_safehouseEquipment;

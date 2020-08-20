@@ -1,5 +1,16 @@
 params ["_oldUnit",	"_killer", "_respawn",	"_respawnDelay"];
 
+//Add code to be called on event
+//[ missionNamespace, "reviveIncapacitated", {_unit = _this select 0; _revivor = _this select 1;} ] call BIS_fnc_addScriptedEventHandler;
+
+//onExplosion is local, each client could count this themselves
+
+//event handler for animation change -> spawn a function that watches what happens to that player
+//> revived, bleed out, executed, forced respawn etc
+
+//setVariable on player isWatched -> if the player is watched when onPlayerKilled we can get data
+
+/*
 private _bluforCount = west countSide allPlayers;
 if (_bluforCount > 0) then
 {
@@ -20,4 +31,4 @@ if (_bluforCount > 0) then
             "<br/><t font='PuristaBold' align='center' size='2' color='#28b858'>+ $2000</t>" remoteExec ["client_fnc_core_displayStructuredText", _x];
         } forEach _civilianPlayers;
     }
-};
+};*/

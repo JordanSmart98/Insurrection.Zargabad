@@ -15,16 +15,13 @@ fnc_borderCreatemarkers = {
 
         private _markerName = format["_wm_%1_%2", _i, _boundIndex];
         private _marker = createMarkerLocal [_markerName, _markerPos];
-        diag_log _marker;
         _marker setMarkerAlphaLocal 0;
         _marker setMarkerTypeLocal "mil_warning";
         _marker setMarkerColorLocal "ColorBlue";
         _markername3d = [_marker] call BH_fnc_mkr3D;
-        diag_log _markername3d;
+
         _markerArray pushBack _marker;
         _markerArray3d pushBack _markername3d;
-        diag_log _markerArray;
-        diag_log _markerArray3d;
     };
     [_markerArray, _markerArray3d];
 };
@@ -58,11 +55,12 @@ fnc_borderGetBounds = {
 };
 
 fnc_borderInRange = {
+    params["_range"];
     private _bounds = call fnc_borderGetBounds;
     private _result = false;
     {
         _x params ["_borderPos", "_distance"];
-        if (_distance < 30) then
+        if (_distance < _range) then
         {
             _result = true;
         };
@@ -110,45 +108,47 @@ fnc_borderRemove3dMarker = {
     deleteVehicle _obj;
 };
 
-["<br/><t font='PuristaBold' align='center' size='2'>BORDER</t>", 4] call client_fnc_core_displayStructuredText;
-[] spawn {
-    private _data = [];
-    while {call fnc_borderInRange} do
-    {
-        private _oldPos = player getVariable["cl_borderPos", [0, 0 ,0]];
-        private _notMoved = player inArea [_oldPos, 3, 3, 0, false];
-        if (_notMoved) then
+if (50 call fnc_borderInRange) then {
+    ["<br/><t font='PuristaBold' align='center' size='2'>NEAR BORDER</t>", 4] call client_fnc_core_displayStructuredText;
+    [] spawn {
+        private _data = [];
+        while {30 call fnc_borderInRange} do
         {
-            sleep 1;
-        }
-        else
-        {
-            player setVariable ["cl_borderPos", position player];
-
-            _data params["_markerArray", "_markerArray3d"];
-            if (!(isNil("_markerArray"))) then
+            private _oldPos = player getVariable["cl_borderPos", [0, 0 ,0]];
+            private _notMoved = player inArea [_oldPos, 3, 3, 0, false];
+            if (_notMoved) then
             {
-                {deleteMarkerLocal _x;} forEach _markerArray;
-            };
-
-            if (!(isNil("_markerArray3d"))) then
+                sleep 1;
+            }
+            else
             {
-                {_x call fnc_borderRemove3dMarker;} forEach _markerArray3d;
-            };
+                player setVariable ["cl_borderPos", position player];
 
-            _data = call fnc_borderCreate;
-            sleep 1;
+                _data params["_markerArray", "_markerArray3d"];
+                if (!(isNil("_markerArray"))) then
+                {
+                    {deleteMarkerLocal _x;} forEach _markerArray;
+                };
+
+                if (!(isNil("_markerArray3d"))) then
+                {
+                    {_x call fnc_borderRemove3dMarker;} forEach _markerArray3d;
+                };
+
+                _data = call fnc_borderCreate;
+                sleep 1;
+            };
         };
-    };
 
-    _data params["_markerArray", "_markerArray3d"];
-    if (!(isNil("_markerArray"))) then
-    {
-        {deleteMarkerLocal _x;} forEach _markerArray;
-    };
+        _data params["_markerArray", "_markerArray3d"];
+        if (!(isNil("_markerArray"))) then
+        {
+            {deleteMarkerLocal _x;} forEach _markerArray;
+        };
 
-    if (!(isNil("_markerArray3d"))) then
-    {
-        {_x call fnc_borderRemove3dMarker;} forEach _markerArray3d;
+        if (!(isNil("_markerArray3d"))) then
+        {
+            {_x call fnc_borderRemove3dMarker;} forEach _markerArray3d;
+        };
     };
 };

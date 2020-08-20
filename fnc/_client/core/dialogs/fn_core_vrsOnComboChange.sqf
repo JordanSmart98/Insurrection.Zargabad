@@ -1,7 +1,11 @@
 disableSerialization;
 
-private _itemIndex = lbCurSel 7902;
-private _itemData = lbData [7902, _itemIndex];
+private _display = findDisplay 7900;
+private _List_Vehicles = _display displayCtrl 7901;
+private _Lb_Type = _display displayCtrl 7902;
+
+private _itemIndex = lbCurSel _Lb_Type;
+private _itemData = _Lb_Type lbData _itemIndex;
 private _curVehicleArray = switch (_itemData) do
 {
     case "BluforLandVL": {BluforLandVL};
@@ -10,13 +14,11 @@ private _curVehicleArray = switch (_itemData) do
     case "insCivVL": {insCivVL};
 };
 
-private _display = findDisplay 7900;
-private _List_Vehicles = _display displayCtrl 7901;
 lbClear _List_Vehicles;
 {
     private _displayName = getText (configFile >> "CfgVehicles" >> _x select 0 >> "displayName");
     private _displayIcon = getText(configFile >> "cfgVehicles" >> _x select 0 >> "picture");
-    private _itemIndex = lbAdd [7901, format["  $%1  ", _x select 1] + _displayName];
+    private _itemIndex = _List_Vehicles lbAdd (format["  $%1  ", _x select 1] + _displayName);
     _List_Vehicles lbSetData [_itemIndex, _x select 0];
     _List_Vehicles lbSetValue [_itemIndex, _x select 1];
     _List_Vehicles lbSetPictureRight[_itemIndex, _displayIcon];
@@ -24,4 +26,4 @@ lbClear _List_Vehicles;
     _List_Vehicles lbSetPictureRightColorSelected[_itemIndex, [1,1,1,1]];
 } forEach _curVehicleArray;
 lbSortByValue _List_Vehicles;
-lbSetCurSel [7901, 0];
+_List_Vehicles lbSetCurSel 0;

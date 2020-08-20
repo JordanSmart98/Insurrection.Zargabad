@@ -17,6 +17,7 @@ class dialog_VehicleRS
 			colorText[] = {0,0,0,1};
 			font = "EtelkaNarrowMediumPro";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
+			onLoad = "[7900] spawn client_fnc_core_menuConditionMet";
 		};
 		class Background
 		{
@@ -28,7 +29,7 @@ class dialog_VehicleRS
 			h = safeZoneH * 0.55;
 			style = 0;
 			text = "";
-			colorBackground[] = {0,0.2,0.2,0.35};
+			colorBackground[] = {0.102,0.102,0.102,0.8};
 			colorText[] = {0.9961,0.1373,0.5451,1};
 			font = "PuristaMedium";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
@@ -63,7 +64,7 @@ class dialog_VehicleRS
 			colorBackground[] = {1,1,1,0};
 			colorText[] = {0.949,0.949,0.949,1};
 			font = "Zeppelin33";
-			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 3);
+			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 2.75);
 			fixedWidth = false;
 			lineSpacing = 0;
 			shadow = 2;
@@ -128,8 +129,8 @@ class dialog_VehicleRS
 			style = 16;
 			colorBackground[] = {0.1279,0.1309,0.1393,0.2};
 			colorDisabled[] = {0.2,0.2,0.2,1};
-			colorSelect[] = {0.7176,0.5098,0.6471,1};
-			colorText[] = {0.7176,0.5804,0.5098,1};
+			colorSelect[] = {0.5474,0.873,0.5474,1};
+			colorText[] = {0.8,0.6,0.2,1};
 			font = "PuristaBold";
 			maxHistoryDelay = 0;
 			rowHeight = 0;
@@ -298,8 +299,8 @@ class dialog_VehicleRS
 
             colorText[] = {1, 0, 0, 1};
             colorTextSelect[] = {0, 1, 0, 1};
-            colorBackground[] = {0.05, 0.3, 0.23, 0.15};
-            colorSelectedBg[] = {0.05, 0.3, 0.23, 0.15};
+			colorBackground[] = {0.05,0.05,0.05,0.15};
+            colorSelectedBg[] = {0.05,0.05,0.05,0.15};
 
             font = "RobotoCondensedBold";
             sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.5);

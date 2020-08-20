@@ -13,9 +13,10 @@ class cfgNotifications
 	{
 		title = "SAFE START";
 		description = "%1";
-		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
+		//iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
+		iconPicture="\A3\ui_f\data\GUI\Cfg\Notifications\tridentEnemy_ca.paa";
 		duration = 2;
-		priority = 0;
+		priority = 9;
 	};
 
 	class CivilianKilled
@@ -31,7 +32,8 @@ class cfgNotifications
 	{
 		title = "Escalation Phase";
 		description = "%1";
-		iconPicture="\A3\ui_f\data\map\mapcontrol\taskIconCreated_ca.paa";
+		//iconPicture="\A3\ui_f\data\map\mapcontrol\taskIconCreated_ca.paa";
+		iconPicture="\A3\ui_f\data\GUI\RscCommon\RscDebugConsole\warningcdc_ca.paa";
 		duration = 3;
 		priority = 2;
 	};
@@ -49,8 +51,9 @@ class cfgNotifications
     {
         title = "Infidels Spotted";
         description = "%1";
-        iconPicture="";
+        //iconPicture="\A3\ui_f\data\GUI\Rsc\RscDisplayArsenal\binoculars_ca.paa";
+        iconPicture="\A3\ui_f\data\GUI\Cfg\Hints\Zooming_ca.paa";
         duration = 2;
-        priority = 9;
+        priority = 5;
     };
 };
