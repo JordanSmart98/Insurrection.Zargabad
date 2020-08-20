@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4697.4702,57.655468,6194.4761};
-		dir[]={-0.18680999,-0.72960901,0.6578896};
-		up[]={-0.19929861,0.68385476,0.70186853};
-		aside[]={0.96198529,2.7078204e-007,0.27316156};
+		pos[]={4034.7363,22.606894,4112.8237};
+		dir[]={-0.50987089,-0.53838366,-0.67095494};
+		up[]={-0.32574895,0.842695,-0.42866307};
+		aside[]={-0.79619527,-2.7008355e-008,0.60504305};
 	};
 };
 binarizationWanted=0;
@@ -83,6 +83,1307 @@ class CustomAttributes
 {
 	class Category0
 	{
+		name="ace_arsenal_DummyCategory";
+		class Attribute0
+		{
+			property="ace_arsenal_DefaultLoadoutsListAttribute";
+			expression="if (!is3DEN) then {ace_arsenal_defaultLoadoutsList= _value}";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"ARRAY"
+									};
+								};
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="The White Wolf";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=10;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"ARRAY"
+															};
+														};
+														class value
+														{
+															items=7;
+															class Item0
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="CUP_lmg_m249_SQuantoon";
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="ACE_muzzle_mzls_L";
+																};
+															};
+															class Item2
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="";
+																};
+															};
+															class Item3
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="optic_ERCO_blk_F";
+																};
+															};
+															class Item4
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"ARRAY"
+																		};
+																	};
+																	class value
+																	{
+																		items=2;
+																		class Item0
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"STRING"
+																					};
+																				};
+																				value="CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
+																			};
+																		};
+																		class Item1
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"SCALAR"
+																					};
+																				};
+																				value=200;
+																			};
+																		};
+																	};
+																};
+															};
+															class Item5
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"ARRAY"
+																		};
+																	};
+																};
+															};
+															class Item6
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="";
+																};
+															};
+														};
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"ARRAY"
+															};
+														};
+														class value
+														{
+															items=7;
+															class Item0
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="gm_pzf44_2_win";
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="";
+																};
+															};
+															class Item2
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="";
+																};
+															};
+															class Item3
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="";
+																};
+															};
+															class Item4
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"ARRAY"
+																		};
+																	};
+																	class value
+																	{
+																		items=2;
+																		class Item0
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"STRING"
+																					};
+																				};
+																				value="gm_1Rnd_44x537mm_heat_dm32_pzf44_2";
+																			};
+																		};
+																		class Item1
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"SCALAR"
+																					};
+																				};
+																				value=1;
+																			};
+																		};
+																	};
+																};
+															};
+															class Item5
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"ARRAY"
+																		};
+																	};
+																};
+															};
+															class Item6
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="";
+																};
+															};
+														};
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"ARRAY"
+															};
+														};
+													};
+												};
+												class Item3
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"ARRAY"
+															};
+														};
+														class value
+														{
+															items=2;
+															class Item0
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="CUP_I_B_PMC_Unit_26";
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"ARRAY"
+																		};
+																	};
+																	class value
+																	{
+																		items=5;
+																		class Item0
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="ACE_EarPlugs";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item1
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="ACE_Clacker";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item2
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="ACE_DefusalKit";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item3
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=3;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="ACE_CTS9";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=5;
+																						};
+																					};
+																					class Item2
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item4
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=3;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="ACE_HuntIR_M203";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=7;
+																						};
+																					};
+																					class Item2
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																	};
+																};
+															};
+														};
+													};
+												};
+												class Item4
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"ARRAY"
+															};
+														};
+														class value
+														{
+															items=2;
+															class Item0
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="V_PlateCarrierSpec_blk";
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"ARRAY"
+																		};
+																	};
+																	class value
+																	{
+																		items=1;
+																		class Item0
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=3;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="gm_1Rnd_44x537mm_heat_dm32_pzf44_2";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=3;
+																						};
+																					};
+																					class Item2
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																	};
+																};
+															};
+														};
+													};
+												};
+												class Item5
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"ARRAY"
+															};
+														};
+														class value
+														{
+															items=2;
+															class Item0
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="B_ViperLightHarness_blk_F";
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"ARRAY"
+																		};
+																	};
+																	class value
+																	{
+																		items=4;
+																		class Item0
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="ACE_HuntIR_monitor";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item1
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="FirstAidKit";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=5;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item2
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=3;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=2;
+																						};
+																					};
+																					class Item2
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=200;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item3
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"ARRAY"
+																								};
+																							};
+																							class value
+																							{
+																								items=7;
+																								class Item0
+																								{
+																									class data
+																									{
+																										class type
+																										{
+																											type[]=
+																											{
+																												"STRING"
+																											};
+																										};
+																										value="CUP_glaunch_M79";
+																									};
+																								};
+																								class Item1
+																								{
+																									class data
+																									{
+																										class type
+																										{
+																											type[]=
+																											{
+																												"STRING"
+																											};
+																										};
+																										value="";
+																									};
+																								};
+																								class Item2
+																								{
+																									class data
+																									{
+																										class type
+																										{
+																											type[]=
+																											{
+																												"STRING"
+																											};
+																										};
+																										value="";
+																									};
+																								};
+																								class Item3
+																								{
+																									class data
+																									{
+																										class type
+																										{
+																											type[]=
+																											{
+																												"STRING"
+																											};
+																										};
+																										value="";
+																									};
+																								};
+																								class Item4
+																								{
+																									class data
+																									{
+																										class type
+																										{
+																											type[]=
+																											{
+																												"ARRAY"
+																											};
+																										};
+																										class value
+																										{
+																											items=2;
+																											class Item0
+																											{
+																												class data
+																												{
+																													class type
+																													{
+																														type[]=
+																														{
+																															"STRING"
+																														};
+																													};
+																													value="ACE_HuntIR_M203";
+																												};
+																											};
+																											class Item1
+																											{
+																												class data
+																												{
+																													class type
+																													{
+																														type[]=
+																														{
+																															"SCALAR"
+																														};
+																													};
+																													value=1;
+																												};
+																											};
+																										};
+																									};
+																								};
+																								class Item5
+																								{
+																									class data
+																									{
+																										class type
+																										{
+																											type[]=
+																											{
+																												"ARRAY"
+																											};
+																										};
+																									};
+																								};
+																								class Item6
+																								{
+																									class data
+																									{
+																										class type
+																										{
+																											type[]=
+																											{
+																												"STRING"
+																											};
+																										};
+																										value="";
+																									};
+																								};
+																							};
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																	};
+																};
+															};
+														};
+													};
+												};
+												class Item6
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="H_HelmetLeaderO_oucamo";
+													};
+												};
+												class Item7
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="gm_gc_army_facewear_schm41m";
+													};
+												};
+												class Item8
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"ARRAY"
+															};
+														};
+													};
+												};
+												class Item9
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"ARRAY"
+															};
+														};
+														class value
+														{
+															items=6;
+															class Item0
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="ItemMap";
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="ItemGPS";
+																};
+															};
+															class Item2
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="ItemRadio";
+																};
+															};
+															class Item3
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="ItemCompass";
+																};
+															};
+															class Item4
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="ItemWatch";
+																};
+															};
+															class Item5
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="NVGogglesB_blk_F";
+																};
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
+	class Category1
+	{
 		name="Multiplayer";
 		class Attribute0
 		{
@@ -141,7 +1442,7 @@ class CustomAttributes
 		};
 		nAttributes=2;
 	};
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
