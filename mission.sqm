@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4034.7363,22.606894,4112.8237};
-		dir[]={-0.50987089,-0.53838366,-0.67095494};
-		up[]={-0.32574895,0.842695,-0.42866307};
-		aside[]={-0.79619527,-2.7008355e-008,0.60504305};
+		pos[]={4044.1936,44.668808,4130.3623};
+		dir[]={-0.47908431,-0.62326336,-0.61808431};
+		up[]={-0.38183191,0.78200698,-0.49261507};
+		aside[]={-0.79037493,-5.4715201e-008,0.6126284};
 	};
 };
 binarizationWanted=0;
@@ -101,7 +101,7 @@ class CustomAttributes
 					};
 					class value
 					{
-						items=1;
+						items=2;
 						class Item0
 						{
 							class data
@@ -1365,6 +1365,1402 @@ class CustomAttributes
 																		};
 																	};
 																	value="NVGogglesB_blk_F";
+																};
+															};
+														};
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"ARRAY"
+									};
+								};
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="BAF Scout";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=10;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"ARRAY"
+															};
+														};
+														class value
+														{
+															items=7;
+															class Item0
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="CUP_arifle_CZ805_A2_coyote";
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="ACE_muzzle_mzls_L";
+																};
+															};
+															class Item2
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="";
+																};
+															};
+															class Item3
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="optic_ERCO_blk_F";
+																};
+															};
+															class Item4
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"ARRAY"
+																		};
+																	};
+																	class value
+																	{
+																		items=2;
+																		class Item0
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"STRING"
+																					};
+																				};
+																				value="CUP_30Rnd_556x45_CZ805";
+																			};
+																		};
+																		class Item1
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"SCALAR"
+																					};
+																				};
+																				value=30;
+																			};
+																		};
+																	};
+																};
+															};
+															class Item5
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"ARRAY"
+																		};
+																	};
+																};
+															};
+															class Item6
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="CUP_bipod_Harris_1A2_L_BLK";
+																};
+															};
+														};
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"ARRAY"
+															};
+														};
+													};
+												};
+												class Item2
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"ARRAY"
+															};
+														};
+													};
+												};
+												class Item3
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"ARRAY"
+															};
+														};
+														class value
+														{
+															items=2;
+															class Item0
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="CUP_U_B_BAF_DDPM_UBACSROLLEDKNEE";
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"ARRAY"
+																		};
+																	};
+																	class value
+																	{
+																		items=4;
+																		class Item0
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="MineDetector";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item1
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="ACE_EarPlugs";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item2
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=3;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="CUP_30Rnd_556x45_CZ805";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																					class Item2
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=30;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item3
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=3;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="ACE_CTS9";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=2;
+																						};
+																					};
+																					class Item2
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																	};
+																};
+															};
+														};
+													};
+												};
+												class Item4
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"ARRAY"
+															};
+														};
+														class value
+														{
+															items=2;
+															class Item0
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="CUP_V_B_BAF_DDPM_Osprey_Mk3_Officer";
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"ARRAY"
+																		};
+																	};
+																	class value
+																	{
+																		items=6;
+																		class Item0
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="FirstAidKit";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=10;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item1
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=3;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="SmokeShellGreen";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=3;
+																						};
+																					};
+																					class Item2
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item2
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=3;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="SmokeShellPurple";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=3;
+																						};
+																					};
+																					class Item2
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item3
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=3;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="SmokeShellRed";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=3;
+																						};
+																					};
+																					class Item2
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item4
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=3;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="SmokeShell";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=5;
+																						};
+																					};
+																					class Item2
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item5
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=3;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="CUP_30Rnd_556x45_CZ805";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=4;
+																						};
+																					};
+																					class Item2
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=30;
+																						};
+																					};
+																				};
+																			};
+																		};
+																	};
+																};
+															};
+														};
+													};
+												};
+												class Item5
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"ARRAY"
+															};
+														};
+														class value
+														{
+															items=2;
+															class Item0
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="B_Kitbag_cbr";
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"ARRAY"
+																		};
+																	};
+																	class value
+																	{
+																		items=7;
+																		class Item0
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="ACE_DefusalKit";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item1
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="ACE_M26_Clacker";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item2
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="ToolKit";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item3
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="ACE_CableTie";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=28;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item4
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=2;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="FirstAidKit";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=3;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item5
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=3;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="DemoCharge_Remote_Mag";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=5;
+																						};
+																					};
+																					class Item2
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																		class Item6
+																		{
+																			class data
+																			{
+																				class type
+																				{
+																					type[]=
+																					{
+																						"ARRAY"
+																					};
+																				};
+																				class value
+																				{
+																					items=3;
+																					class Item0
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"STRING"
+																								};
+																							};
+																							value="ACE_CTS9";
+																						};
+																					};
+																					class Item1
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=10;
+																						};
+																					};
+																					class Item2
+																					{
+																						class data
+																						{
+																							class type
+																							{
+																								type[]=
+																								{
+																									"SCALAR"
+																								};
+																							};
+																							value=1;
+																						};
+																					};
+																				};
+																			};
+																		};
+																	};
+																};
+															};
+														};
+													};
+												};
+												class Item6
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="CUP_H_BAF_DDPM_Mk6_NETTING_PRR";
+													};
+												};
+												class Item7
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"STRING"
+															};
+														};
+														value="CUP_G_Scarf_Face_Tan";
+													};
+												};
+												class Item8
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"ARRAY"
+															};
+														};
+													};
+												};
+												class Item9
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"ARRAY"
+															};
+														};
+														class value
+														{
+															items=6;
+															class Item0
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="ItemMap";
+																};
+															};
+															class Item1
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="ItemGPS";
+																};
+															};
+															class Item2
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="ItemRadio";
+																};
+															};
+															class Item3
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="ItemCompass";
+																};
+															};
+															class Item4
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="ItemWatch";
+																};
+															};
+															class Item5
+															{
+																class data
+																{
+																	class type
+																	{
+																		type[]=
+																		{
+																			"STRING"
+																		};
+																	};
+																	value="ACE_NVG_Wide";
 																};
 															};
 														};

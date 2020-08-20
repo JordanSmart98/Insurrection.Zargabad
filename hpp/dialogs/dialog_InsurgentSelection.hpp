@@ -16,7 +16,7 @@ class dialog_InsurgentSelection
 			h = safeZoneH * 0.62333334;
 			style = 0;
 			text = "";
-			colorBackground[] = {0.102,0.102,0.102,0.7};
+			colorBackground[] = {0.102,0.102,0.102,0.8};
 			colorText[] = {0.6,0.302,0.4,0.95};
 			font = "PuristaMedium";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
