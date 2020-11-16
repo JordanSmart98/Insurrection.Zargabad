@@ -97,6 +97,7 @@ class cfgFunctions {
 	        file = "fnc\_server\ins";
             class ins__Init;
             class ins_dickersCore;
+            class ins_dickersAdjust;
             class ins_safehouseCreate;
             class ins_safehouseEH;
             class ins_safehouseEquipment;
